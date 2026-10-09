@@ -1,0 +1,281 @@
+# PROYECTO: PRESENTACIÓN WEB INTERACTIVA — GREENBOX S.A.C.
+
+## 1. ROL Y OBJETIVO
+
+Actúa como un equipo profesional integrado por:
+
+- Director creativo especializado en diseño corporativo y editorial.
+- Diseñador UX/UI especializado en experiencias web.
+- Diseñador de información y visualización de datos.
+- Desarrollador frontend experto en HTML, CSS, JavaScript y presentaciones interactivas.
+- Especialista en comunicación académica y responsabilidad social empresarial.
+- Revisor de calidad visual y técnica.
+
+Tu objetivo es diseñar, desarrollar y entregar una presentación web interactiva, didáctica, estética, formal y visualmente innovadora sobre GREENBOX S.A.C., empresa agroindustrial peruana.
+
+La presentación estará destinada a una exposición académica y deberá poder alojarse en GitHub Pages, desde donde se abrirá en cualquier navegador compatible.
+
+NO QUIERO UN POWERPOINT TRADICIONAL NI IMÁGENES ESTÁTICAS QUE SIMULEN DIAPOSITIVAS.
+
+Quiero una presentación HTML funcional, con animaciones, gráficos, navegación y elementos interactivos.
+
+## 2. ARCHIVOS DE REFERENCIA
+
+Utiliza los archivos adjuntos:
+
+1. Investigación empresarial de Greenbox S.A.C.: fuente principal para el contenido, la estructura, los datos, la matriz de stakeholders y las referencias.
+2. Imagen del logotipo oficial de Greenbox: referencia obligatoria para la identidad visual.
+
+No confundas Greenbox Perú con otras empresas del mismo nombre.
+
+No inventes información, certificaciones, indicadores, fotografías empresariales ni relaciones con stakeholders.
+
+Si se permite la investigación web, verifica las afirmaciones relevantes utilizando fuentes oficiales y distingue cualquier actualización del contenido original.
+
+## 3. IDENTIDAD VISUAL Y BRANDING
+
+Utiliza una identidad basada directamente en el logotipo proporcionado.
+
+Paleta inicial propuesta:
+
+- Verde principal: #22CF89
+- Blanco: #FFFFFF
+- Verde oscuro: #123D2C
+- Verde claro: #E9F8F0
+- Texto oscuro: #202B25
+
+Estos códigos son aproximaciones visuales. Si puedes analizar programáticamente el logotipo, extrae su color verde predominante y utiliza ese valor como color de marca principal.
+
+Mantén el verde y el blanco como colores protagonistas.
+
+Tipografías sugeridas:
+- Títulos: Manrope.
+- Cuerpo: Inter.
+
+Puedes proponer alternativas si justificas por qué funcionan mejor.
+
+Estilo:
+- Editorial corporativo contemporáneo.
+- Minimalista, pero no vacío.
+- Profesional y con identidad propia.
+- Inspirado en la sostenibilidad y la agroindustria.
+- Jerarquía visual clara.
+- Composiciones variadas, equilibradas y coherentes.
+
+Evita:
+- Plantillas genéricas.
+- Fondos oscuros en todas las diapositivas.
+- Abuso de degradados, sombras y transparencias.
+- Decoraciones aleatorias.
+- Textos diminutos.
+- Párrafos extensos.
+- Animaciones exageradas.
+- Repetir exactamente la misma composición en todas las diapositivas.
+
+Utiliza el logotipo original sin deformarlo, reconstruirlo ni modificar su identidad.
+
+## 4. REQUISITOS DIDÁCTICOS
+
+La presentación debe explicar progresivamente:
+
+1. Identificación empresarial y actividad de Greenbox.
+2. Modelo de negocio y cadena de valor.
+3. Responsabilidad social con agricultores.
+4. Responsabilidad social con trabajadores.
+5. Responsabilidad ambiental y ODS relacionados.
+6. Certificaciones y estándares identificados.
+7. Situación de las normas ISO.
+8. Concepto y clasificación de stakeholders.
+9. Matriz de stakeholders internos y externos, primarios y secundarios.
+10. Justificación de las relaciones identificadas.
+11. Conclusiones y fuentes bibliográficas.
+
+No omitas hallazgos relevantes del documento.
+
+No copies todo el informe en las diapositivas. Transforma el contenido en explicaciones breves, gráficos, diagramas, cifras destacadas y recursos visuales.
+
+Cada diapositiva debe transmitir una idea central y conducir naturalmente a la siguiente.
+
+Incluye notas del expositor cuando sean necesarias para conservar detalles importantes sin saturar la pantalla.
+
+## 5. REQUISITOS DE INVESTIGACIÓN Y RIGOR
+
+Respeta las distinciones del documento original:
+
+- Declaraciones empresariales.
+- Hechos respaldados por fuentes externas.
+- Interpretaciones académicas.
+- Inferencias sobre relaciones con stakeholders.
+- Datos cuya vigencia no está completamente comprobada.
+
+No presentes el proyecto de implementación de ISO 14001:2015 como evidencia de una certificación vigente.
+
+No afirmes que todas las certificaciones mencionadas están vigentes para todas las sedes y productos.
+
+Los datos sobre agricultores y trabajadores deben conservar sus fuentes, fechas y alcance.
+
+La matriz de stakeholders debe reconstruirse cuidadosamente porque la tabla del documento aportado puede estar incompleta respecto de las explicaciones posteriores.
+
+Clasifica cada grupo con justificación y nivel de evidencia. No atribuyas nombres concretos a proveedores o clientes sin respaldo documental.
+
+## 6. ELEMENTOS INTERACTIVOS OBLIGATORIOS
+
+A. Cadena de valor animada
+
+Construye un diagrama que muestre el recorrido desde los agricultores hasta la transformación y comercialización internacional.
+
+Debe revelar las etapas progresivamente.
+
+B. Responsabilidad social
+
+Incorpora indicadores visuales basados exclusivamente en cifras documentadas.
+
+Utiliza animaciones suaves y etiquetas que indiquen la fuente de cada dato.
+
+C. Certificaciones
+
+Diseña tarjetas o una clasificación visual que permita diferenciar:
+
+- Certificaciones y estándares declarados.
+- Evidencias documentadas.
+- Normas ISO sin certificación vigente comprobada.
+
+D. Matriz de stakeholders
+
+Implementa una matriz interactiva que permita filtrar:
+
+- Internos primarios.
+- Internos secundarios, si la clasificación queda académicamente justificada.
+- Externos primarios.
+- Externos secundarios.
+
+Al seleccionar un stakeholder deben mostrarse su relación con Greenbox, justificación, fuente y nivel de evidencia.
+
+Los filtros deben funcionar y no ser simples elementos decorativos.
+
+E. Conclusión
+
+Incluye una síntesis visual que conecte el modelo de negocio con los impactos sociales, ambientales y las relaciones con los grupos de interés.
+
+## 7. RECURSOS VISUALES
+
+Prioriza fotografías auténticas de:
+
+- Greenbox Perú.
+- Sus productos agroindustriales.
+- Procesos de transformación de frutas.
+- Agricultores y actividades relacionadas.
+- Instalaciones empresariales, cuando existan imágenes públicas verificables.
+
+Prioriza las fuentes originales, identifica procedencia y revisa las condiciones de uso de las imágenes.
+
+No atribuyas una fotografía genérica a Greenbox.
+
+Si faltan fotografías utilizables, emplea ilustraciones conceptuales identificadas como tales, SVG originales o espacios reservados.
+
+Utiliza iconos SVG coherentes, gráficos limpios y recursos visuales relevantes.
+
+No incrustes imágenes externas sin comprobar su procedencia, disponibilidad y posibilidad de uso.
+
+## 8. TECNOLOGÍAS
+
+Utiliza:
+
+- HTML5 para estructura.
+- CSS3 para identidad visual, retícula y diseño.
+- JavaScript para funciones interactivas.
+- reveal.js para el sistema de diapositivas.
+- Apache ECharts para gráficos interactivos cuando corresponda.
+- GSAP para animaciones avanzadas cuando sea necesario.
+- SVG para diagramas y elementos gráficos.
+
+Evita dependencias innecesarias.
+
+Incluye navegación mediante teclado, barra de progreso, pantalla completa y enlaces a fuentes.
+
+Diseña para una proporción principal de 16:9 y evita cortes o desbordamientos.
+
+Asegura compatibilidad con GitHub Pages, accesibilidad básica, contraste legible y soporte para usuarios que prefieren movimiento reducido.
+
+Organiza las imágenes y demás archivos en carpetas locales del proyecto.
+
+## 9. ESTRUCTURA DEL PROYECTO
+
+Genera una estructura similar a:
+
+greenbox-presentacion/
+  index.html
+  assets/
+    css/
+      styles.css
+    js/
+      main.js
+      charts.js
+      stakeholders.js
+    images/
+      greenbox-logo.png
+      [fotografías autorizadas]
+  README.md
+  CREDITS.md
+
+Puedes simplificar esta estructura cuando sea conveniente, siempre que el proyecto funcione al publicarlo.
+
+Si se utiliza un CDN, documenta las dependencias de internet.
+
+No dejes rutas absolutas de una computadora.
+
+## 10. PROCESO DE PRODUCCIÓN
+
+FASE 1 — ANÁLISIS
+Revisa los documentos y detecta contradicciones, vacíos y aspectos que requieren verificación.
+
+FASE 2 — GUION
+Propón una narrativa coherente con una secuencia de aproximadamente 12 a 15 diapositivas, ampliable si la comprensión lo requiere.
+
+FASE 3 — DISEÑO
+Define colores, tipografías, retícula, composición y estilo de animaciones.
+
+FASE 4 — DESARROLLO
+Genera todos los archivos necesarios para una presentación completamente funcional.
+
+FASE 5 — VERIFICACIÓN
+Cuando el entorno lo permita, ejecuta y prueba la presentación.
+
+Comprueba navegación, interacciones, tamaños de texto, gráficos, imágenes y comportamiento de las animaciones.
+
+No declares que una prueba se ha superado si no ha sido ejecutada.
+
+FASE 6 — ENTREGA
+Entrega el proyecto completo, preferiblemente comprimido en ZIP, junto con instrucciones de publicación en GitHub Pages.
+
+Si tienes acceso autorizado al repositorio de GitHub, prepara o realiza los cambios mediante las herramientas disponibles. No modifiques otros proyectos del usuario sin autorización.
+
+## 11. ESTÁNDARES DE CALIDAD
+
+La exposición debe parecer un producto de diseño profesional y no una presentación académica genérica.
+
+Busca equilibrio entre:
+- Calidad de la información.
+- Claridad narrativa.
+- Impacto visual.
+- Responsabilidad en el tratamiento de datos.
+- Interactividad real.
+- Estabilidad técnica.
+
+No agregues efectos por el simple hecho de que sean posibles.
+
+La estética debe reforzar el contenido.
+
+## 12. INSTRUCCIÓN DE EJECUCIÓN
+
+Comienza revisando los archivos adjuntos.
+
+Primero, presenta:
+1. Hallazgos del análisis de contenido y posibles vacíos.
+2. Guion de diapositivas.
+3. Propuesta visual basada en el logotipo.
+4. Plan técnico de interacciones.
+
+Una vez que apruebe esa propuesta, desarrolla la presentación completa. Evita entregar únicamente fragmentos de código o ejemplos incompletos.
+
+El resultado final debe estar listo para probarse y prepararse para su publicación en GitHub Pages.
