@@ -38,3 +38,6 @@ Para completar la selección, sirven JPG/PNG/WebP originales, preferiblemente de
 ## Implementación · 10 octubre 2026
 
 Vista general independiente implementada en cadena de valor, agricultores y ambiente. El primer aspecto también tiene acercamiento. Flechas, pestañas y selección del diagrama comparten los mismos estados; Vista completa restaura tanto cámara como explicación y pestaña general. Certificaciones conserva su vista general y ahora acerca cada familia. Se integraron las 19 imágenes aportadas en empresa, catálogo, cadena y estándares.
+
+## Aplicación en el recorrido vertical
+Los recursos se reutilizan en portada panorámica, fotografía de empresa, galería de productos y capítulos de personas. Se preservan los originales y sus créditos. La fotografía agrícola se contiene completa para no cortar el rostro. Vista general y cada acercamiento siguen siendo estados propios, con retorno visible.

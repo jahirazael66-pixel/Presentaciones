@@ -1,37 +1,24 @@
-# Validación — exploración visual de Greenbox
+# Validación — recorrido vertical Greenbox
 
-Iteración del 10 octubre 2026. Alcance: exclusivamente `presentaciones/greenbox/`; las otras presentaciones y el lobby se conservan.
+Iteración del 10 octubre 2026. Alcance: únicamente `presentaciones/greenbox/`; otras presentaciones y lobby se conservan.
 
-## Comprobaciones realizadas en Chromium / Playwright
-- Recorrido de las 15 escenas y sus 50 estados: errores JavaScript y encuadre de contenido, gráficos, leyendas, títulos y conclusiones respecto del pie.
-- Filtros de dispersión: 5 internos, 8 externos, 7 primarios y 6 secundarios; los 13 grupos permanecen disponibles al restablecer la vista.
-- Selección de los 13 stakeholders: nombre, justificación y respaldo dentro de la escena, con encuadre comprobado.
-- Cámara: acercamiento, desplazamiento por arrastre y restablecimiento de la vista; selección por cuadrante y punto.
-- Circular: 3/2/4/4 grupos, selección de categorías y exploración de miembros.
-- Barras: selección de ambos momentos y comparación; 40 → 240, escala común con base cero.
-- Cadena de valor: cuatro etapas con explicación y actores relacionados.
-- Matriz de evidencia: selección de las ocho filas, con propósito, límite de verificación y cámara por fila.
-- Movimiento reducido por defecto, activación explícita persistente y repetición con animaciones activas.
-- Navegación mediante índice y teclado, selección SVG por Enter y estabilidad de la diapositiva al redimensionar a formatos móviles; apertura del índice en orientación vertical.
-- Revisión visual de capturas de cadena, barras, clasificación, dispersión y evidencia. Ajustadas dimensiones intrínsecas SVG, leyendas y márgenes de cuadrantes.
+## Verificaciones en Chromium / Playwright
+- 15 capítulos y 53 estados en escritorio 1440×960: sin errores JavaScript, solicitudes fallidas ni desbordamientos horizontales detectados.
+- Los mismos 53 estados en 1024×768, 390×844 y 844×390: 159 estados adicionales sin desbordamientos de títulos, párrafos, imágenes, pestañas o gráficos detectados.
+- Selección por pestañas y SVG, flechas anterior/siguiente, navegación con teclado, índice completo y detección del capítulo al desplazar la página.
+- Cadena, agricultores y ambiente: vista general independiente, primer acercamiento y siguientes, retorno simultáneo de cámara, texto y pestaña.
+- Circular: categorías 3/2/4/4 sincronizadas con la explicación.
+- Matriz de Valor: los 13 stakeholders seleccionables; filtros 5 internos, 8 externos, 7 primarios y 6 secundarios; selección y restablecimiento.
+- Evidencia de estándares: ocho filas seleccionables, acercamiento por fila y retorno general.
+- Zoom por botones y Alt + rueda; rueda normal desplaza la página. Arrastre después del acercamiento comprobado.
+- Movimiento activado, repetición, persistencia tras recargar y enlace directo al estado elegido.
+- Índice en los tres tamaños; los controles superiores no cubren el contenido centrado.
+- Revisión de capturas: portada, productos, cadena, agricultores, ambiente, ODS, ISO, circular, dispersión y certificaciones. Corregidos recorte de fotografía agrícola, superposición de pestañas y ubicación de controles.
 
-No se afirma una auditoría de accesibilidad ni pruebas en todos los navegadores o dispositivos. En móvil se recomienda orientación horizontal para leer el formato de exposición. El estándar estético continúa sujeto a la evaluación del usuario.
+Estas comprobaciones no constituyen una auditoría de accesibilidad ni garantizan todos los dispositivos y navegadores. La valoración estética sigue correspondiendo al usuario.
 
-## Rigor del contenido
-Se revisaron fuentes actuales y se precisaron afirmaciones empresariales, sin inventar métricas de influencia/interés. +200 trabajadores, seis veces y +500% son cálculos derivados de 40 y 240. El circular cuenta grupos, no personas ni participación económica. La dispersión solo clasifica alto/bajo; las posiciones dentro del cuadrante no representan puntajes. El flujo no representa volumen. Las referencias de estándares no equivalen a certificados vigentes.
+## Rigor
+No se añadieron cifras o certificados para justificar nuevos gráficos. La matriz sigue siendo cualitativa; el circular cuenta grupos. Se mantienen fuentes, interpretaciones y límites de certificaciones. Fotografías ilustrativas aportadas se distinguen de imágenes documentales NESsT.
 
 ## Publicación
-El commit contiene solo archivos de Greenbox. La verificación del despliegue comprueba GitHub Pages y el contenido público frente a los archivos publicados.
-
-## Nueva revisión
-Se revisan las perspectivas de agricultores y ambiente, los cuatro segmentos del circular y la categoría interna secundaria en filtros y detalles. La dirección financiera pasa a influencia alta estimada a partir del CFO documentado; su condición de soporte es independiente. La matriz sigue siendo cualitativa. Las referencias y límites se documentan en `docs/revision-de-contenido-y-stakeholders.md`.
-
-
-## Edición fotográfica · 10 octubre 2026
-
-- 15 diapositivas, 53 estados revisados en Chromium: sin errores JavaScript ni desbordamientos de contenido detectados.
-- 19 imágenes aportadas decodificadas y cargadas correctamente; sin solicitudes fallidas.
-- General → primer acercamiento → siguientes: cadena, agricultores y ambiente.
-- Selección directa, flechas anterior/siguiente, retorno de cámara/texto/pestaña a general y familias de estándares: comprobados.
-- Animaciones, repetición y persistencia tras recargar: comprobadas.
-- Pantallas móviles 844×390 y 390×844: navegación e índice comprobados.
+Cambios limitados a Greenbox, basados en el último árbol del repositorio y actualización de rama con comprobación del commit esperado. La entrega se verifica contra GitHub Pages tras completar el despliegue.

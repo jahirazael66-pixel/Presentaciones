@@ -6,16 +6,16 @@ Fuente principal: `docs/Info.txt`, investigación proporcionada por el usuario. 
 
 Contraste de la propuesta: Greenbox About Us, artículo NESsT del 28 de enero de 2026 y resultados ProInnóvate de 2021, p. 14. Las referencias Greenbox Certifications, consultas comerciales, LinkedIn y Datos Perú se conservan desde el informe; no se afirma revalidación de certificados ni identidad registral actual. El artículo NESsT es una fuente del financiador, no una auditoría independiente.
 
-La revisión corrige la clasificación de administración, finanzas y RR.HH. como internos primarios. El criterio de soporte funcional no basta para clasificarlos secundarios. Las entidades comerciales extranjeras se mantienen externas provisionalmente respecto de Greenbox S.A.C. Perú; el perímetro y propiedad no están completamente comprobados. Certificadores y reguladores conservan el criterio del informe, indicando su carácter interpretativo. Los nombres de clientes y proveedores comerciales no se inventan.
+La versión actual distingue administración/finanzas y RR.HH. como internos secundarios en la adaptación funcional de Info.txt; esto no se presenta como clasificación universal. Clarkson considera primarios a los empleados, como explica la revisión de contenido. Las entidades comerciales extranjeras se mantienen externas provisionalmente respecto de Greenbox S.A.C. Perú; el perímetro y propiedad no están completamente comprobados. Certificadores y reguladores conservan el criterio del informe, indicando su carácter interpretativo. Los nombres de clientes y proveedores comerciales no se inventan.
 
 ## Identidad e imágenes
 
 - Logo Greenbox: PNG original adjunto por el usuario. Se mantiene su proporción y apariencia. Uso en esta presentación académica según la instrucción del usuario; no se declara una licencia pública para otros usos.
 - Verde dominante extraído: RGB 42, 211, 134 (`#2AD386`). Complementos: blanco, crema `#F7F3E8`, menta `#E7F7ED`, durazno `#F4DFCF` y verde profundo `#163D2C`.
 - Ilustraciones de fruta, personas, caja, hoja, globo y ciclo: SVG conceptuales originales creados para esta presentación. No representan instalaciones ni trabajadores específicos de Greenbox.
-- No se incorporan fotografías externas: no se verificó una autorización o licencia reutilizable. No se atribuyen imágenes genéricas a la empresa.
+- Fotografías documentales y aportadas: procedencia y límites indicados más abajo.
 
-## Dependencias locales
+## Dependencias locales de versiones iniciales (historial)
 
 - Reveal.js 5.2.1 — MIT; fuente: https://github.com/hakimel/reveal.js . Distribución obtenida de jsDelivr; licencia en `assets/vendor/reveal-LICENSE`.
 - Apache ECharts 5.6.0 — Apache-2.0; fuente: https://github.com/apache/echarts . Licencia y NOTICE en `assets/vendor/`.
@@ -38,7 +38,7 @@ Las cifras animadas siempre terminan en los valores documentados. Los pasos de l
 - DM Sans y DM Serif Display: Google Fonts, archivos locales y licencias OFL incluidas en assets/fonts.
 - GSAP 3.15.0 y plugins MotionPath, DrawSVG y MorphSVG: gsap.com / paquete npm gsap. Términos oficiales en assets/vendor/gsap-LICENSE.txt.
 - Diagramas e ilustraciones SVG conceptuales realizados para esta presentación. No representan fotografías ni instalaciones verificadas.
-- Reveal.js conservado; Auto-Animate identifica los mismos stakeholders al pasar de red a matriz.
+- En la reforma vertical se conserva Reveal.js como archivo histórico; no se carga. La navegación actual es nativa y los gráficos son SVG.
 
 Los gráficos interactivos de `learning.js` son SVG originales del proyecto; no añaden dependencias. Los cálculos de empleo y composición se derivan de la información ya documentada.
 
@@ -74,3 +74,6 @@ Se incorporan las 19 imágenes sin alterar sus píxeles, textos ni marcas. Se pr
 - `haccp.webp` → `assets/images/aportadas/haccp.webp`
 - `kosher.jpg` → `assets/images/aportadas/kosher.jpg`
 - `fairtrade.png` → `assets/images/aportadas/fairtrade.png`
+
+## Dependencias activas en el recorrido vertical
+La página actual carga únicamente las fuentes locales DM Sans y DM Serif Display, GSAP local, `stakeholders.js`, `learning.js` y `journey.js`, junto con estilos de fuentes y `journey.css`. Los archivos de bibliotecas anteriores se conservan sin cargarse. No se añade ninguna imagen ni licencia externa en esta reforma.

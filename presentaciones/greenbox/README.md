@@ -1,54 +1,42 @@
-# Greenbox — presentación visual narrativa
+# Greenbox — recorrido vertical interactivo
 
-Presentación HTML de 15 escenas para exposición académica. Conserva la información de la versión anterior y reorganiza su desarrollo mediante diagramas, ilustraciones SVG, texto integrado y secuencias de movimiento.
+Presentación académica de 15 capítulos y 53 estados de explicación. El contenido se recorre con desplazamiento vertical normal; los controles de exposición permiten avanzar subtema por subtema. Se conservan los temas, fuentes, imágenes y cinco gráficos de la versión anterior.
 
 ## Abrir
-https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/
+https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=vertical1
 
-También se puede servir esta carpeta con `python -m http.server 8000` y abrir `http://localhost:8000`. No requiere proceso de compilación, cuenta adicional ni extensiones del navegador para exponer.
+Puede abrirse directamente o servirse con `python -m http.server 8000`. No requiere compilación, cuenta, conexión a fuentes tipográficas externas ni extensiones.
 
-## Navegar
-- Flechas del teclado o del menú: avanzar y retroceder por subtemas y escenas.
-- Encabezados de sección: saltar a empresa, cadena de valor, responsabilidad social, certificaciones, stakeholders o cierre.
-- Subtemas: elegir el foco actual.
-- Índice: seleccionar cualquiera de las 15 escenas.
-- Repetir: volver a ejecutar la secuencia del punto actual.
-- Animación: activar o desactivar; la elección se conserva en este navegador cuando el almacenamiento local está disponible.
-- Pantalla completa y notas del expositor: controles auxiliares.
-- En teléfonos, usar orientación horizontal para mejorar la lectura. La presentación conserva el modo diapositivas al redimensionar.
+## Navegar y exponer
+- Desplazar la página con ratón, rueda o gesto táctil; el índice lateral indica el capítulo actual.
+- Encabezados, índice lateral e índice de Opciones: saltar a un capítulo.
+- Flechas anterior/siguiente, izquierda/derecha y PageUp/PageDown: recorrer subtemas y capítulos. Las flechas arriba/abajo conservan el desplazamiento normal.
+- Pestañas y elementos del gráfico: elegir un foco directamente.
+- Vista completa: restaurar cámara, explicación y estado general. Cada aspecto, incluido el primero, tiene un acercamiento independiente.
+- Opciones: índice, animación, repetición, pantalla completa, notas y retorno al lobby.
+- Animación: respeta inicialmente la preferencia de movimiento reducido del sistema. Una elección explícita permanece en el navegador cuando el almacenamiento local está disponible.
+- En móvil, la página se apila para lectura vertical; también admite orientación horizontal.
+
+## Explorar gráficos
+Cinco SVG locales: flujo de cadena de valor, barras de empleo, circular de grupos, dispersión de stakeholders y matriz de evidencia de estándares. Agricultores y ambiente añaden diagramas con perspectivas.
+
+Usar +/− para acercar. Arrastrar después del acercamiento para desplazar; Alt + rueda permite zoom en escritorio. La rueda normal sigue desplazando la página. Los elementos seleccionables admiten Tab y Enter o espacio. Las explicaciones permanecen fuera del área móvil del gráfico y no abren globos.
 
 ## Diseño y recursos
-DM Sans para contenido y navegación; DM Serif Display para contraste editorial. Verde del logo, blanco, crema, verde oscuro y tonos suaves. Fuentes, logo, ilustraciones y bibliotecas necesarias se sirven desde el proyecto.
+DM Sans y DM Serif Display, fuentes locales. Paleta verde, crema y menta con acentos de terracota, azul y ámbar. Cada capítulo tiene composición propia: portada fotográfica, galería de productos, panorama de cadena, cifras protagonistas, bandas ODS, mapa de relaciones y síntesis tipográfica. La información de empresa aparece una vez en su capítulo.
 
-Reveal.js mantiene la navegación por escenas y subtemas. GSAP 3.15.0, MotionPath, DrawSVG y MorphSVG coordinan recorridos, dibujo de conexiones y transformación de ilustraciones. Los cinco gráficos son SVG locales: barras de empleo, circular de grupos, dispersión cualitativa de stakeholders, flujo de cadena de valor y matriz de evidencia de estándares. `learning.js` controla selección, filtros y cámaras; `learning.css` define jerarquía y acentos. No se requieren nuevas bibliotecas ni servicios externos. Los recursos de versiones anteriores se conservan pero no son dependencias de la nueva página.
+`journey.css` y `journey.js` definen el recorrido nativo; `learning.js` controla gráficos y cámaras; `stakeholders.js` conserva la clasificación y referencias. GSAP local coordina animación. Reveal.js, plugins adicionales, ECharts y estilos anteriores se conservan como recursos de versiones previas, pero la página actual no los carga.
 
-## Contenido y rigor
-La revisión actual relee fuentes empresariales y NESsT para precisar actividad, productos, empleo, financiación y trazabilidad. Las referencias y límites se conservan: datos documentados, declaraciones empresariales e inferencias. La vigencia de certificaciones sigue sin comprobarse. Se conservan los 13 grupos; administración/finanzas y RR. HH. se restauran como internos secundarios en la adaptación funcional de Info.txt. La dirección financiera se valora con influencia alta por el cargo CFO documentado. Primario/secundario no equivale a influencia/interés.
+## Contenido y límites
+Se mantienen datos documentados, declaraciones empresariales e inferencias señaladas. Las cifras de empleo 40 y 240 corresponden a momentos reportados, no a una serie anual actual. +200 y +500% son cálculos derivados. El circular cuenta grupos (3/2/4/4), no personas ni peso económico. La dispersión es cualitativa alto/bajo y no atribuye puntuaciones.
 
-El contenido esencial no abre globos ni ventanas emergentes. Índice y notas son utilidades independientes de la explicación. Las fuentes siguen accesibles mediante enlaces.
+Los 13 stakeholders siguen disponibles. Administración/finanzas y RR. HH. se distinguen como internos secundarios en la adaptación funcional de Info.txt, con el límite explicado en `docs/revision-de-contenido-y-stakeholders.md`: Clarkson considera primarios a los empleados. Primario/secundario no equivale a influencia/interés.
 
-## Documentación reutilizable
-- `docs/estandar-visual-en-desarrollo.md`: preferencias expresas y criterios de futuras presentaciones.
-- `docs/retroalimentacion-de-implementacion.md`: decisiones, dificultades y mejoras observadas.
-- `VALIDACION.md`: resumen de verificaciones.
+Las menciones y logos de estándares no prueban certificación vigente. Las fotografías aportadas y documentales conservan sus créditos y límites en `CREDITS.md`.
 
-El estándar visual sigue sujeto a la evaluación estética del usuario. Las pruebas funcionales no sustituyen esa aprobación.
+## Documentación
+- `VALIDACION.md`: verificaciones funcionales y visuales.
+- `docs/estandar-visual-en-desarrollo.md`: preferencias expresas, aún en calibración.
+- `docs/retroalimentacion-de-implementacion.md`: aprendizajes de implementación.
 
-## Explorar los gráficos
-- Cadena de valor: elegir una etapa o subtema, acercar con +/−, arrastrar al acercarse y volver con «Vista completa».
-- Empleo: seleccionar una barra o «Comparar». Son 40 y 240 trabajadores en dos momentos reportados; +200 y +500% son cálculos derivados, no nuevos datos de campo.
-- Stakeholders: seleccionar un sector circular y un grupo. El gráfico cuenta 3 internos primarios, 2 internos secundarios, 4 externos primarios y 4 externos secundarios.
-- Matriz de Valor: filtrar internos/externos y primarios/secundarios, seleccionar un cuadrante o punto, acercar, desplazar y regresar. La separación entre puntos no representa puntuaciones.
-- Certificaciones: seleccionar una fila para leer propósito, respaldo y límite de verificación. No se afirma vigencia de certificados sin evidencia.
-
-Todos los elementos seleccionables admiten Tab y Enter o espacio. El zoom tiene botones y rueda; el desplazamiento admite arrastre con ratón o puntero táctil. Las explicaciones permanecen en pantalla, separadas del área móvil del gráfico.
-
-## Nuevos focos y precisión
-Agricultores y ambiente ahora combinan vista general, acercamiento por foco y retorno al contexto. La matriz de evidencia permite enfocar una fila. Se conservan las composiciones distintas en las demás escenas.
-
-La adaptación funcional utiliza cuatro categorías; no es un organigrama oficial ni una clasificación universal de empleados. Los criterios y límites, junto con el respaldo de cada grupo, se explican en `docs/revision-de-contenido-y-stakeholders.md`. En el enfoque clásico de Clarkson los empleados son primarios; la distinción de funciones internas de apoyo corresponde al documento base del usuario.
-
-
-### Edición con imágenes aportadas
-
-19 imágenes integradas con transparencias originales, soporte blanco y márgenes uniformes. Cadena, agricultores y ambiente tienen Vista general independiente más acercamiento a cada aspecto; estándares permite ver todo y enfocar familias o filas. Se mantienen 15 diapositivas, ahora con 53 estados.
+La reforma solo afecta `presentaciones/greenbox/`; conserva el lobby y las demás presentaciones.

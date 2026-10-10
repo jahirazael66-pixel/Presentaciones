@@ -54,3 +54,14 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 - Separar la vista general del primer foco, con estados de navegación explícitos.
 - Al reiniciar una cámara, restaurar también explicación y pestaña.
 - Etiquetar fruta fresca y fotografías ilustrativas para no confundirlas con productos finales.
+
+## Reforma vertical — 10 octubre 2026
+- Una plantilla uniforme seguía haciendo repetitivas las escenas pese a cambiar ilustraciones. Se sustituyó el marco de slides por capítulos nativos y composiciones elegidas según cada relación.
+- Mantener la misma API de gráficos permite conservar contenido, categorías y cámaras sin rehacer datos. Los 53 estados y enlaces directos se mantienen.
+- La rueda de gráficos competía con la lectura vertical: reservar el zoom de rueda a Alt y ofrecer botones. Permitir arrastre solo al acercar y conservar gesto vertical normal.
+- Los controles flotantes inferiores tapaban texto centrado. Se trasladaron al encabezado; las utilidades quedan agrupadas en Opciones.
+- Completar antes de cancelar la animación evita residuos de opacidad cuando se cambia rápido de estado.
+- La prueba de rueda debe recalcular el rectángulo del gráfico después de desplazar: una coordenada anterior puede quedar fuera del SVG y producir una falsa falla.
+- Revisar fotografías además de cajas: una imagen puede caber perfectamente pero cortar el rostro. El agricultor se presenta completo mediante ajuste de contención.
+- No cargar recursos heredados que la versión actual no usa; conservarlos sin referencias mantiene historial sin añadir coste de carga.
+- La rapidez proviene de reutilizar datos y contratos probados, mientras se rediseña la estructura visual; documentar resultados de pruebas reales, no supuestos.

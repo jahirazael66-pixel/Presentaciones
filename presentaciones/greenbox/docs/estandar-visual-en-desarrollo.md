@@ -16,7 +16,7 @@ Este documento recoge preferencias expresas del usuario. Todavía no constituye 
 ## Aplicación a Greenbox
 Se conservan los quince temas: portada, empresa, productos, cadena de valor, agricultores, trabajadores, ambiente, ODS, certificaciones, ISO, clasificación de stakeholders, Matriz de Valor, relaciones, conclusiones y fuentes. El énfasis visual recae en responsabilidad social, certificaciones y stakeholders.
 
-DM Sans resuelve lectura y controles; DM Serif Display aporta contraste editorial. Las ilustraciones SVG son conceptuales, no fotografías ni representación de instalaciones verificadas. GSAP coordina secuencias controladas por el avance; Reveal.js mantiene navegación y transforma elementos identificados entre red y matriz.
+DM Sans resuelve lectura y controles; DM Serif Display aporta contraste editorial. Las ilustraciones SVG son conceptuales, no fotografías ni representación de instalaciones verificadas. GSAP coordina secuencias y cámaras; el recorrido vertical nativo permite lectura continua y avance por subtemas.
 
 ## Encargo mínimo para futuras presentaciones
 Tema y objetivo; público; duración; información con fuentes; logo e imágenes disponibles; idea visual y restricciones; carpeta de destino; permiso de publicación. Mantener las demás presentaciones.
@@ -41,6 +41,13 @@ Revisar cada estado, contraste, alineación, textos, fuentes, teclado, índice, 
 - Conservar el criterio académico del documento base y explicitar adaptaciones: no cambiar una clasificación discutible sin avisar ni confundir soporte con baja influencia.
 
 ## Siguiente ajuste acordado: navegación de perspectivas
-La vista general debe ser un estado propio. Cada aspecto, incluido el primero, tiene un acercamiento separado. Plan: “Vista general → foco 1 → foco 2 → …”; selección directa desde el conjunto; botón permanente para volver; flechas y teclado recorren los mismos estados. La vista general explica la relación completa y cada foco muestra su detalle. Esta corrección está planificada, todavía no aplicada en la iteración de fotografías.
+La vista general debe ser un estado propio. Cada aspecto, incluido el primero, tiene un acercamiento separado. Plan: “Vista general → foco 1 → foco 2 → …”; selección directa desde el conjunto; botón permanente para volver; flechas y teclado recorren los mismos estados. La vista general explica la relación completa y cada foco muestra su detalle. Esta corrección está aplicada, también en el nuevo recorrido vertical.
 
 Combinar diagramas con fotografía real del caso; dar crédito y distinguir imagen documental, ilustración y certificado verificable. No usar una fotografía de otra empresa como si perteneciera a Greenbox.
+
+## Calibración: variedad espacial y recorrido vertical
+- No imponer un formato de diapositivas: permitir una interfaz vertical que mantenga el modo de exposición mediante estados y controles.
+- Reformar cada capítulo según la idea; alternar galería, cifras, panorama, mapa, bandas y composición tipográfica. Evitar cambiar solo el color de una plantilla repetida.
+- Centrar bloques explicativos y equilibrar márgenes. Variar la relación entre texto e imagen; no colocar siempre texto en el mismo lado.
+- Evitar duplicar información de portada y empresa, especialmente la tarjeta Perú/origen.
+- La página enseña por sí misma y conserva focos independientes con retorno al contexto. La navegación nunca debe cubrir el contenido.
