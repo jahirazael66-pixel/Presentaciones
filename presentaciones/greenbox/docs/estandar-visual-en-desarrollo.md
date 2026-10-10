@@ -65,3 +65,5 @@ Combinar diagramas con fotografía real del caso; dar crédito y distinguir imag
 
 ## Zoom de lectura accesible al puntero
 Ofrecer un control visible y directo, separado de menús o cinta de opciones, para graduar el tamaño de lectura con transición suave. Incluir retorno sencillo al contexto completo y desplazamiento de la vista ampliada. Mantener operables gráficos, filtros y navegación.
+
+El nivel de zoom elegido debe conservarse al avanzar o retroceder en capítulos, subtemas y animaciones. Restablecerlo solo por una acción explícita del usuario.

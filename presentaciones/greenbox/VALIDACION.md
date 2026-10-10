@@ -49,3 +49,6 @@ Cambios limitados a Greenbox, basados en el último árbol del repositorio y act
 - 153 estados en 1366×768, 1440×900 y 1024×768 al tamaño normal, sin cortes o desbordamientos detectados.
 - Móvil 390×844 y 844×390: control dentro de pantalla, ampliación y retorno operativos; sin desbordamiento horizontal del documento.
 - Sin errores JavaScript; revisión visual de vista normal y ampliada.
+
+## Corrección: mantener zoom al navegar
+La regla anterior de restablecer automáticamente al avanzar queda sustituida. Se conserva el nivel de zoom al cambiar capítulo o subtema, avanzar animaciones, retroceder y redimensionar. Comprobadas 14 flechas consecutivas, saltos de capítulo, pestañas, transición suave, tamaños de escritorio y móvil; 150% permanece aplicado al contenido y al indicador. Ajustar y Escape vuelven a 100%. Sin errores JavaScript en estas pruebas.

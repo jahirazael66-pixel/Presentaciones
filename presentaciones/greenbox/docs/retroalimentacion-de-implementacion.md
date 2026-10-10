@@ -85,3 +85,6 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 - El control queda en el margen lateral, con botones, deslizador vertical, porcentaje y retorno Ajustar. El nivel va de 100% a 200%; arrastre en texto/fondo mueve el contenido ampliado.
 - El ajuste automático no debe medir la caja transformada por el zoom del usuario: usar altura de diseño y escala de encuadre evita que lo compense reduciéndolo.
 - Excluir controles, enlaces y SVG del arrastre global conserva los filtros y las cámaras de gráficos. Restablecer al cambiar de subtema evita arrastrar un encuadre parcial a la explicación siguiente.
+
+## Corrección de persistencia del zoom
+La preferencia del usuario es conservar el zoom al navegar, incluso entre capítulos. Se retira el restablecimiento automático: mantener nivel y desplazamiento, limitándolo al contenido nuevo. El origen de transformación del nuevo capítulo se calcula en sus coordenadas locales para no depender de su posición antes del desplazamiento suave. Ajustar y Escape siguen restaurando 100%.
