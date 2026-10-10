@@ -1,0 +1,72 @@
+/* Focus through position, hierarchy and purpose-bound accents. */
+:root{--amber:#d79a39;--terracotta:#bd644c;--blue:#527c95}
+.learning-scene .scene-body>div:not(.explorer){display:none}
+.workers[data-point]:not([data-point="0"]) .scene-body>.work-composition{display:grid}
+.workers[data-point]:not([data-point="0"]) .explorer{display:none}
+.explorer{display:grid;grid-template-columns:minmax(0,72fr) minmax(0,28fr);height:408px;gap:28px;text-align:left}
+.chart-side{min-width:0;display:flex;flex-direction:column;position:relative}
+.chart-tools{height:34px;display:flex;gap:6px;align-items:center;flex-shrink:0}
+.chart-tools button,.chart-reading button{border:1px solid var(--line);background:transparent;border-radius:20px;padding:5px 11px;font-size:11px;line-height:1.3}
+.chart-tools button[aria-pressed=true],.chart-reading button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}
+.chart-tools button:hover,.chart-reading button:hover{border-color:var(--ink)}
+.chart-tools .tool-divider{height:18px;width:1px;background:var(--line);margin:0 4px}
+.chart-stage{flex:1;min-height:0;position:relative;border-radius:20px;overflow:hidden}
+.chart-stage svg{width:100%;height:100%;display:block;touch-action:none;user-select:none}
+.chart-stage text{font-family:'DM Sans',Arial,sans-serif;fill:var(--ink)}
+.chart-stage [role=button]{cursor:pointer;outline:none}
+.chart-stage [role=button]:focus-visible rect,.chart-stage [role=button]:focus-visible circle,.chart-stage [role=button]:focus-visible path{stroke:var(--ink);stroke-width:4}
+.chart-caption{font-size:10px;line-height:1.45;color:var(--muted);padding-top:8px;min-height:30px}
+.chart-reading{border-left:1px solid var(--line);padding:12px 0 0 24px;display:flex;flex-direction:column;min-width:0}
+.reading-kicker{font-size:10px;letter-spacing:1.4px;color:var(--muted);font-weight:700}
+.reveal .chart-reading h3{font-size:29px;line-height:1.08;margin:12px 0 15px}
+.reveal .reading-body p{font-size:15px;line-height:1.45;margin:0 0 12px}
+.reading-body small{font-size:10px;line-height:1.45;display:block;color:var(--muted)}
+.reading-body a{color:var(--ink);font-size:10px}
+.reading-takeaway{border-top:3px solid var(--accent,var(--green));margin-top:auto;padding:12px 0 5px;font-size:16px;font-weight:600;line-height:1.35}
+.reading-list{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px;max-height:172px;overflow:auto;padding:3px}
+.reading-list button{font-size:10px;padding:5px 8px}
+.chart-stage .chart-item{transition:opacity .3s}
+.chart-stage .is-muted{opacity:.2}.chart-stage .is-selected{stroke:var(--ink);stroke-width:3}
+.camera{cursor:grab}.camera.dragging{cursor:grabbing}
+.camera-world{transform-origin:0 0}
+.editorial-scene .scene-heading{position:absolute;left:60px;top:100px;width:230px;height:auto}
+.editorial-scene .scene-heading h2{font-size:44px;line-height:1.05;font-family:'DM Serif Display';font-weight:400;letter-spacing:-1px}
+.editorial-scene .scene-steps{margin-left:262px;font-size:11px;height:67px}
+.editorial-scene .scene-steps button{font-size:12px;padding:9px}
+.editorial-scene .scene-body{margin-left:262px;height:490px}
+.editorial-scene .explorer{height:490px;grid-template-columns:61fr 39fr;gap:18px}
+.editorial-scene .chart-reading{padding-left:17px}
+.editorial-scene .chart-stage{border-radius:0}
+.editorial-scene .chart-tools{flex-wrap:wrap;height:auto;min-height:34px}
+.network{--accent:var(--blue)}.certifications{--accent:var(--amber)}.workers{--accent:var(--terracotta)}.chain{--accent:var(--green)}.matrix{--accent:var(--amber)}
+.network .reading-takeaway{border-color:var(--blue)}
+.certifications .chart-reading h3{font-size:26px}
+.certifications .reading-list{max-height:120px}
+.farm .exchange-metric>strong{color:var(--terracotta)}
+.farm .exchange-lines{stroke:var(--terracotta)}
+.farm .copy-band .story-copy h3{color:var(--terracotta)}
+.ods .ods-0{background:#fae1d8}.ods .ods-1{background:#f8eacb}.ods .ods-2{background:#ddebf1}.ods .ods-3{background:#daf0dd}
+.ods .ods-node.active{background:var(--ink);color:white}.ods .ods-node.active strong{color:white}
+.environment .eco-node.active{background:#527c95;color:white;border-color:#527c95}
+.iso .evidence-gates>div:nth-child(1){border-color:var(--blue)}.iso .evidence-gates>div:nth-child(2){border-color:var(--amber)}.iso .evidence-gates>div:nth-child(3){border-color:var(--terracotta)}
+.closing .closing-landscape>div.active{border-color:var(--terracotta)}.closing .closing-landscape>div.active strong{color:var(--terracotta)}
+.relationships .relation-item.active{color:var(--blue)}
+.reveal .slides section.chain{background:#153f30;color:#f7f3e8}
+.chain .scene-heading h2,.chain .scene-heading .eyebrow,.chain .scene-steps button,.chain .chart-stage text,.chain .chart-reading h3{color:#f7f3e8;fill:#f7f3e8}
+.chain .reading-kicker,.chain .chart-caption,.chain footer,.chain footer a,.chain .eyebrow b{color:#bed3c6!important}
+.chain .chart-reading,.chain .scene-steps{border-color:#426454}
+.chain .chart-tools button{color:#f7f3e8;border-color:#537968}
+.chain .chart-tools button[aria-pressed=true]{background:#2ad386;color:#153f30}
+.chain .chart-stage [role=button]:focus-visible rect{stroke:white}
+.chain .reading-body small{color:#bed3c6}
+.motion-off .camera-world{transition:none!important}
+/* Constrain intrinsic SVG dimensions to the slide grid. */
+.explorer{grid-template-rows:minmax(0,1fr)}
+.chart-side,.chart-reading{min-height:0}
+.chart-stage svg{position:absolute;inset:0;margin:0!important;max-width:none!important;max-height:none!important}
+.editorial-scene .scene-heading h2{font-size:38px}
+.reading-list{flex-shrink:1;scrollbar-width:thin}
+.chart-reading .reading-takeaway{flex-shrink:0}
+.chart-tools button:disabled{opacity:.4;cursor:default}
+.matrix .chart-reading h3{font-size:26px}
+.matrix .reading-list{max-height:100px;margin-top:4px;margin-bottom:6px}

@@ -23,3 +23,13 @@ Tema y objetivo; público; duración; información con fuentes; logo e imágenes
 
 ## Antes de declarar entrega
 Revisar cada estado, contraste, alineación, textos, fuentes, teclado, índice, navegación inversa, repetición, movimiento reducido, elección persistente, formato móvil y archivos públicos. Publicar solo dentro del alcance autorizado.
+
+## Ajustes acordados tras la evaluación de Greenbox — 10 octubre 2026
+- La paleta y tipografía de esta versión son una base aprobada. Mantener identidad visual y variar los acentos con una función explicativa, sin colorear todo con igual protagonismo.
+- Diseñar un recorrido de atención: dato o relación principal → comparación → explicación breve → conclusión. Cada gráfico identifica qué representa y qué no permite afirmar.
+- La presentación debe enseñar por sí misma; la exposición añade contexto y dinamismo. La claridad depende de jerarquía, espacio y relaciones visuales, no de infantilizar el vocabulario.
+- Variar composición según la idea: título lateral, gráfico central, cifra protagonista, ruta, comparación y síntesis. No imponer título arriba y contenido debajo en todas las escenas.
+- Interactividad inmersiva con contexto: vista general, selección, acercamiento y retorno visible. Zoom y desplazamiento solo cuando ayudan a comprender. La explicación permanece fuera del área que se mueve.
+- Animaciones distintas según la relación: crecimiento en barras, aparición por grupos, lectura por filas y acercamiento por etapas. Siempre ofrecer modo sin movimiento plenamente funcional.
+- Los gráficos de categorías no inventan métricas: una dispersión cualitativa solo utiliza alto/bajo; una composición de grupos no se interpreta como número de personas o peso económico.
+- Evaluar cada iteración con el usuario. Estos acuerdos documentan preferencias; no equivalen a memoria global de ChatGPT ni a una plantilla universal terminada.

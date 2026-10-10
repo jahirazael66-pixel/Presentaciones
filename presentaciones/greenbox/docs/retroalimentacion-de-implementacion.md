@@ -23,3 +23,18 @@ Las capturas y resultados del recorrido se guardan durante la revisión. Los res
 
 ## Mejora siguiente
 Recoger la valoración del usuario después de exponer. Medir qué transiciones ayudan a comprender y cuáles distraen, si el tamaño de texto funciona proyectado y si las escenas permiten entender el material sin narración adicional. Ajustar el estándar a esa retroalimentación, sin confundir una prueba funcional con aprobación estética.
+
+## Iteración de foco visual y exploración — 10 octubre 2026
+**Retroalimentación recibida:** la tipografía, paleta y animaciones anteriores fueron valoradas positivamente; la presentación aún repetía composiciones y no dirigía suficientemente la atención. Se pidió aprender sin depender del discurso y explorar cinco gráficos.
+
+**Respuesta de diseño:** se conservan los quince temas. El empleo compara dos momentos con base cero; el circular cuenta los trece grupos; la dispersión usa niveles cualitativos; la cadena conecta etapas con actores; la matriz separa propósito y respaldo de estándares. Todas tienen explicación y conclusión dentro de la escena. Los títulos laterales y una escena oscura aportan variación sin cambiar las familias tipográficas.
+
+**Lecciones observadas:**
+- Una prueba que revisa solo párrafos y títulos puede omitir leyendas SVG. Revisar también la caja del gráfico, leyenda, conclusión y pie.
+- Los SVG con alto al 100% pueden expandir una fila de CSS Grid por tamaño intrínseco. Usar una fila `minmax(0,1fr)`, hijos con `min-height:0` y SVG anclado a su contenedor.
+- Las etiquetas de puntos necesitan espacio dentro de cada cuadrante; no basta con ubicar bien el centro del círculo.
+- Mantener fuentes y límites al seleccionar un elemento evita que una exploración aparente más certeza que la documentación.
+- Reutilizar SVG y bibliotecas locales existentes evita instalar nuevas dependencias para una interacción que el navegador ya resuelve.
+- La cámara mueve solo el gráfico: controles, explicación y conclusión conservan posición y legibilidad. El modo sin animaciones también permite filtrar, seleccionar, acercar y regresar.
+
+Esta bitácora describe decisiones y comprobaciones del proyecto; no implica reentrenamiento ni memoria permanente del modelo.

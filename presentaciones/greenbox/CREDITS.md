@@ -39,3 +39,5 @@ Las cifras animadas siempre terminan en los valores documentados. Los pasos de l
 - GSAP 3.15.0 y plugins MotionPath, DrawSVG y MorphSVG: gsap.com / paquete npm gsap. Términos oficiales en assets/vendor/gsap-LICENSE.txt.
 - Diagramas e ilustraciones SVG conceptuales realizados para esta presentación. No representan fotografías ni instalaciones verificadas.
 - Reveal.js conservado; Auto-Animate identifica los mismos stakeholders al pasar de red a matriz.
+
+Los gráficos interactivos de `learning.js` son SVG originales del proyecto; no añaden dependencias. Los cálculos de empleo y composición se derivan de la información ya documentada.

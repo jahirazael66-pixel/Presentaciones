@@ -1,22 +1,24 @@
-# Validación — reforma narrativa
+# Validación — exploración visual de Greenbox
 
-## Alcance
-15 escenas, 47 estados de subtema y 49 vistas contando portada y fuentes. Los temas y datos provienen de la versión anterior; no se añadieron afirmaciones empresariales nuevas. Se mantienen 13 stakeholders, clasificación interno/externo y primario/secundario, y cuatro cuadrantes de influencia/interés.
+Iteración del 10 octubre 2026. Alcance: exclusivamente `presentaciones/greenbox/`; las otras presentaciones y el lobby se conservan.
 
-## Comprobaciones realizadas
-- Recorrido automatizado por todas las escenas y subtemas en Chromium con viewport de 1440 × 900.
-- Cero errores de JavaScript y cero textos que sobrepasen los límites de la diapositiva o invadan las referencias durante el recorrido.
-- Capturas revisadas de portada, cadena de valor, agricultores, certificaciones, red de stakeholders y Matriz de Valor.
-- Ajuste interno de familias de certificaciones, grupos de red, cuadrantes y justificaciones después de completar las etiquetas.
-- Navegación por flechas, retroceso de subtema, encabezados, índice, cierre de índice y repetición de secuencia.
-- Movimiento reducido: desactivación inicial, activación manual, persistencia después de recargar y desactivación posterior.
-- Identidad compartida de los 13 grupos entre red y matriz para Auto-Animate.
-- Controles e índice en viewport móvil de 390 × 844; modo de exposición conservado al redimensionar. Orientación horizontal recomendada para lectura.
-- Sintaxis de JavaScript revisada con Node.
-- Fuentes y bibliotecas locales con procedencia y licencias registradas.
+## Comprobaciones realizadas en Chromium / Playwright
+- Recorrido de las 15 escenas y sus 49 estados: errores JavaScript y encuadre de contenido, gráficos, leyendas, títulos y conclusiones respecto del pie.
+- Filtros de dispersión: 5 internos, 8 externos, 9 primarios y 4 secundarios; los 13 grupos permanecen disponibles al restablecer la vista.
+- Selección de los 13 stakeholders: nombre, justificación y respaldo dentro de la escena, con encuadre comprobado.
+- Cámara: acercamiento, desplazamiento por arrastre y restablecimiento de la vista; selección por cuadrante y punto.
+- Circular: 5/4/4 grupos, selección de categorías y exploración de miembros.
+- Barras: selección de ambos momentos y comparación; 40 → 240, escala común con base cero.
+- Cadena de valor: cuatro etapas con explicación y actores relacionados.
+- Matriz de evidencia: selección de las ocho filas, con propósito y límite de verificación.
+- Movimiento reducido por defecto, activación explícita persistente y repetición con animaciones activas.
+- Navegación mediante índice y teclado, selección SVG por Enter y estabilidad de la diapositiva al redimensionar a formatos móviles; apertura del índice en orientación vertical.
+- Revisión visual de capturas de cadena, barras, clasificación, dispersión y evidencia. Ajustadas dimensiones intrínsecas SVG, leyendas y márgenes de cuadrantes.
 
-## Límites
-No se verificaron nuevos certificados ni datos de la empresa. La matriz sigue siendo una valoración analítica y las ilustraciones son conceptuales. La revisión en Chromium no equivale a una prueba en todos los navegadores, equipos de proyección ni configuraciones de accesibilidad. La evaluación del estilo por el usuario sigue pendiente.
+No se afirma una auditoría de accesibilidad ni pruebas en todos los navegadores o dispositivos. En móvil se recomienda orientación horizontal para leer el formato de exposición. El estándar estético continúa sujeto a la evaluación del usuario.
+
+## Rigor del contenido
+No se incorporaron nuevas afirmaciones empresariales ni métricas de influencia/interés. +200 trabajadores, seis veces y +500% son cálculos derivados de 40 y 240. El circular cuenta grupos, no personas ni participación económica. La dispersión solo clasifica alto/bajo; las posiciones dentro del cuadrante no representan puntajes. El flujo no representa volumen. Las referencias de estándares no equivalen a certificados vigentes.
 
 ## Publicación
-El despliegue y los archivos servidos en GitHub Pages se comprobarán al publicar. Las demás presentaciones y el lobby se conservan mediante una actualización de árbol limitada a `presentaciones/greenbox/`.
+El commit contiene solo archivos de Greenbox. La verificación del despliegue comprueba GitHub Pages y el contenido público frente a los archivos publicados.

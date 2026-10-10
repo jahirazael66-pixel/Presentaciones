@@ -27,6 +27,7 @@ function state(s,p){
  $$('[data-group]',s).forEach(x=>x.classList.toggle('active',Number(x.dataset.group)===p));
  $$('[data-quad]',s).forEach(x=>x.classList.toggle('active',Number(x.dataset.quad)===p));
  if(s.dataset.scene==='chain'){$('.chain-fruit',s).style.left=`calc(${12.5+p*25}% - 23px)`;}
+ if(window.GB_LEARNING)window.GB_LEARNING.sync(s,p);
  if(s.dataset.scene==='products'){
  const path=$('.fruit-illustration path',s);const d=['M48 27C33 13 14 26 17 52C20 76 38 90 54 84C79 74 91 38 72 25C65 20 55 22 48 27ZM48 27Q47 14 60 8M53 19Q71 5 80 12Q73 25 53 19','M50 8C15 17 12 78 50 94C88 78 85 17 50 8ZM50 8V94M50 8C32 30 32 73 50 94M50 8C68 30 68 73 50 94','M50 7C46 27 17 48 17 69C17 108 83 108 83 69C83 48 54 27 50 7Z'];path.dataset.target=d[p];if(!motion)path.setAttribute('d',d[p]);
  }
@@ -34,7 +35,7 @@ function state(s,p){
 function run(replay=false){if(!deck.isReady())return;const s=deck.getCurrentSlide(),p=$$('.scene-marker.visible',s).length,changed=s!==lastSlide;if(!replay&&!changed&&p===lastPoint)return;const previousPoint=lastPoint;stop();state(s,p);controls();lastSlide=s;lastPoint=p;
  if(!motion){counts(s,{to:()=>{}});if(s.dataset.scene==='products')$('.fruit-illustration path',s).setAttribute('d',$('.fruit-illustration path',s).dataset.target);return;}
  context=gsap.context(()=>{
-  const tl=gsap.timeline({defaults:{ease:'power3.out',duration:.75}});if(changed||replay)tl.fromTo($('.scene-heading',s),{y:20,opacity:0},{y:0,opacity:1},0);
+  const tl=gsap.timeline({defaults:{ease:'power3.out',duration:.75}});if(window.GB_LEARNING)window.GB_LEARNING.animate(s,tl,changed||replay);if(changed||replay)tl.fromTo($('.scene-heading',s),{y:20,opacity:0},{y:0,opacity:1},0);
   const copy=$('.story-copy:not([hidden])',s);if(copy)tl.fromTo(copy,{y:25,opacity:0},{y:0,opacity:1},.12);
   counts(s,tl);const kind=s.dataset.scene;
   if(kind==='cover'){tl.fromTo($('.cover-heading',s),{y:30,opacity:0},{y:0,opacity:1},.05).fromTo($$('.cover-island',s),{scale:.75,opacity:0},{scale:1,opacity:1,stagger:.18},.15).fromTo($('.draw-path',s),{drawSVG:'0%'},{drawSVG:'100%',duration:1.8},.1).to($('.travel-fruit',s),{motionPath:{path:$('.draw-path',s),align:$('.draw-path',s),alignOrigin:[.5,.5]},duration:2,ease:'power1.inOut'},.15);}
