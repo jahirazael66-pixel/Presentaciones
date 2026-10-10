@@ -79,3 +79,9 @@
 .network .reading-list{max-height:140px}
 .matrix .reading-body small,.network .reading-body small{margin-bottom:6px}
 .network .chart-reading h3{font-size:26px}
+/* Documentary images occupy the editorial margin without obscuring charts. */
+.documentary-photo{position:absolute;left:60px;top:330px;width:230px;margin:0!important}
+.documentary-photo img{width:230px;height:175px;object-fit:cover;display:block;border-radius:12px;margin:0!important;max-width:none!important;max-height:none!important}
+.documentary-photo figcaption{font-size:10px;line-height:1.5;margin-top:9px;color:var(--muted)}
+.documentary-photo a{color:var(--muted)!important}
+.certifications .documentary-photo{top:285px}

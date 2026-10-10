@@ -41,3 +41,11 @@ Las cifras animadas siempre terminan en los valores documentados. Los pasos de l
 - Reveal.js conservado; Auto-Animate identifica los mismos stakeholders al pasar de red a matriz.
 
 Los gráficos interactivos de `learning.js` son SVG originales del proyecto; no añaden dependencias. Los cálculos de empleo y composición se derivan de la información ya documentada.
+
+## Fotografías documentales
+
+Imágenes publicadas en la [ficha de Greenbox de NESsT](https://www.nesst.org/greenbox). Se conservan sin retoque; el encuadre se resuelve en CSS/SVG. No se afirma la fecha de captura ni que una fotografía pruebe certificación, vigencia o situación actual. Los derechos permanecen con sus titulares.
+
+- `greenbox-campo.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/263426ef-117d-4e1a-9c64-148bb1d63418/55458116386_30fd1ffdb2_b.jpg?format=750w).
+- `greenbox-planta.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/1592329915131-ISIKGMFRXACUITFGJHVV/DSC_8591.jpg?format=750w).
+- `greenbox-empaque.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/1592329914243-5FACYKFWVX4Z25R379KI/DSC_8294.jpg?format=750w).

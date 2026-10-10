@@ -39,3 +39,8 @@ Revisar cada estado, contraste, alineación, textos, fuentes, teclado, índice, 
 - Precisar empresa, procesos, productos, actores, fechas y referencias. Aumentar conocimiento por palabra, manteniendo subtítulos breves y focos directos.
 - Mantener dos niveles: la escena enseña la relación y muestra suficiente información; la exposición añade detalle y dinamismo.
 - Conservar el criterio académico del documento base y explicitar adaptaciones: no cambiar una clasificación discutible sin avisar ni confundir soporte con baja influencia.
+
+## Siguiente ajuste acordado: navegación de perspectivas
+La vista general debe ser un estado propio. Cada aspecto, incluido el primero, tiene un acercamiento separado. Plan: “Vista general → foco 1 → foco 2 → …”; selección directa desde el conjunto; botón permanente para volver; flechas y teclado recorren los mismos estados. La vista general explica la relación completa y cada foco muestra su detalle. Esta corrección está planificada, todavía no aplicada en la iteración de fotografías.
+
+Combinar diagramas con fotografía real del caso; dar crédito y distinguir imagen documental, ilustración y certificado verificable. No usar una fotografía de otra empresa como si perteneciera a Greenbox.
