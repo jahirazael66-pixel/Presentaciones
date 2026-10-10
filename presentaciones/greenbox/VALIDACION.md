@@ -25,3 +25,13 @@ El commit contiene solo archivos de Greenbox. La verificación del despliegue co
 
 ## Nueva revisión
 Se revisan las perspectivas de agricultores y ambiente, los cuatro segmentos del circular y la categoría interna secundaria en filtros y detalles. La dirección financiera pasa a influencia alta estimada a partir del CFO documentado; su condición de soporte es independiente. La matriz sigue siendo cualitativa. Las referencias y límites se documentan en `docs/revision-de-contenido-y-stakeholders.md`.
+
+
+## Edición fotográfica · 10 octubre 2026
+
+- 15 diapositivas, 53 estados revisados en Chromium: sin errores JavaScript ni desbordamientos de contenido detectados.
+- 19 imágenes aportadas decodificadas y cargadas correctamente; sin solicitudes fallidas.
+- General → primer acercamiento → siguientes: cadena, agricultores y ambiente.
+- Selección directa, flechas anterior/siguiente, retorno de cámara/texto/pestaña a general y familias de estándares: comprobados.
+- Animaciones, repetición y persistencia tras recargar: comprobadas.
+- Pantallas móviles 844×390 y 390×844: navegación e índice comprobados.

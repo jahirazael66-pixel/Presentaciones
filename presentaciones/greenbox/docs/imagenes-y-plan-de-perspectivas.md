@@ -33,3 +33,8 @@ Se descargaron tres fotografías de la [ficha de Greenbox publicada por NESsT](h
 | Certificados reales, completos y legibles | Estándares, alcance y vigencia | Pendiente documentos; los logos no los sustituyen |
 
 Para completar la selección, sirven JPG/PNG/WebP originales, preferiblemente de 1.500 px o más en su lado largo; horizontales para escenas generales y primeros planos para producto/proceso. Adjuntar la URL de origen y una breve identificación. Para certificados, preferir PDF completo. No son necesarias imágenes genéricas para la Matriz de Valor o los ODS: sus diagramas explican mejor las clasificaciones y relaciones.
+
+
+## Implementación · 10 octubre 2026
+
+Vista general independiente implementada en cadena de valor, agricultores y ambiente. El primer aspecto también tiene acercamiento. Flechas, pestañas y selección del diagrama comparten los mismos estados; Vista completa restaura tanto cámara como explicación y pestaña general. Certificaciones conserva su vista general y ahora acerca cada familia. Se integraron las 19 imágenes aportadas en empresa, catálogo, cadena y estándares.

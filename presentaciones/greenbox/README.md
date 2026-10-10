@@ -47,3 +47,8 @@ Todos los elementos seleccionables admiten Tab y Enter o espacio. El zoom tiene 
 Agricultores y ambiente ahora combinan vista general, acercamiento por foco y retorno al contexto. La matriz de evidencia permite enfocar una fila. Se conservan las composiciones distintas en las demás escenas.
 
 La adaptación funcional utiliza cuatro categorías; no es un organigrama oficial ni una clasificación universal de empleados. Los criterios y límites, junto con el respaldo de cada grupo, se explican en `docs/revision-de-contenido-y-stakeholders.md`. En el enfoque clásico de Clarkson los empleados son primarios; la distinción de funciones internas de apoyo corresponde al documento base del usuario.
+
+
+### Edición con imágenes aportadas
+
+19 imágenes integradas con transparencias originales, soporte blanco y márgenes uniformes. Cadena, agricultores y ambiente tienen Vista general independiente más acercamiento a cada aspecto; estándares permite ver todo y enfocar familias o filas. Se mantienen 15 diapositivas, ahora con 53 estados.

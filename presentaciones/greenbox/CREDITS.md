@@ -49,3 +49,28 @@ Imágenes publicadas en la [ficha de Greenbox de NESsT](https://www.nesst.org/gr
 - `greenbox-campo.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/263426ef-117d-4e1a-9c64-148bb1d63418/55458116386_30fd1ffdb2_b.jpg?format=750w).
 - `greenbox-planta.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/1592329915131-ISIKGMFRXACUITFGJHVV/DSC_8591.jpg?format=750w).
 - `greenbox-empaque.jpg`: [archivo fuente](https://images.squarespace-cdn.com/content/v1/58d072963e00bea07a2ca2da/1592329914243-5FACYKFWVX4Z25R379KI/DSC_8294.jpg?format=750w).
+
+
+## Imágenes aportadas por el usuario · 10 octubre 2026
+
+Se incorporan las 19 imágenes sin alterar sus píxeles, textos ni marcas. Se preservan transparencias originales y se adaptan con contenedores blancos, márgenes, `object-fit` y encuadre CSS/SVG. No se aumenta resolución artificialmente. Imágenes de productos: ilustrativas, no prueba de un producto o envase Greenbox. Paisaje e instalaciones: aportadas, sin geolocalización verificada. Distintivos: referencia gráfica, no documentos de certificación ni prueba de vigencia.
+
+- `valle.webp` → `assets/images/aportadas/paisaje-valle.webp`
+- `planta greenbox.jpg` → `assets/images/aportadas/instalaciones.jpg`
+- `seleecion fruta.jpg` → `assets/images/aportadas/seleccion-fruta.jpg`
+- `piña.webp` → `assets/images/aportadas/pina.webp`
+- `mango.png` → `assets/images/aportadas/mango.png`
+- `Aguaymanto.webp` → `assets/images/aportadas/aguaymanto.webp`
+- `bananaa.png` → `assets/images/aportadas/banana.png`
+- `nibs.jpg` → `assets/images/aportadas/nibs.jpg`
+- `polvo maca.jpg` → `assets/images/aportadas/maca.jpg`
+- `polvo.jpg` → `assets/images/aportadas/cacao.jpg`
+- `pure mango.jpg` → `assets/images/aportadas/pure-mango.jpg`
+- `logo usda.gif` → `assets/images/aportadas/usda.gif`
+- `eu organic.jpg` → `assets/images/aportadas/eu-organic.jpg`
+- `bio suisse.png` → `assets/images/aportadas/bio-suisse.png`
+- `jas organic.jpg` → `assets/images/aportadas/jas.jpg`
+- `bgrs logo.webp` → `assets/images/aportadas/brcgs.webp`
+- `haccp.webp` → `assets/images/aportadas/haccp.webp`
+- `kosher.jpg` → `assets/images/aportadas/kosher.jpg`
+- `fairtrade.png` → `assets/images/aportadas/fairtrade.png`

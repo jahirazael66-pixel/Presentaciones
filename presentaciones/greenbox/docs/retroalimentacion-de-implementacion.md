@@ -45,3 +45,12 @@ La cadena de valor fue validada por el usuario como referencia de atención foca
 La revisión detectó una diferencia entre el marco clásico de Clarkson y la adaptación funcional ya explícita en Info.txt. La versión anterior había eliminado internos secundarios sin conservar aquella adaptación. Se restauran administración/finanzas y RR. HH. como soporte en el criterio del documento, con su límite teórico visible. El CFO documentado permite distinguir función secundaria e influencia alta estimada.
 
 Para mejorar rapidez y rigor: leer primero el criterio del documento base; registrar hecho, inferencia y clasificación por separado; calcular filtros y gráficos desde una única fuente de datos; probar todos los miembros al modificar textos, no solo la vista general. Consultar las FAQ actuales evitó tratar Bio Suisse y JAS como menciones únicamente históricas; HACCP permanece sin revalidación actual.
+
+
+## Edición fotográfica
+
+- Inspeccionar transparencia real, no interpretar el fondo negro de una previsualización como píxeles negros.
+- Conservar texto y geometría de marcas; adaptar el soporte visual en CSS/SVG.
+- Separar la vista general del primer foco, con estados de navegación explícitos.
+- Al reiniciar una cámara, restaurar también explicación y pestaña.
+- Etiquetar fruta fresca y fotografías ilustrativas para no confundirlas con productos finales.
