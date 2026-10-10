@@ -45,3 +45,9 @@ Esta versión es una revisión local pendiente de autorización para sustituir l
 Edita el contenido en `index.html` y la matriz en `assets/js/stakeholders.js`. No se presentan las certificaciones como vigentes para todas las sedes y productos. ISO 14001 se muestra como proyecto documentado, no como certificado obtenido. El gráfico laboral compara cifras históricas publicadas, sin inventar fechas de inicio y fin. La asignación a los ODS es interpretativa.
 
 El diseño usa 16:9. En pantallas pequeñas se escala para conservar el formato de exposición; las notas y detalles tienen desplazamiento. Todos los controles interactivos admiten teclado. El texto de las fuentes ocupa una jerarquía secundaria y las referencias completas están al final.
+
+
+## Actualización: Matriz de Valor y animaciones
+La diapositiva 12 presenta los 13 stakeholders en una matriz de influencia/interés: administrar de cerca, mantener satisfechos, mantener informado y monitorear. Cada botón abre la evidencia, la clasificación y la justificación analítica; estas posiciones no son mediciones de Greenbox.
+
+El control de animaciones recuerda la selección en el navegador y permite activarlas con movimiento reducido del sistema. «Repetir ↻» vuelve a mostrar la animación actual. «Ayuda» explica la activación en Windows y la navegación. Los CSS y JS usan una versión de URL para evitar cargar copias anteriores.
