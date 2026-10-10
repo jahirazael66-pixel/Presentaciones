@@ -95,3 +95,14 @@ html{scroll-padding-top:0}#journey{padding-top:var(--header);overflow-anchor:non
 .chapter footer,.chart-caption,.story-copy .evidence,.reading-body small,.reading-body a{font-size:12px}
 @media(max-width:760px){.view-zoom{right:6px;width:44px;padding:8px 2px}.view-zoom button{width:32px;font-size:21px;min-height:30px}.view-zoom input{height:85px}.view-zoom #view-zoom-reset{width:39px;font-size:10px}.view-zoom-label{font-size:9px}#view-zoom-tip{right:52px;width:115px}.chapter footer,.chart-caption,.story-copy .evidence,.reading-body small{font-size:11px}}
 @media print{.view-zoom{display:none!important}.chapter-shell{transform:none!important}}
+/* Comparison charts use parallel columns instead of shrinking a tall stack. */
+@media(min-width:761px){
+ .workers .explorer{display:grid;grid-template-columns:minmax(0,56fr) minmax(0,44fr);align-items:center;gap:36px;max-width:none}
+ .workers .chart-stage{height:340px}.workers .chart-reading{margin:0;padding:0;max-width:none}
+ .workers .chart-reading h3{font-size:32px;line-height:1.2}.workers .reading-body p{font-size:19px;line-height:1.55}
+ .people-2{flex-direction:row;gap:45px}.people-2 .people-art{width:25%;max-width:240px}.people-2 .people-icon{height:220px}.people-2 .story-copy{max-width:650px}
+ .matrix .explorer{display:grid;grid-template-columns:minmax(0,62fr) minmax(0,38fr);gap:26px;align-items:center}
+ .matrix .chart-stage{height:360px}.matrix .chart-reading{margin:0;padding:0;max-width:none}
+ .matrix .chart-reading h3{font-size:32px;line-height:1.15}.matrix .reading-body p{font-size:19px;line-height:1.5}
+ .matrix .chart-caption{max-width:none}.matrix .reading-list{gap:6px}.matrix .reading-takeaway{font-size:17px}
+}

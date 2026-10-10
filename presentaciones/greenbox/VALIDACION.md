@@ -52,3 +52,6 @@ Cambios limitados a Greenbox, basados en el último árbol del repositorio y act
 
 ## Corrección: mantener zoom al navegar
 La regla anterior de restablecer automáticamente al avanzar queda sustituida. Se conserva el nivel de zoom al cambiar capítulo o subtema, avanzar animaciones, retroceder y redimensionar. Comprobadas 14 flechas consecutivas, saltos de capítulo, pestañas, transición suave, tamaños de escritorio y móvil; 150% permanece aplicado al contenido y al indicador. Ajustar y Escape vuelven a 100%. Sin errores JavaScript en estas pruebas.
+
+## Empleo y Matriz de Valor en horizontal
+27 estados de los capítulos de trabajadores y matriz comprobados en 1366×768, 1440×900 y 1024×768: textos, ilustraciones, gráficos y fuentes dentro del encuadre, sin desbordamientos detectados. Barras seleccionables y comparación, filtros internos + secundarios, conservación de zoom al avanzar y móvil 390×844 / 844×390 comprobados. Sin errores JavaScript; revisión visual de empleo y matriz en columnas.

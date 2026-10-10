@@ -3,7 +3,7 @@
 Presentación académica de 15 capítulos y 51 estados de explicación. El contenido se recorre con desplazamiento vertical normal; los controles de exposición permiten avanzar subtema por subtema. Se conservan los temas, fuentes, imágenes y cinco gráficos de la versión anterior.
 
 ## Abrir
-https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=zoom2
+https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=horizontal1
 
 Puede abrirse directamente o servirse con `python -m http.server 8000`. No requiere compilación, cuenta, conexión a fuentes tipográficas externas ni extensiones.
 
@@ -59,3 +59,6 @@ El control flotante Zoom permanece visible en el lateral derecho, separado de Op
 Con zoom activo, arrastrar texto o fondo mueve la vista ampliada; enlaces, botones y gráficos mantienen su propia interacción. El zoom usa transición de 0,42 segundos con movimiento activo. El nivel de zoom se conserva al cambiar capítulo, subtema o tamaño de ventana; solo se restablece mediante Ajustar o Escape. Se conserva el zoom de cámaras de gráficos, que funciona independientemente.
 
 Los pies, fuentes y aclaraciones de gráficos tienen un tamaño base ligeramente mayor. El ajuste automático de encuadre mide el diseño antes de su transformación para no anular el zoom elegido.
+
+## Comparación en paralelo
+Empleo y Matriz de Valor colocan gráfico y explicación en columnas en escritorio, con párrafos más grandes y sin apilar todo en el centro. El subtema Mujeres también sitúa ilustración y texto en paralelo. En móvil se conserva lectura vertical. La cadena mantiene su vista panorámica; el zoom elegido continúa al navegar.

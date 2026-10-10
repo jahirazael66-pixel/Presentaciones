@@ -88,3 +88,6 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 
 ## Corrección de persistencia del zoom
 La preferencia del usuario es conservar el zoom al navegar, incluso entre capítulos. Se retira el restablecimiento automático: mantener nivel y desplazamiento, limitándolo al contenido nuevo. El origen de transformación del nuevo capítulo se calcula en sus coordenadas locales para no depender de su posición antes del desplazamiento suave. Ajustar y Escape siguen restaurando 100%.
+
+## Empleo y matriz en paralelo
+El apilamiento centrado seguía reduciendo texto de empleo. Se distribuyen barras y explicación en columnas, con párrafos de 19 px antes del ajuste de encuadre. La Matriz de Valor utiliza también columnas para explicar cuadrantes y grupos sin una larga pila vertical. El subtema Mujeres sitúa ilustración y texto lado a lado. Móvil conserva el apilamiento; cadena mantiene panorama.

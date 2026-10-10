@@ -67,3 +67,5 @@ Combinar diagramas con fotografía real del caso; dar crédito y distinguir imag
 Ofrecer un control visible y directo, separado de menús o cinta de opciones, para graduar el tamaño de lectura con transición suave. Incluir retorno sencillo al contexto completo y desplazamiento de la vista ampliada. Mantener operables gráficos, filtros y navegación.
 
 El nivel de zoom elegido debe conservarse al avanzar o retroceder en capítulos, subtemas y animaciones. Restablecerlo solo por una acción explícita del usuario.
+
+Cuando una comparación o matriz acumule texto debajo del gráfico, probar composición horizontal para priorizar lectura. Empleo combina barras y explicación lado a lado; mantener variedad en los demás capítulos, especialmente la cadena panorámica.
