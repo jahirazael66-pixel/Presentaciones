@@ -20,6 +20,16 @@ La revisión corrige la clasificación de administración, finanzas y RR.HH. com
 - Reveal.js 5.2.1 — MIT; fuente: https://github.com/hakimel/reveal.js . Distribución obtenida de jsDelivr; licencia en `assets/vendor/reveal-LICENSE`.
 - Apache ECharts 5.6.0 — Apache-2.0; fuente: https://github.com/apache/echarts . Licencia y NOTICE en `assets/vendor/`.
 - Manrope e Inter — SIL Open Font License 1.1. Archivos obtenidos de Google Fonts. Licencias en `assets/fonts/`.
-- No se necesita GSAP: Reveal.js, ECharts y CSS cubren las transiciones requeridas sin agregar otra dependencia.
+- No se añade GSAP: Reveal.js gestiona navegación y fragmentos; ECharts anima el gráfico; la Web Animations API del navegador gestiona las entradas secuenciadas y el dibujo de iconos. Esta implementación permite cancelar animaciones y respetar movimiento reducido sin otra dependencia.
 
 No se usan CDNs durante la exposición. Las consultas a fuentes externas requieren internet. Los archivos fuente pueden editarse sin compilación ni gestor de paquetes.
+
+## Investigación de movimiento y exposición · revisión 2
+
+- Reveal.js, Fragments: https://revealjs.com/fragments/ — avance incremental y eventos fragmentshown/fragmenthidden.
+- Reveal.js, Transitions: https://revealjs.com/transitions/ — transiciones por diapositiva.
+- Reveal.js, Auto-Animate: https://revealjs.com/auto-animate/ — opción investigada; no se utiliza para evitar emparejamientos ambiguos entre escenas diferentes.
+- MDN, Element.animate(): https://developer.mozilla.org/en-US/docs/Web/API/Element/animate — animaciones nativas con objetos cancelables.
+- GSAP, Timeline y matchMedia: https://gsap.com/docs/v3/GSAP/gsap.timeline() y https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/ — alternativas investigadas; no añadidas como dependencias.
+
+Las cifras animadas siempre terminan en los valores documentados. Los pasos de la cadena, el ciclo de compost y las conexiones visuales son ilustraciones conceptuales. La animación no representa cantidades, tasas o resultados nuevos.

@@ -1,14 +1,16 @@
 # Greenbox · Del campo al mundo
 
-Presentación HTML académica completa: 15 diapositivas, cadena de valor progresiva, gráfico interactivo, 8 fichas de estándares, matriz de 13 stakeholders, fuentes y notas del expositor.
+Presentación HTML académica completa: 15 diapositivas, 11 escenas guiadas y 36 puntos de exposición. Incluye transiciones por tema, cadena de valor por etapas, gráfico interactivo, 8 fichas de estándares filtrables, matriz de 13 stakeholders, fuentes y notas del expositor.
 
 ## Abrir y presentar
 
 1. Extrae el ZIP completo. Conserva la estructura de carpetas.
 2. Abre `index.html` en un navegador moderno. No requiere instalar paquetes ni conexión a internet para presentar; los enlaces a fuentes sí necesitan internet.
-3. Usa las flechas o los botones de navegación. La diapositiva de cadena de valor revela sus etapas en cada avance.
+3. Usa las flechas o los botones de navegación. En las escenas, cada avance muestra el siguiente subtema antes de pasar a la siguiente diapositiva. Las pestañas permiten elegir directamente un punto; ← retrocede al punto anterior. El pie indica el punto actual.
 4. Usa **Índice** para saltar de diapositiva, **Notas** para consultar el guion y **Pantalla completa** para exponer. Escape cierra los diálogos; Escape fuera de un diálogo abre la vista general de Reveal.js. F11 es una alternativa para pantalla completa.
-5. En la matriz, elige un filtro y después un grupo. Las tarjetas de certificaciones abren su detalle.
+5. En la matriz, elige un filtro y después un grupo. En certificaciones, filtra por orgánicos, inocuidad u otros requisitos y abre una tarjeta para consultar su detalle.
+6. Usa **↻** para repetir la animación del punto actual y **Animación: sí/no** para activar o desactivar movimiento. El sistema respeta la preferencia de movimiento reducido. El gráfico laboral tiene un botón propio para repetir su crecimiento.
+7. La navegación superior permite saltar entre Empresa, RSE, Certificaciones, Stakeholders y Cierre.
 
 Para servirlo localmente, desde esta carpeta: `python -m http.server 8000`. Abre `http://localhost:8000`.
 
@@ -20,12 +22,14 @@ Destino sugerido: repositorio `jahirazael66-pixel/Presentaciones`.
 2. En Settings → Pages, selecciona Deploy from a branch, rama `main`, carpeta `/ (root)` y Save. Si Pages ya está configurado, conserva su configuración actual.
 3. Espera que termine el despliegue. La ruta esperada será `https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/`.
 
-La presentación está preparada para publicar; esta entrega no modifica ni publica automáticamente el repositorio.
+Esta versión es una revisión local pendiente de autorización para sustituir los archivos de Greenbox en GitHub. El lobby conserva el mismo acceso.
 
 ## Archivos
 
 - `index.html`: contenido y notas de las 15 diapositivas.
 - `assets/css/`: identidad, retícula, tipografías y movimiento reducido.
+- `assets/js/motion.js`: escenas, fragmentos sincronizados, animaciones nativas, filtros de estándares y movimiento reducido.
+- `assets/css/motion.css`: composiciones de escenas y transiciones visuales.
 - `assets/js/main.js`: navegación, diálogos, certificaciones y filtros.
 - `assets/js/charts.js`: gráfico ECharts con alternativa legible.
 - `assets/js/stakeholders.js`: 13 registros y referencias.
