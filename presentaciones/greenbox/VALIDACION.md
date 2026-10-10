@@ -22,3 +22,13 @@ No se añadieron cifras o certificados para justificar nuevos gráficos. La matr
 
 ## Publicación
 Cambios limitados a Greenbox, basados en el último árbol del repositorio y actualización de rama con comprobación del commit esperado. La entrega se verifica contra GitHub Pages tras completar el despliegue.
+
+## Corrección de encuadre y contenido proyectado
+- 15 capítulos y 51 estados: ISO pasa de tres estados a un único proyecto documentado.
+- 153 estados completos comprobados al avanzar con el botón real en 1366×768, 1440×900 y 1024×768. Títulos, textos, imágenes, controles de subtemas, gráficos, notas y fuentes quedan dentro del área visible bajo el encabezado; sin fallas detectadas.
+- 150 transiciones inversas con el botón anterior: alineación final comprobada.
+- Transición suave de 0,7 segundos a un capítulo lejano y avance de subtema: mantiene el destino seleccionado y llega al margen correcto.
+- Teclado izquierda/derecha funciona también con foco en los botones de navegación. Entrada y salida de pantalla completa comprobadas.
+- Móvil 390×844: conserva lectura vertical y no presenta desbordamiento horizontal en el capítulo comprobado.
+- Recorrido completo de contenido visible: retirados avisos de verificación pendiente. Citas y pies de gráficos conservados. ISO no afirma obtención de un certificado.
+- Sin errores JavaScript durante estas pruebas.

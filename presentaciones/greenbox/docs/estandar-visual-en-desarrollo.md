@@ -51,3 +51,9 @@ Combinar diagramas con fotografía real del caso; dar crédito y distinguir imag
 - Centrar bloques explicativos y equilibrar márgenes. Variar la relación entre texto e imagen; no colocar siempre texto en el mismo lado.
 - Evitar duplicar información de portada y empresa, especialmente la tarjeta Perú/origen.
 - La página enseña por sí misma y conserva focos independientes con retorno al contexto. La navegación nunca debe cubrir el contenido.
+
+## Exposición vertical y notas orales
+- Al usar flechas, mostrar el capítulo completo y bien alineado debajo del encabezado; mantener una transición suave entre capítulos y recalcular el encuadre al cambiar subtema.
+- Mantener desplazamiento libre para lectura vertical, además de controles de exposición.
+- No proyectar apartados de “falta comprobar”, “falta investigar” o advertencias repetidas. El expositor comunica esos límites oralmente. Conservar las citas y los pies metodológicos debajo de gráficos.
+- Eliminar la sección de comprobaciones pendientes de ISO sin atribuir certificaciones que las fuentes no acrediten.

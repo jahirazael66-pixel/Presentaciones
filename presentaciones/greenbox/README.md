@@ -1,9 +1,9 @@
 # Greenbox — recorrido vertical interactivo
 
-Presentación académica de 15 capítulos y 53 estados de explicación. El contenido se recorre con desplazamiento vertical normal; los controles de exposición permiten avanzar subtema por subtema. Se conservan los temas, fuentes, imágenes y cinco gráficos de la versión anterior.
+Presentación académica de 15 capítulos y 51 estados de explicación. El contenido se recorre con desplazamiento vertical normal; los controles de exposición permiten avanzar subtema por subtema. Se conservan los temas, fuentes, imágenes y cinco gráficos de la versión anterior.
 
 ## Abrir
-https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=vertical1
+https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=encuadre1
 
 Puede abrirse directamente o servirse con `python -m http.server 8000`. No requiere compilación, cuenta, conexión a fuentes tipográficas externas ni extensiones.
 
@@ -40,3 +40,8 @@ Las menciones y logos de estándares no prueban certificación vigente. Las foto
 - `docs/retroalimentacion-de-implementacion.md`: aprendizajes de implementación.
 
 La reforma solo afecta `presentaciones/greenbox/`; conserva el lobby y las demás presentaciones.
+
+## Encuadre de exposición
+En escritorio, cada capítulo se ajusta al espacio disponible bajo el encabezado. Flechas, índice y pestañas alinean la sección completa con una transición de 0,7 segundos cuando las animaciones están activadas. El encuadre se recalcula tras cambiar subtema, tamaño de ventana, fuentes o imágenes. La rueda y los gestos conservan el recorrido vertical normal; en móvil se mantiene lectura natural sin reducir todo a una pantalla.
+
+ISO contiene un solo estado dedicado al proyecto de gestión ambiental documentado en 2021. Se retiraron del contenido proyectado las aclaraciones de verificación pendiente, manteniendo citas, pies de gráficos y documentación para la explicación oral. No se convierte una mención o un proyecto en afirmación de certificado obtenido.

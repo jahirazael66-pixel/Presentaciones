@@ -65,3 +65,11 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 - Revisar fotografías además de cajas: una imagen puede caber perfectamente pero cortar el rostro. El agricultor se presenta completo mediante ajuste de contención.
 - No cargar recursos heredados que la versión actual no usa; conservarlos sin referencias mantiene historial sin añadir coste de carga.
 - La rapidez proviene de reutilizar datos y contratos probados, mientras se rediseña la estructura visual; documentar resultados de pruebas reales, no supuestos.
+
+## Corrección de encuadre — 10 octubre 2026
+- Revisar cajas dentro del capítulo no bastaba: las pruebas anteriores no comprobaban que el capítulo completo entrara en el viewport tras pulsar las flechas.
+- `scroll-padding-top` y `scroll-margin-top` aplicaban dos veces el espacio del encabezado. Se usa una sola referencia a su altura efectiva.
+- Escenas con altura natural mayor que el área disponible necesitan ajuste de exposición en escritorio. Medir cada estado y comprobar el encuadre final después de hacer zoom de diseño; conservar lectura vertical en móvil.
+- El desplazamiento suave nativo con un temporizador fijo podía liberar demasiado pronto la detección del capítulo. La transición actual conoce su finalización, conserva el destino elegido y admite interrupción manual.
+- Comprobar recorrido hacia adelante y hacia atrás, navegación con el foco en las flechas, cambios de tamaño y pantalla completa.
+- Retirar avisos pendientes del contenido proyectado según preferencia del usuario; conservar respaldo documental y límites para intervención oral. ISO explica el proyecto registrado, sin sugerir obtención de un certificado.

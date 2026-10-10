@@ -43,3 +43,27 @@
 @media(max-width:760px){.site-header{gap:9px;padding:12px 16px}.site-header .toolbar button{font-size:11px;padding:8px 9px}.site-header #position{font-size:10px;min-width:33px}.site-header .toolbar{gap:2px}.options-panel{top:calc(var(--header) + 8px);right:12px;bottom:auto}}
 
 .chart-stage svg{touch-action:pan-y}.chart-stage svg.zoomed{touch-action:none}.chart-tools button[data-zoom-in]::after{content:none}
+
+/* One header offset and one screen per chapter on desktop. Mobile keeps natural reading. */
+html{scroll-padding-top:0}#journey{padding-top:var(--header);overflow-anchor:none}
+.chapter{min-height:calc(100svh - var(--header));scroll-margin-top:var(--header)}
+.cover .hero-landscape{height:calc(100svh - var(--header));min-height:540px;padding-top:0}
+.iso-purpose{font-size:18px;line-height:1.6;max-width:650px;margin:24px auto 0;text-align:center}
+@media(min-width:761px){
+ .chapter{display:flex;align-items:center;min-height:calc(100svh - var(--header))}
+ .chapter-shell{width:100%;zoom:var(--frame-scale,1);padding-top:36px;padding-bottom:36px}
+ .cover .chapter-shell{zoom:1;padding:0}
+ .cover .hero-landscape{min-height:0}
+ .farm-photo{max-width:360px}.farm-photo img{max-height:205px;border-radius:65px 12px 65px 12px}
+ .network .chart-stage{height:340px}
+ .chapter-rail{max-height:calc(100svh - var(--header) - 18px);overflow-y:auto;top:calc(50% + var(--header)/2)}
+}
+@media(max-width:760px){.cover .hero-landscape{min-height:580px}}
+@media print{#journey{padding-top:0}.chapter{display:block;min-height:0}.chapter-shell{zoom:1!important}}
+@media(min-width:761px) and (max-height:900px){
+ .matrix .chart-stage{height:330px}.matrix .chart-reading{margin-top:12px}
+ .matrix .chart-reading h3{font-size:30px;margin:8px 0 10px}
+ .matrix .reading-body p{font-size:18px;line-height:1.4;margin-bottom:8px}
+ .matrix .reading-body small{line-height:1.4;margin:6px 0}
+ .matrix .reading-list{margin:8px 0;gap:5px}.matrix .reading-takeaway{margin-top:8px;font-size:15px}
+}
