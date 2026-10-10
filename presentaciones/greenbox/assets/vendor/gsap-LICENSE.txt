@@ -1,0 +1,5 @@
+GSAP 3.15.0
+License identifier: Standard 'no charge' license: https://gsap.com/standard-license.
+Official terms: https://gsap.com/standard-license/
+Source: https://gsap.com/
+Distributed from npm package gsap.

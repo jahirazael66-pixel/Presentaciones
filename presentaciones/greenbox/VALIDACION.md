@@ -1,21 +1,22 @@
-# Validación de la versión 2
+# Validación — reforma narrativa
 
-Ejecutada en Chromium mediante Playwright, con los recursos locales y formato de exposición 16:9. Fecha de revisión: 9 de octubre de 2026 (Lima).
+## Alcance
+15 escenas, 47 estados de subtema y 49 vistas contando portada y fuentes. Los temas y datos provienen de la versión anterior; no se añadieron afirmaciones empresariales nuevas. Se mantienen 13 stakeholders, clasificación interno/externo y primario/secundario, y cuatro cuadrantes de influencia/interés.
 
-- 15 diapositivas; 11 escenas; 36 puntos de exposición.
-- Los 36 puntos seleccionados y comprobados: solo un panel de contenido visible, pestaña y contador sincronizados.
-- Avance y retroceso por subtemas mediante botones comprobados.
-- Navegación por teclado, índice y notas del expositor comprobados.
-- Filtros de certificaciones: todos 8, orgánicos 4, inocuidad 2, otros requisitos 2.
-- Apertura y cierre de fichas de certificaciones comprobados.
-- Filtros de stakeholders: todos 13, internos primarios 5, internos secundarios 0, externos primarios 4, externos secundarios 4.
-- Selección de NESsT y actualización de detalle comprobadas.
-- Control de animación apagado: animaciones nativas desactivadas y transiciones `none` en todas las diapositivas.
-- Preferencia de movimiento reducido comprobada: movimiento apagado y transiciones `none`.
-- Los 36 puntos y las 15 diapositivas medidos a 1440 × 900: sin invasión del pie de fuentes ni desbordamiento vertical del panel.
-- Sin errores JavaScript ni solicitudes fallidas de recursos.
-- Vista de 390 × 844: sin desbordamiento horizontal del documento; el formato de exposición se escala.
-- Capturas revisadas de portada, cadena de valor, agricultores, ambiente, certificaciones, matriz y conclusiones.
-- Sintaxis JavaScript y referencias locales comprobadas.
+## Comprobaciones realizadas
+- Recorrido automatizado por todas las escenas y subtemas en Chromium con viewport de 1440 × 900.
+- Cero errores de JavaScript y cero textos que sobrepasen los límites de la diapositiva o invadan las referencias durante el recorrido.
+- Capturas revisadas de portada, cadena de valor, agricultores, certificaciones, red de stakeholders y Matriz de Valor.
+- Ajuste interno de familias de certificaciones, grupos de red, cuadrantes y justificaciones después de completar las etiquetas.
+- Navegación por flechas, retroceso de subtema, encabezados, índice, cierre de índice y repetición de secuencia.
+- Movimiento reducido: desactivación inicial, activación manual, persistencia después de recargar y desactivación posterior.
+- Identidad compartida de los 13 grupos entre red y matriz para Auto-Animate.
+- Controles e índice en viewport móvil de 390 × 844; modo de exposición conservado al redimensionar. Orientación horizontal recomendada para lectura.
+- Sintaxis de JavaScript revisada con Node.
+- Fuentes y bibliotecas locales con procedencia y licencias registradas.
 
-Esta revisión está preparada localmente y no se ha publicado en GitHub. Las pruebas no validan nuevos hechos empresariales ni certificaciones vigentes. No se probó esta revisión en Firefox, Safari ni en un despliegue público. Se conservan las cifras, referencias y reservas de evidencia de la versión anterior.
+## Límites
+No se verificaron nuevos certificados ni datos de la empresa. La matriz sigue siendo una valoración analítica y las ilustraciones son conceptuales. La revisión en Chromium no equivale a una prueba en todos los navegadores, equipos de proyección ni configuraciones de accesibilidad. La evaluación del estilo por el usuario sigue pendiente.
+
+## Publicación
+El despliegue y los archivos servidos en GitHub Pages se comprobarán al publicar. Las demás presentaciones y el lobby se conservan mediante una actualización de árbol limitada a `presentaciones/greenbox/`.

@@ -1,53 +1,35 @@
-# Greenbox · Del campo al mundo
+# Greenbox — presentación visual narrativa
 
-Presentación HTML académica completa: 15 diapositivas, 11 escenas guiadas y 36 puntos de exposición. Incluye transiciones por tema, cadena de valor por etapas, gráfico interactivo, 8 fichas de estándares filtrables, matriz de 13 stakeholders, fuentes y notas del expositor.
+Presentación HTML de 15 escenas para exposición académica. Conserva la información de la versión anterior y reorganiza su desarrollo mediante diagramas, ilustraciones SVG, texto integrado y secuencias de movimiento.
 
-## Abrir y presentar
+## Abrir
+https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/
 
-1. Extrae el ZIP completo. Conserva la estructura de carpetas.
-2. Abre `index.html` en un navegador moderno. No requiere instalar paquetes ni conexión a internet para presentar; los enlaces a fuentes sí necesitan internet.
-3. Usa las flechas o los botones de navegación. En las escenas, cada avance muestra el siguiente subtema antes de pasar a la siguiente diapositiva. Las pestañas permiten elegir directamente un punto; ← retrocede al punto anterior. El pie indica el punto actual.
-4. Usa **Índice** para saltar de diapositiva, **Notas** para consultar el guion y **Pantalla completa** para exponer. Escape cierra los diálogos; Escape fuera de un diálogo abre la vista general de Reveal.js. F11 es una alternativa para pantalla completa.
-5. En la matriz, elige un filtro y después un grupo. En certificaciones, filtra por orgánicos, inocuidad u otros requisitos y abre una tarjeta para consultar su detalle.
-6. Usa **↻** para repetir la animación del punto actual y **Animación: sí/no** para activar o desactivar movimiento. El sistema respeta la preferencia de movimiento reducido. El gráfico laboral tiene un botón propio para repetir su crecimiento.
-7. La navegación superior permite saltar entre Empresa, RSE, Certificaciones, Stakeholders y Cierre.
+También se puede servir esta carpeta con `python -m http.server 8000` y abrir `http://localhost:8000`. No requiere proceso de compilación, cuenta adicional ni extensiones del navegador para exponer.
 
-Para servirlo localmente, desde esta carpeta: `python -m http.server 8000`. Abre `http://localhost:8000`.
+## Navegar
+- Flechas del teclado o del menú: avanzar y retroceder por subtemas y escenas.
+- Encabezados de sección: saltar a empresa, cadena de valor, responsabilidad social, certificaciones, stakeholders o cierre.
+- Subtemas superiores: elegir el foco actual.
+- Índice: seleccionar cualquiera de las 15 escenas.
+- Repetir: volver a ejecutar la secuencia del punto actual.
+- Animación: activar o desactivar; la elección se conserva en este navegador cuando el almacenamiento local está disponible.
+- Pantalla completa y notas del expositor: controles auxiliares.
+- En teléfonos, usar orientación horizontal para mejorar la lectura. La presentación conserva el modo diapositivas al redimensionar.
 
-## Publicar en GitHub Pages
+## Diseño y recursos
+DM Sans para contenido y navegación; DM Serif Display para contraste editorial. Verde del logo, blanco, crema, verde oscuro y tonos suaves. Fuentes, logo, ilustraciones y bibliotecas necesarias se sirven desde el proyecto.
 
-Destino sugerido: repositorio `jahirazael66-pixel/Presentaciones`.
+Reveal.js mantiene navegación y Auto-Animate entre red y Matriz de Valor. GSAP 3.15.0, MotionPath, DrawSVG y MorphSVG coordinan recorridos, dibujo de conexiones y transformación de ilustraciones. El gráfico de empleo es un diagrama HTML local con dos valores reportados; no inventa una serie temporal. Los recursos de versiones anteriores se conservan pero no son dependencias de la nueva página.
 
-1. En el repositorio, crea una carpeta `presentaciones/greenbox` y sube **todo el contenido** de esta carpeta, incluidos `index.html` y `assets/`. No subas solamente el ZIP.
-2. En Settings → Pages, selecciona Deploy from a branch, rama `main`, carpeta `/ (root)` y Save. Si Pages ya está configurado, conserva su configuración actual.
-3. Espera que termine el despliegue. La ruta esperada será `https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/`.
+## Contenido y rigor
+No se investigaron ni agregaron nuevos datos empresariales en esta reforma. Las referencias y límites se conservan: datos documentados, declaraciones empresariales e inferencias. La vigencia de certificaciones sigue sin comprobarse. Los 13 stakeholders y sus posiciones en la matriz son los de la versión publicada anterior. Primario/secundario no equivale a influencia/interés.
 
-Esta versión es una revisión local pendiente de autorización para sustituir los archivos de Greenbox en GitHub. El lobby conserva el mismo acceso.
+El contenido esencial no abre globos ni ventanas emergentes. Índice y notas son utilidades independientes de la explicación. Las fuentes siguen accesibles mediante enlaces.
 
-## Archivos
+## Documentación reutilizable
+- `docs/estandar-visual-en-desarrollo.md`: preferencias expresas y criterios de futuras presentaciones.
+- `docs/retroalimentacion-de-implementacion.md`: decisiones, dificultades y mejoras observadas.
+- `VALIDACION.md`: resumen de verificaciones.
 
-- `index.html`: contenido y notas de las 15 diapositivas.
-- `assets/css/`: identidad, retícula, tipografías y movimiento reducido.
-- `assets/js/motion.js`: escenas, fragmentos sincronizados, animaciones nativas, filtros de estándares y movimiento reducido.
-- `assets/css/motion.css`: composiciones de escenas y transiciones visuales.
-- `assets/js/main.js`: navegación, diálogos, certificaciones y filtros.
-- `assets/js/charts.js`: gráfico ECharts con alternativa legible.
-- `assets/js/stakeholders.js`: 13 registros y referencias.
-- `assets/vendor/`: Reveal.js 5.2.1 y ECharts 5.6.0, con sus licencias.
-- `assets/fonts/`: Manrope e Inter locales.
-- `assets/images/`: logo original y SVG conceptual para favicon.
-- `docs/`: investigación y prompt originales; notas del expositor en Markdown.
-- `CREDITS.md`: fuentes, procedencia y límites de evidencia.
-- `VALIDACION.md`: comprobaciones ejecutadas.
-
-## Edición y rigor
-
-Edita el contenido en `index.html` y la matriz en `assets/js/stakeholders.js`. No se presentan las certificaciones como vigentes para todas las sedes y productos. ISO 14001 se muestra como proyecto documentado, no como certificado obtenido. El gráfico laboral compara cifras históricas publicadas, sin inventar fechas de inicio y fin. La asignación a los ODS es interpretativa.
-
-El diseño usa 16:9. En pantallas pequeñas se escala para conservar el formato de exposición; las notas y detalles tienen desplazamiento. Todos los controles interactivos admiten teclado. El texto de las fuentes ocupa una jerarquía secundaria y las referencias completas están al final.
-
-
-## Actualización: Matriz de Valor y animaciones
-La diapositiva 12 presenta los 13 stakeholders en una matriz de influencia/interés: administrar de cerca, mantener satisfechos, mantener informado y monitorear. Cada botón abre la evidencia, la clasificación y la justificación analítica; estas posiciones no son mediciones de Greenbox.
-
-El control de animaciones recuerda la selección en el navegador y permite activarlas con movimiento reducido del sistema. «Repetir ↻» vuelve a mostrar la animación actual. «Ayuda» explica la activación en Windows y la navegación. Los CSS y JS usan una versión de URL para evitar cargar copias anteriores.
+El estándar visual sigue sujeto a la evaluación estética del usuario. Las pruebas funcionales no sustituyen esa aprobación.

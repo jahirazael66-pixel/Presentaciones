@@ -33,3 +33,9 @@ No se usan CDNs durante la exposición. Las consultas a fuentes externas requier
 - GSAP, Timeline y matchMedia: https://gsap.com/docs/v3/GSAP/gsap.timeline() y https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/ — alternativas investigadas; no añadidas como dependencias.
 
 Las cifras animadas siempre terminan en los valores documentados. Los pasos de la cadena, el ciclo de compost y las conexiones visuales son ilustraciones conceptuales. La animación no representa cantidades, tasas o resultados nuevos.
+
+## Reforma visual narrativa
+- DM Sans y DM Serif Display: Google Fonts, archivos locales y licencias OFL incluidas en assets/fonts.
+- GSAP 3.15.0 y plugins MotionPath, DrawSVG y MorphSVG: gsap.com / paquete npm gsap. Términos oficiales en assets/vendor/gsap-LICENSE.txt.
+- Diagramas e ilustraciones SVG conceptuales realizados para esta presentación. No representan fotografías ni instalaciones verificadas.
+- Reveal.js conservado; Auto-Animate identifica los mismos stakeholders al pasar de red a matriz.
