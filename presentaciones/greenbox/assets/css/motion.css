@@ -3,3 +3,14 @@
 
 /* Fit the complete stakeholder selector; keep each source immediately accessible. */
 .stake-list{max-height:360px}.stake-list button,.stake-list button[aria-pressed=true]{min-height:43px;padding:8px 11px}.detail>a{display:block;font-size:12px;margin:0 0 12px}.detail .badge{margin-bottom:8px}
+
+/* Reduced motion is the default; an explicit presentation control can opt in. */
+@media(prefers-reduced-motion:reduce){
+ body.motion-on .reveal .slides section{transition:transform .7s cubic-bezier(.26,.86,.44,.985),opacity .7s cubic-bezier(.26,.86,.44,.985)!important}
+ body.motion-on .scene-tab:after{transition:transform .4s ease!important}
+ body.motion-on .route-progress{transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1)!important}
+ body.motion-on .wheel-progress{transition:stroke-dashoffset .9s ease!important}
+ body.motion-on .relation-node{transition:background .3s,transform .3s!important}
+ body.motion-on .closing-line{transition:width .5s!important}
+ body.motion-on .cert-grid button{transition:transform .2s,border-color .2s!important}
+}
