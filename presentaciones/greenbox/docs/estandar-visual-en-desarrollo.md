@@ -33,3 +33,9 @@ Revisar cada estado, contraste, alineación, textos, fuentes, teclado, índice, 
 - Animaciones distintas según la relación: crecimiento en barras, aparición por grupos, lectura por filas y acercamiento por etapas. Siempre ofrecer modo sin movimiento plenamente funcional.
 - Los gráficos de categorías no inventan métricas: una dispersión cualitativa solo utiliza alto/bajo; una composición de grupos no se interpreta como número de personas o peso económico.
 - Evaluar cada iteración con el usuario. Estos acuerdos documentan preferencias; no equivalen a memoria global de ChatGPT ni a una plantilla universal terminada.
+
+## Calibración tras la revisión del usuario
+- El acercamiento de la cadena de valor es una referencia aprobada de focalización: combinarlo con otras perspectivas en algunas escenas, sin repetirlo en todas.
+- Precisar empresa, procesos, productos, actores, fechas y referencias. Aumentar conocimiento por palabra, manteniendo subtítulos breves y focos directos.
+- Mantener dos niveles: la escena enseña la relación y muestra suficiente información; la exposición añade detalle y dinamismo.
+- Conservar el criterio académico del documento base y explicitar adaptaciones: no cambiar una clasificación discutible sin avisar ni confundir soporte con baja influencia.

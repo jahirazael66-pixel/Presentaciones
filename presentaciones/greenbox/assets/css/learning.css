@@ -70,3 +70,12 @@
 .chart-tools button:disabled{opacity:.4;cursor:default}
 .matrix .chart-reading h3{font-size:26px}
 .matrix .reading-list{max-height:100px;margin-top:4px;margin-bottom:6px}
+/* Perspective scenes isolate one relationship while keeping the explanation fixed. */
+.perspective-scene .explorer{grid-template-columns:68fr 32fr}
+.perspective-scene .chart-reading h3{font-family:'DM Serif Display';font-size:36px;font-weight:400}
+.perspective-scene .reading-body p{font-size:17px}
+.network .scene-steps button{font-size:11px;padding:9px 7px}
+.network .scene-steps button>span{margin-right:5px}
+.network .reading-list{max-height:140px}
+.matrix .reading-body small,.network .reading-body small{margin-bottom:6px}
+.network .chart-reading h3{font-size:26px}

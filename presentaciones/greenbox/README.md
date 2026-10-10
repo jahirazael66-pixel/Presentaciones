@@ -23,7 +23,7 @@ DM Sans para contenido y navegación; DM Serif Display para contraste editorial.
 Reveal.js mantiene la navegación por escenas y subtemas. GSAP 3.15.0, MotionPath, DrawSVG y MorphSVG coordinan recorridos, dibujo de conexiones y transformación de ilustraciones. Los cinco gráficos son SVG locales: barras de empleo, circular de grupos, dispersión cualitativa de stakeholders, flujo de cadena de valor y matriz de evidencia de estándares. `learning.js` controla selección, filtros y cámaras; `learning.css` define jerarquía y acentos. No se requieren nuevas bibliotecas ni servicios externos. Los recursos de versiones anteriores se conservan pero no son dependencias de la nueva página.
 
 ## Contenido y rigor
-No se investigaron ni agregaron nuevos datos empresariales en esta reforma. Las referencias y límites se conservan: datos documentados, declaraciones empresariales e inferencias. La vigencia de certificaciones sigue sin comprobarse. Los 13 stakeholders y sus posiciones en la matriz son los de la versión publicada anterior. Primario/secundario no equivale a influencia/interés.
+La revisión actual relee fuentes empresariales y NESsT para precisar actividad, productos, empleo, financiación y trazabilidad. Las referencias y límites se conservan: datos documentados, declaraciones empresariales e inferencias. La vigencia de certificaciones sigue sin comprobarse. Se conservan los 13 grupos; administración/finanzas y RR. HH. se restauran como internos secundarios en la adaptación funcional de Info.txt. La dirección financiera se valora con influencia alta por el cargo CFO documentado. Primario/secundario no equivale a influencia/interés.
 
 El contenido esencial no abre globos ni ventanas emergentes. Índice y notas son utilidades independientes de la explicación. Las fuentes siguen accesibles mediante enlaces.
 
@@ -37,8 +37,13 @@ El estándar visual sigue sujeto a la evaluación estética del usuario. Las pru
 ## Explorar los gráficos
 - Cadena de valor: elegir una etapa o subtema, acercar con +/−, arrastrar al acercarse y volver con «Vista completa».
 - Empleo: seleccionar una barra o «Comparar». Son 40 y 240 trabajadores en dos momentos reportados; +200 y +500% son cálculos derivados, no nuevos datos de campo.
-- Stakeholders: seleccionar un sector circular y un grupo. El gráfico cuenta 5 internos primarios, 4 externos primarios y 4 externos secundarios.
+- Stakeholders: seleccionar un sector circular y un grupo. El gráfico cuenta 3 internos primarios, 2 internos secundarios, 4 externos primarios y 4 externos secundarios.
 - Matriz de Valor: filtrar internos/externos y primarios/secundarios, seleccionar un cuadrante o punto, acercar, desplazar y regresar. La separación entre puntos no representa puntuaciones.
 - Certificaciones: seleccionar una fila para leer propósito, respaldo y límite de verificación. No se afirma vigencia de certificados sin evidencia.
 
 Todos los elementos seleccionables admiten Tab y Enter o espacio. El zoom tiene botones y rueda; el desplazamiento admite arrastre con ratón o puntero táctil. Las explicaciones permanecen en pantalla, separadas del área móvil del gráfico.
+
+## Nuevos focos y precisión
+Agricultores y ambiente ahora combinan vista general, acercamiento por foco y retorno al contexto. La matriz de evidencia permite enfocar una fila. Se conservan las composiciones distintas en las demás escenas.
+
+La adaptación funcional utiliza cuatro categorías; no es un organigrama oficial ni una clasificación universal de empleados. Los criterios y límites, junto con el respaldo de cada grupo, se explican en `docs/revision-de-contenido-y-stakeholders.md`. En el enfoque clásico de Clarkson los empleados son primarios; la distinción de funciones internas de apoyo corresponde al documento base del usuario.
