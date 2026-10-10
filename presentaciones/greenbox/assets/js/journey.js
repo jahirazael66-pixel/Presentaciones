@@ -14,16 +14,16 @@ const figures=$$('.big-figures>div,.product-photo-set:not([hidden]) figure,.mark
 if(s.dataset.scene==='relationships')tl.fromTo($('.relation-line',s),{strokeDasharray:260,strokeDashoffset:260},{strokeDashoffset:0,duration:.9},0);
 }
 function hash(s,p){history.replaceState(null,'',`#${s.id}/${p}`)}
-function setStep(h,p,entry=false){h=Math.max(0,Math.min(sections.length-1,h));p=Math.max(0,Math.min(points[h]-1,p));const s=sections[h];current=h;s.dataset.point=p;$$('[data-step]',s).forEach(b=>b.setAttribute('aria-pressed',Number(b.dataset.step)===p));$$('[data-panel]',s).forEach(e=>e.hidden=Number(e.dataset.panel)!==p);$$('[data-copy]',s).forEach(e=>e.hidden=Number(e.dataset.copy)!==p);if(window.GB_LEARNING)GB_LEARNING.sync(s,p);fit(s);controls();hash(s,p);animate(s,entry);seen.add(s)}
+function setStep(h,p,entry=false){h=Math.max(0,Math.min(sections.length-1,h));p=Math.max(0,Math.min(points[h]-1,p));const s=sections[h];current=h;s.dataset.point=p;$$('[data-step]',s).forEach(b=>b.setAttribute('aria-pressed',Number(b.dataset.step)===p));$$('[data-panel]',s).forEach(e=>e.hidden=Number(e.dataset.panel)!==p);$$('[data-copy]',s).forEach(e=>e.hidden=Number(e.dataset.copy)!==p);if(window.GB_LEARNING)GB_LEARNING.sync(s,p);fit(s);controls();hash(s,p);animate(s,entry);seen.add(s);document.dispatchEvent(new CustomEvent('gb:state',{detail:{h,p}}))}
 function fit(s){
  if(!s)return;
  if(innerWidth<=760||s.id==='cover'){s.style.removeProperty('--frame-scale');return}
  const shell=$('.chapter-shell',s),room=innerHeight-$('.site-header').getBoundingClientRect().height-8;
  s.style.setProperty('--frame-scale',1);
- const scale=Math.min(1,room/shell.getBoundingClientRect().height);
+ const scale=Math.min(1,room/shell.offsetHeight);
  s.style.setProperty('--frame-scale',Math.max(.2,scale));
  // Zoom can change the available line width. Measure the final box, not stale geometry.
- const actual=shell.getBoundingClientRect().height;if(actual>room)s.style.setProperty('--frame-scale',Math.max(.2,scale*room/actual));
+ const actual=shell.offsetHeight*Number(s.style.getPropertyValue('--frame-scale'));if(actual>room)s.style.setProperty('--frame-scale',Math.max(.2,scale*room/actual));
 }
 function stopScroll(){if(scrollTween){scrollTween.kill();scrollTween=null}clearTimeout(scrollTimer);programScroll=false}
 function frame(s,smooth=true){

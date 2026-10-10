@@ -1,0 +1,17 @@
+/* Zoom the live chapter, preserving links, graph controls and data. */
+(function(){'use strict';
+const box=document.querySelector('#view-zoom'),range=box.querySelector('input'),plus=document.querySelector('#view-zoom-in'),minus=document.querySelector('#view-zoom-out'),reset=document.querySelector('#view-zoom-reset'),value=document.querySelector('#view-zoom-value'),tip=document.querySelector('#view-zoom-tip');
+let level=1,x=0,y=0,shell=null,section=null,state='',drag=null,tween=null,tipTimer=0;
+function limits(){const scale=Number(section?.style.getPropertyValue('--frame-scale'))||1;return{scale,maxX:(shell?.offsetWidth||innerWidth)*scale*(level-1)/2,maxY:(shell?.offsetHeight||innerHeight)*scale*(level-1)/2}}
+function paint(smooth=true){if(!shell)return;const bounds=limits();x=Math.max(-bounds.maxX,Math.min(bounds.maxX,x));y=Math.max(-bounds.maxY,Math.min(bounds.maxY,y));if(tween)tween.kill();const props={x:x/bounds.scale,y:y/bounds.scale,scale:level};if(smooth&&window.GB_MOTION?.isMotion())tween=gsap.to(shell,{...props,duration:.42,ease:'power2.out',overwrite:true});else gsap.set(shell,props);}
+function update(){const percent=Math.round(level*100);range.value=percent;range.setAttribute('aria-valuetext',`${percent} por ciento`);value.textContent=percent+'%';plus.disabled=level>=2;minus.disabled=level<=1;document.body.classList.toggle('reading-zoomed',level>1);box.classList.toggle('is-zoomed',level>1);}
+function clear(){if(tween)tween.kill();if(shell)gsap.set(shell,{clearProps:'transform,transformOrigin'});level=1;x=y=0;drag=null;clearTimeout(tipTimer);tip.hidden=true;document.body.classList.remove('reading-zoom-dragging');update();}
+function bind(){const s=GB_DECK.getCurrentSlide(),key=s.id+'/'+s.dataset.point;if(key!==state){clear();section=s;shell=s.querySelector('.chapter-shell');state=key;}}
+function zoom(percent){bind();const was=level;level=Math.max(1,Math.min(2,Number(percent)/100));if(was===1&&level>1){const r=shell.getBoundingClientRect(),base=limits().scale,header=document.querySelector('.site-header').getBoundingClientRect().bottom;gsap.set(shell,{transformOrigin:`${(innerWidth/2-r.left)/base}px ${(header+(innerHeight-header)/2-r.top)/base}px`});tip.hidden=false;clearTimeout(tipTimer);tipTimer=setTimeout(()=>tip.hidden=true,2800);}if(level===1){x=y=0;tip.hidden=true;}update();paint();}
+plus.onclick=()=>zoom((level+.1)*100);minus.onclick=()=>zoom((level-.1)*100);reset.onclick=()=>zoom(100);range.addEventListener('input',()=>zoom(range.value));
+document.addEventListener('gb:state',bind);document.addEventListener('pointerdown',e=>{if(level<=1||!shell.contains(e.target)||e.button!==0||e.target.closest('button,a,input,svg,[role=button]'))return;drag={startX:e.clientX,startY:e.clientY,x,y,pointer:e.pointerId,target:e.target};if(tween)tween.kill();e.target.setPointerCapture(e.pointerId);document.body.classList.add('reading-zoom-dragging');tip.hidden=true;e.preventDefault();});
+document.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.pointer)return;x=drag.x+e.clientX-drag.startX;y=drag.y+e.clientY-drag.startY;paint(false)});
+function end(e){if(drag&&e.pointerId===drag.pointer){drag=null;document.body.classList.remove('reading-zoom-dragging')}}document.addEventListener('pointerup',end);document.addEventListener('pointercancel',end);
+window.addEventListener('resize',()=>{clear();state='';bind()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&level>1){zoom(100);e.preventDefault()}});
+window.GB_VIEWZOOM={set:zoom,reset:()=>zoom(100),level:()=>level};bind();
+})();

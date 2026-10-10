@@ -79,3 +79,9 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 - La fotografía de agricultores competía con la información principal. Se retiró de ese capítulo, conservando el archivo original y los créditos.
 - Los filtros exclusivos impedían explicar categorías cruzadas. Se implementan selecciones independientes por ubicación y tipo: unión dentro de cada dimensión, intersección entre dimensiones.
 - Cambiar el foco de cámara no debe borrar una combinación seleccionada. Vista completa conserva los filtros y Todos los limpia.
+
+## Zoom de lectura sin menú
+- Un encuadre completo puede hacer pequeños algunos textos. Añadir una cámara de lectura sobre el capítulo vivo permite ampliarlo sin duplicar gráficos ni perder eventos.
+- El control queda en el margen lateral, con botones, deslizador vertical, porcentaje y retorno Ajustar. El nivel va de 100% a 200%; arrastre en texto/fondo mueve el contenido ampliado.
+- El ajuste automático no debe medir la caja transformada por el zoom del usuario: usar altura de diseño y escala de encuadre evita que lo compense reduciéndolo.
+- Excluir controles, enlaces y SVG del arrastre global conserva los filtros y las cámaras de gráficos. Restablecer al cambiar de subtema evita arrastrar un encuadre parcial a la explicación siguiente.

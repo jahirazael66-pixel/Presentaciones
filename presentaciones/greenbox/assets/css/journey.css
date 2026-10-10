@@ -84,3 +84,14 @@ html{scroll-padding-top:0}#journey{padding-top:var(--header);overflow-anchor:non
  .farm .chart-stage{height:360px}
 }
 @media(max-width:760px){.network .explorer{display:block}.network .chart-stage{height:330px}.filter-group{gap:3px;padding:3px}.filter-group>span{font-size:9px}.filter-status{font-size:11px}.donut-legend button{font-size:11px}}
+
+/* Direct reading zoom stays in the right gutter, outside Options. */
+.view-zoom{position:fixed;right:12px;top:calc(50% + var(--header)/2);transform:translateY(-50%);z-index:62;width:54px;border:1px solid var(--line);border-radius:26px;padding:10px 5px;background:#fffffff2;backdrop-filter:blur(12px);box-shadow:0 4px 24px #153f3014;display:flex;flex-direction:column;align-items:center;gap:5px}
+.view-zoom-label{font-size:10px;color:var(--muted)}.view-zoom button{background:transparent;border-radius:50%;width:36px;min-height:34px;padding:5px;font-size:24px;line-height:1}
+.view-zoom button:hover{background:var(--mint)}.view-zoom input{writing-mode:vertical-lr;direction:rtl;width:24px;height:105px;accent-color:var(--ink);cursor:pointer;margin:3px 0}
+.view-zoom #view-zoom-reset{border-radius:12px;width:44px;font-size:11px;line-height:1.4}.view-zoom #view-zoom-reset span{display:block;font-size:9px;color:var(--muted)}
+#view-zoom-tip{position:absolute;right:65px;bottom:0;width:130px;background:var(--ink);color:white;padding:10px;border-radius:12px;font-size:11px;line-height:1.4;text-align:center;pointer-events:none}
+.reading-zoomed .chapter-shell{cursor:grab;touch-action:none}.reading-zoom-dragging .chapter-shell{cursor:grabbing;user-select:none}.reading-zoomed .chapter-shell button,.reading-zoomed .chapter-shell a{cursor:pointer}
+.chapter footer,.chart-caption,.story-copy .evidence,.reading-body small,.reading-body a{font-size:12px}
+@media(max-width:760px){.view-zoom{right:6px;width:44px;padding:8px 2px}.view-zoom button{width:32px;font-size:21px;min-height:30px}.view-zoom input{height:85px}.view-zoom #view-zoom-reset{width:39px;font-size:10px}.view-zoom-label{font-size:9px}#view-zoom-tip{right:52px;width:115px}.chapter footer,.chart-caption,.story-copy .evidence,.reading-body small{font-size:11px}}
+@media print{.view-zoom{display:none!important}.chapter-shell{transform:none!important}}

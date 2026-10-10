@@ -40,3 +40,12 @@ Cambios limitados a Greenbox, basados en el último árbol del repositorio y act
 - Circular: cuatro botones de leyenda seleccionables y sincronizados con explicación. Foto de agricultores retirada del capítulo.
 - Móvil 390×844 y 844×390: capítulos afectados sin desbordamiento horizontal; filtros externos + secundarios muestran cuatro grupos.
 - Sin errores JavaScript durante estas pruebas; revisión visual de capturas del circular y agricultores.
+
+## Zoom de lectura visible
+- +/−, deslizador 100–200% con pasos de 5, porcentaje y texto accesible: comprobados.
+- El tamaño real de una cabecera aumenta proporcionalmente; la transición presenta escala intermedia y llega a 180% tras 0,42 segundos.
+- Arrastre en párrafo desplaza la vista; Ajustar y Escape vuelven a 100%. Teclado del deslizador comprobado.
+- Avanzar de subtema restablece el encuadre completo. Los filtros siguen operativos y el ajuste automático no reduce el zoom elegido.
+- 153 estados en 1366×768, 1440×900 y 1024×768 al tamaño normal, sin cortes o desbordamientos detectados.
+- Móvil 390×844 y 844×390: control dentro de pantalla, ampliación y retorno operativos; sin desbordamiento horizontal del documento.
+- Sin errores JavaScript; revisión visual de vista normal y ampliada.

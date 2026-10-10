@@ -62,3 +62,6 @@ Combinar diagramas con fotografía real del caso; dar crédito y distinguir imag
 - Cuando el encuadre reduce un gráfico demasiado, colocar gráfico y explicación en paralelo en escritorio; apilar en móvil.
 - Priorizar la relación visual que enseña el tema sobre fotografías decorativas que resten espacio.
 - Los filtros deben permitir comparar grupos y combinar criterios sin borrar selecciones al cambiar la perspectiva. Mostrar qué combinación está activa.
+
+## Zoom de lectura accesible al puntero
+Ofrecer un control visible y directo, separado de menús o cinta de opciones, para graduar el tamaño de lectura con transición suave. Incluir retorno sencillo al contexto completo y desplazamiento de la vista ampliada. Mantener operables gráficos, filtros y navegación.

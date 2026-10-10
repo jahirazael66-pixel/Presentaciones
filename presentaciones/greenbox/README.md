@@ -3,7 +3,7 @@
 Presentación académica de 15 capítulos y 51 estados de explicación. El contenido se recorre con desplazamiento vertical normal; los controles de exposición permiten avanzar subtema por subtema. Se conservan los temas, fuentes, imágenes y cinco gráficos de la versión anterior.
 
 ## Abrir
-https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=filtros1
+https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/greenbox/?v=zoom1
 
 Puede abrirse directamente o servirse con `python -m http.server 8000`. No requiere compilación, cuenta, conexión a fuentes tipográficas externas ni extensiones.
 
@@ -52,3 +52,10 @@ El circular de stakeholders se presenta junto a la explicación en escritorio, c
 En la Matriz de Valor, los filtros se combinan en dos dimensiones: ubicación (internos/externos) y tipo (primarios/secundarios). Dentro de una dimensión se suman las opciones; entre dimensiones se cruzan. Ejemplos: internos + primarios = 3 grupos; internos + secundarios = 2; externos + primarios = 4; externos + secundarios = 4. Seleccionar ambos tipos muestra primarios y secundarios, limitado por la ubicación si está seleccionada. Una dimensión sin selección incluye todas sus opciones.
 
 Cada botón permite seleccionar y deseleccionar. La combinación permanece al avanzar por cuadrantes y restablecer cámara; Todos limpia los filtros. El indicador muestra las opciones y el total de grupos visibles.
+
+## Zoom de lectura directo
+El control flotante Zoom permanece visible en el lateral derecho, separado de Opciones. +/− cambian en 10 puntos; el deslizador gradúa entre 100% y 200% en pasos de 5. El porcentaje es relativo al encuadre completo del capítulo. Ajustar o Escape vuelven a 100%.
+
+Con zoom activo, arrastrar texto o fondo mueve la vista ampliada; enlaces, botones y gráficos mantienen su propia interacción. El zoom usa transición de 0,42 segundos con movimiento activo. Cambiar capítulo o subtema restablece el encuadre completo. Se conserva el zoom de cámaras de gráficos, que funciona independientemente.
+
+Los pies, fuentes y aclaraciones de gráficos tienen un tamaño base ligeramente mayor. El ajuste automático de encuadre mide el diseño antes de su transformación para no anular el zoom elegido.
