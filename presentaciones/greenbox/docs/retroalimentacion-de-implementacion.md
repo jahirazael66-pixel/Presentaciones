@@ -73,3 +73,9 @@ Para mejorar rapidez y rigor: leer primero el criterio del documento base; regis
 - El desplazamiento suave nativo con un temporizador fijo podía liberar demasiado pronto la detección del capítulo. La transición actual conoce su finalización, conserva el destino elegido y admite interrupción manual.
 - Comprobar recorrido hacia adelante y hacia atrás, navegación con el foco en las flechas, cambios de tamaño y pantalla completa.
 - Retirar avisos pendientes del contenido proyectado según preferencia del usuario; conservar respaldo documental y límites para intervención oral. ISO explica el proyecto registrado, sin sugerir obtención de un certificado.
+
+## Tamaño de gráficos y filtros combinados
+- El ajuste de una escena completa puede reducir demasiado los gráficos si se apilan gráfico y texto. Para el circular se utiliza composición horizontal en escritorio, con leyenda HTML separada del SVG; así sus controles conservan legibilidad.
+- La fotografía de agricultores competía con la información principal. Se retiró de ese capítulo, conservando el archivo original y los créditos.
+- Los filtros exclusivos impedían explicar categorías cruzadas. Se implementan selecciones independientes por ubicación y tipo: unión dentro de cada dimensión, intersección entre dimensiones.
+- Cambiar el foco de cámara no debe borrar una combinación seleccionada. Vista completa conserva los filtros y Todos los limpia.

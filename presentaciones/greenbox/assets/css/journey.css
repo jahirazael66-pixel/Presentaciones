@@ -67,3 +67,20 @@ html{scroll-padding-top:0}#journey{padding-top:var(--header);overflow-anchor:non
  .matrix .reading-body small{line-height:1.4;margin:6px 0}
  .matrix .reading-list{margin:8px 0;gap:5px}.matrix .reading-takeaway{margin-top:8px;font-size:15px}
 }
+
+/* Give the circular chart a full column; explanations retain readable size. */
+.donut-legend{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px auto 0;max-width:460px}
+.donut-legend button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);border-radius:16px;background:transparent;font-size:12px;line-height:1.35;padding:9px 7px}
+.donut-legend button i{width:9px;height:9px;flex-shrink:0;border-radius:50%}
+.donut-legend button[aria-pressed=true]{background:white;border-color:var(--ink)}
+.filter-group{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:22px;padding:4px 6px}
+.filter-group>span{font-size:10px;color:var(--muted);padding:0 4px}.filter-status{text-align:center;font-size:12px;color:var(--muted);margin:5px 0 12px;line-height:1.4}
+@media(min-width:761px){
+ .network .explorer{display:grid;grid-template-columns:minmax(0,48fr) minmax(0,52fr);align-items:center;gap:35px}
+ .network .chart-side{width:100%;max-width:none}.network .chart-stage{height:350px}
+ .network .chart-caption{position:static;transform:none;width:auto;max-width:none}
+ .network .chart-reading{margin:0;padding:0 12px}.network .chart-reading h3{font-size:36px}
+ .network .reading-list{gap:6px}.network .reading-list button{padding:7px 10px;font-size:12px}
+ .farm .chart-stage{height:360px}
+}
+@media(max-width:760px){.network .explorer{display:block}.network .chart-stage{height:330px}.filter-group{gap:3px;padding:3px}.filter-group>span{font-size:9px}.filter-status{font-size:11px}.donut-legend button{font-size:11px}}

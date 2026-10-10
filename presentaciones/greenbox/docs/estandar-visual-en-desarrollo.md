@@ -57,3 +57,8 @@ Combinar diagramas con fotografía real del caso; dar crédito y distinguir imag
 - Mantener desplazamiento libre para lectura vertical, además de controles de exposición.
 - No proyectar apartados de “falta comprobar”, “falta investigar” o advertencias repetidas. El expositor comunica esos límites oralmente. Conservar las citas y los pies metodológicos debajo de gráficos.
 - Eliminar la sección de comprobaciones pendientes de ISO sin atribuir certificaciones que las fuentes no acrediten.
+
+## Legibilidad e interacción explicativa
+- Cuando el encuadre reduce un gráfico demasiado, colocar gráfico y explicación en paralelo en escritorio; apilar en móvil.
+- Priorizar la relación visual que enseña el tema sobre fotografías decorativas que resten espacio.
+- Los filtros deben permitir comparar grupos y combinar criterios sin borrar selecciones al cambiar la perspectiva. Mostrar qué combinación está activa.

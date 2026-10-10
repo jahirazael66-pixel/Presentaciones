@@ -32,3 +32,11 @@ Cambios limitados a Greenbox, basados en el último árbol del repositorio y act
 - Móvil 390×844: conserva lectura vertical y no presenta desbordamiento horizontal en el capítulo comprobado.
 - Recorrido completo de contenido visible: retirados avisos de verificación pendiente. Citas y pies de gráficos conservados. ISO no afirma obtención de un certificado.
 - Sin errores JavaScript durante estas pruebas.
+
+## Circular horizontal y matriz con filtros combinables
+- Las 16 combinaciones posibles de los cuatro filtros se comprobaron contra los 13 grupos. Resultados por categoría: internos primarios 3, internos secundarios 2, externos primarios 4, externos secundarios 4; primarios 7, secundarios 6.
+- Selección y deselección mediante botones reales; estados aria-pressed, persistencia entre cuadrantes y flechas, retorno de cámara y limpieza con Todos: comprobados.
+- Los 14 estados de agricultores, circular y matriz en 1366×768, 1440×900 y 1024×768: encuadre completo sin desbordamientos detectados.
+- Circular: cuatro botones de leyenda seleccionables y sincronizados con explicación. Foto de agricultores retirada del capítulo.
+- Móvil 390×844 y 844×390: capítulos afectados sin desbordamiento horizontal; filtros externos + secundarios muestran cuatro grupos.
+- Sin errores JavaScript durante estas pruebas; revisión visual de capturas del circular y agricultores.
