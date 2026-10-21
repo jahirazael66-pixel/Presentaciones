@@ -15,5 +15,5 @@ for(const n of flowNodes.filter(n=>n.type==='decision'))assert.deepEqual(outgoin
 assert.ok(!outgoing('missing').some(e=>e[1]==='stock'));assert.ok(!outgoing('bad').some(e=>e[1]==='stock'));assert.deepEqual(flowEdges.filter(e=>e[1]==='stock').map(e=>e[0]),['sign']);
 assert.equal(chapters.length,17);console.log('OK: reglas críticas, 16 combinaciones de liberación, indicador, pesos, decisiones y rutas del flujograma.');
 const {isoBlocks,whyQuestions,causeDetails}=await import('../src/iso-data.js');
-for(const b of Object.values(isoBlocks))for(const c of b.clauses){assert.ok(c.summary&&c.application&&c.evidence&&c.pdf&&c.stage);for(const f of c.focus)assert.ok(flowNodes.some(n=>n.id===f));assert.ok(c.legal.length>0);}
+for(const b of Object.values(isoBlocks))for(const c of b.clauses){assert.ok(c.summary&&c.application&&c.evidence&&c.stage);for(const f of c.focus)assert.ok(flowNodes.some(n=>n.id===f));assert.ok(c.legal.length>0);}
 assert.equal(whyQuestions.length,5);assert.equal(causeDetails.length,6);console.log('OK: ISO trazable a etapas reales del flujograma, síntesis y aplicación separadas, cinco preguntas y seis ramas.');

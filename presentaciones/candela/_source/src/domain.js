@@ -13,7 +13,7 @@ export const references=[
  ['R10','DS 004-2011-AG','Inocuidad agroalimentaria; modificado por DS 006-2016-MINAGRI','https://www.senasa.gob.pe/senasa/descargasarchivos/2014/11/DS.004-2011-AG-Rgto.-Inocuidad-Agroalimentaria.pdf'],
  ['R11','Codex CXC 1-1969','Principios de higiene y HACCP','https://www.fao.org/fao-who-codexalimentarius/codex-texts/codes-of-practice/es/'],
  ['R12','Codex CXC 75-2015','Alimentos de baja humedad','https://www.fao.org/fao-who-codexalimentarius/codex-texts/codes-of-practice/es/'],
- ['R13','ISO 9001:2015','Edición de la actividad académica; apartados A–D','https://www.iso.org/standard/62085.html']];
+ ['R13','ISO 9001:2015','Sistema de gestión de la calidad · apartados A–D','https://www.iso.org/standard/62085.html']];
 export const criteria=[
  ['Identidad y trazabilidad',20,true,'Origen, proveedor, lote y cadena de custodia.'],
  ['Aflatoxinas del lote',25,true,'Informe con B1 y suma conformes e identificación coincidente.'],
@@ -23,7 +23,7 @@ export const criteria=[
  ['Empaque y plagas',10,false,'Material apto, integridad y control de plagas.'],
  ['Gestión de desviaciones',5,false,'Bloqueo, comunicación, investigación y disposición.'],
  ['Integridad documental',5,false,'Autenticidad de informes y oportunidad de entrega.']];
-export function evaluateSupplier(scores){if(scores.length!==criteria.length||scores.some(s=>s===null))return {status:'No verificable',score:null,reason:'Falta completar la evidencia. No equivale a incumplimiento.'};const score=criteria.reduce((a,c,i)=>a+c[1]*scores[i]/2,0);if(criteria.some((c,i)=>c[2]&&scores[i]!==2))return {status:'No aprobar',score,reason:'Existe al menos una brecha crítica. El puntaje no la compensa.'};return {status:score>=85?'Aprobar':score>=70?'Condicionar':'No aprobar',score,reason:'Resultado de la regla académica propuesta, no evaluación real.'};}
+export function evaluateSupplier(scores){if(scores.length!==criteria.length||scores.some(s=>s===null))return {status:'No verificable',score:null,reason:'Falta completar la evidencia. No equivale a incumplimiento.'};const score=criteria.reduce((a,c,i)=>a+c[1]*scores[i]/2,0);if(criteria.some((c,i)=>c[2]&&scores[i]!==2))return {status:'No aprobar',score,reason:'Existe al menos una brecha crítica. El puntaje no la compensa.'};return {status:score>=85?'Aprobar':score>=70?'Condicionar':'No aprobar',score,reason:'Resultado según los criterios y ponderaciones seleccionados.'};}
 export function indicator(complete,total){if(!Number.isInteger(total)||!Number.isInteger(complete)||total<0||complete<0||complete>total)return null;return total===0?'N/A':Math.round(complete/total*1000)/10;}
 export function canRelease({evidence,b1,total,signature}){return evidence&&b1&&total&&signature;}
 export const flowNodes=[
@@ -35,7 +35,7 @@ export const flowNodes=[
  {id:'sample',x:360,y:535,label:['Tomar muestra','representativa'],who:'Personal competente / laboratorio',input:'Lote identificado y plan adecuado.',action:'Tomar, identificar y custodiar una muestra representativa.',record:'Plan, acta de muestreo y custodia.',result:'Muestra relacionada inequívocamente con el lote.'},
  {id:'report',x:650,y:535,type:'doc',label:['Analizar B1 y suma','Informe del lote'],who:'Laboratorio',input:'Muestra identificada.',action:'Analizar B1 y suma B1+B2+G1+G2 con método competente.',record:'Informe identificable del lote.',result:'Evidencia para revisión de Calidad.'},
  {id:'valid',x:360,y:755,type:'decision',label:['¿Evidencia','válida del lote?'],who:'Calidad',input:'Muestra, informe y trazabilidad.',action:'Comprobar vínculo, representatividad y validez del expediente.',record:'Revisión técnica del expediente.',result:'Sin evidencia válida se mantiene la retención.'},
- {id:'missing',x:1300,y:325,type:'hold',label:['Retener por falta','de evidencia'],who:'Calidad / Almacén',input:'Expediente insuficiente.',action:'Completar evidencia y evaluar la desviación documental.',record:'Bloqueo y solicitud de documentación.',result:'No afirmar que el alimento incumple solo por faltar un documento.'},
+ {id:'missing',x:1300,y:325,type:'hold',label:['Retener por falta','de evidencia'],who:'Calidad / Almacén',input:'Expediente insuficiente.',action:'Completar evidencia y evaluar la desviación documental.',record:'Bloqueo y solicitud de documentación.',result:'Completar la evidencia antes de decidir la conformidad del alimento.'},
  {id:'conform',x:650,y:755,type:'decision',label:['¿B1 y suma','conformes?'],who:'Calidad',input:'Resultados válidos del lote.',action:'Revisar ambos máximos y la regla de decisión aplicable.',record:'Dictamen de conformidad.',result:'Deben cumplirse ambos requisitos simultáneamente.'},
  {id:'bad',x:1300,y:755,type:'hold',label:['Retener lote','no conforme'],who:'Calidad / Almacén',input:'Uno o ambos máximos incumplidos.',action:'Bloquear y definir disposición segura con trazabilidad.',record:'No conformidad, decisión y disposición.',result:'No mezclar para diluir ni despachar como conforme.'},
  {id:'sign',x:950,y:755,type:'doc',label:['Autorizar','liberación'],who:'Calidad',input:'Expediente completo y conforme.',action:'Autorizar antes de habilitar producto.',record:'Informe revisado e identidad de quien autoriza.',result:'Autorización independiente y trazable.'},

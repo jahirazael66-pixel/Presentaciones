@@ -31,7 +31,7 @@ En el repositorio publicado, `_source/` conserva el proyecto reproducible. Tras 
 
 El incidente, la posible causa raíz, el flujo de control y las metas son académicos. No describen un incidente real ni un procedimiento auditado de Candela. Se distingue cadena general de referencia del proceso evaluado de recepción, cuarentena y liberación.
 
-La ficha del proveedor no asigna puntaje real: conserva NV. El ejercicio interactivo y el calculador del indicador están identificados como demostraciones. El indicador devuelve N/A sin liberaciones y rechaza numerador superior al total. Las brechas críticas impiden aprobar un proveedor, cualquiera sea el puntaje.
+La ficha del proveedor no asigna puntaje real: conserva NV. La evaluación interactiva del proveedor permite estudiar los criterios. El indicador mensual se presenta como una ficha estática compacta con fórmula, meta, responsable y frecuencia; sin liberaciones corresponde N/A. Las brechas críticas impiden aprobar un proveedor, cualquiera sea el puntaje.
 
 ## Imágenes
 

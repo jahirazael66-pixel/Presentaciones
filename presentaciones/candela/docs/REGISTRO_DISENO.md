@@ -14,3 +14,7 @@
 ## Retroalimentación incorporada
 
 Conservar estilo visual y reemplazar frases de encabezado por títulos temáticos. Explicar primero el caso y presentar al cierre la matriz A–D antes del desarrollo de cada bloque y las conclusiones. Los análisis necesitan preguntas, hipótesis, mecanismos y evidencia visibles: no basta con títulos de ramas o respuestas sin preguntas. Una relación ISO debe conectar cláusula, etapa de cadena, aplicación, normativa y registro.
+
+## Limpieza editorial
+
+El indicador debe poder leerse como una ficha pequeña, sin calculadora que domine la sección. Retirar avisos destacados y referencias a archivos de trabajo del contenido proyectado; conservar referencias externas, la redacción como escenario o propuesta y los controles que apoyan la comprensión.
