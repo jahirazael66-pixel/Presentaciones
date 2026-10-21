@@ -1,5 +1,5 @@
-export const chapters=[['inicio','El caso'],['empresa','Producto y destino'],['requisitos','Peligro y requisitos'],['contexto','ISO · Contexto A'],['cadena','Cadena y flujograma'],['escenario','Problema y riesgo B'],['causas','Análisis de causas'],['prevencion','Prevención y HACCP'],['proveedor','Evaluación del proveedor'],['control','Control operacional C'],['acciones','Corrección y acciones'],['mejora','Evaluación y mejora D'],['sintesis','Síntesis y decisión'],['fuentes','Fuentes']];
-export const stepCounts={cadena:16,escenario:4,causas:7,control:5};
+export const chapters=[['inicio','Caso Candela'],['empresa','Empresa, producto y mercado'],['requisitos','Aflatoxinas y requisitos'],['cadena','Cadena de procesos y flujograma'],['escenario','No conformidad y riesgo'],['causas','Ishikawa y cinco porqués'],['prevencion','Prevención y HACCP'],['proveedor','Evaluación del proveedor'],['control','Control de recepción y liberación'],['acciones','Corrección y acciones'],['matriz','Matriz ISO A–D'],['iso-a','A. Contexto y proceso'],['iso-b','B. Riesgo y objetivo'],['iso-c','C. Control operacional'],['iso-d','D. Evaluación y mejora'],['conclusiones','Conclusiones del caso'],['fuentes','Fuentes y referencias']];
+export const stepCounts={cadena:16,escenario:4,causas:7,control:5,'iso-a':3,'iso-b':2,'iso-c':5,'iso-d':3};
 export const references=[
  ['R1','Candela · Perfil comercial','Empresa, producto y destinos','https://perutradecommission.us/candela-peru/'],
  ['R2','UE 2023/915','Aflatoxinas: anexo I, 1.1.11','https://eur-lex.europa.eu/eli/reg/2023/915/oj'],

@@ -9,3 +9,7 @@ Fuentes externas identificadas R1–R13 en src/domain.js y en el capítulo Fuent
 Se utiliza ISO 9001:2015 por la consigna académica. La aplicación a las cláusulas es una propuesta del grupo y no acredita certificación ni conformidad integral de Candela.
 
 Sin datos históricos, no se crea un Pareto ni una serie estadística. Los ejercicios del indicador, proveedor y barrera de liberación se etiquetan y se mantienen separados del estado real del estudio.
+
+## Integración ISO revisada
+
+Se relee el PDF original Normativa Internacional ISO 9001.2015.pdf, páginas físicas 13–17, 22 y 25–32. Se utilizan paráfrasis, no reproducción de la norma. El bloque A–D se reúne al final: matriz, desarrollo A, B, C y D, conclusiones. Cada cláusula enlaza etapas del flujo ya construido, aplicación, requisitos alimentarios y evidencia. Los vínculos no atribuyen a ISO los límites legales ni a la legislación una firma interna universal de Calidad.

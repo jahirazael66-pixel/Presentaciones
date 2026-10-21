@@ -10,3 +10,7 @@
 - Diferencias: pareja tipográfica, contraste de escenas, paleta, flujograma empresarial y ejercicios de decisión.
 - Mejora de implementación: separar información real, hipótesis y demostraciones. Probar el primer foco y la navegación fuera del capítulo. Los cálculos se verifican mediante pruebas de reglas, no solo por aspecto visual.
 - Limitación: sin revisión visual automatizada de navegador en esta ejecución; consultar VALIDACION.md.
+
+## Retroalimentación incorporada
+
+Conservar estilo visual y reemplazar frases de encabezado por títulos temáticos. Explicar primero el caso y presentar al cierre la matriz A–D antes del desarrollo de cada bloque y las conclusiones. Los análisis necesitan preguntas, hipótesis, mecanismos y evidencia visibles: no basta con títulos de ramas o respuestas sin preguntas. Una relación ISO debe conectar cláusula, etapa de cadena, aplicación, normativa y registro.

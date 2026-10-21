@@ -1,11 +1,11 @@
 import {JSDOM,VirtualConsole} from 'jsdom';import{readFileSync,readdirSync}from'node:fs';import assert from'node:assert/strict';
 const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));vc.on('error',(...x)=>errors.push(x.join(' ')));
 const dom=new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>',{url:'https://example.org/presentaciones/candela/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc});const w=dom.window;
-w.matchMedia=()=>({matches:true,addListener(){},removeListener(){}});w.IntersectionObserver=class{observe(){}disconnect(){}};w.HTMLElement.prototype.scrollIntoView=function(){w.lastScroll=this.id};w.document.documentElement.requestFullscreen=async()=>{};
-const asset=readdirSync('dist/assets').find(x=>/^index-.*\.js$/.test(x));w.eval(readFileSync('dist/assets/'+asset,'utf8'));
-const wait=()=>new Promise(r=>setTimeout(r,35));await wait();
+w.matchMedia=()=>({matches:true,addListener(){},removeListener(){}});w.IntersectionObserver=class{observe(){}disconnect(){}};w.scrollHistory=[];w.HTMLElement.prototype.scrollIntoView=function(){w.lastScroll=this.id;w.scrollHistory.push(this.id)};w.document.documentElement.requestFullscreen=async()=>{};
+const asset=readFileSync('dist/index.html','utf8').match(/src="\.\/assets\/([^"]+\.js)"/)[1];w.eval(readFileSync('dist/assets/'+asset,'utf8'));
+const wait=()=>new Promise(r=>setTimeout(r,35));await new Promise(r=>setTimeout(r,180));
 const doc=w.document;const all=s=>[...doc.querySelectorAll(s)];const button=t=>all('button').find(b=>b.textContent.trim()===t);const click=async el=>{assert.ok(el,'Control requerido');el.dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true}));await wait();};
-assert.equal(all('.chapter').length,14);assert.equal(errors.length,0,errors.join('\n'));
+assert.equal(all('.chapter').length,17,errors.join('\n')||doc.body.textContent);assert.equal(errors.length,0,errors.join('\n'));
 await click(doc.querySelector('[aria-label="Ampliar lectura"]'));assert.equal(doc.querySelector('.zoom-reset b').textContent,'110%');
 await click(button('Cadena y proceso'));assert.equal(w.lastScroll,'cadena');assert.equal(doc.querySelector('.zoom-reset b').textContent,'110%');
 await click(button('Proceso evaluado'));assert.equal(all('.flow-node').length,14);await click(doc.querySelector('.flow-node'));assert.match(doc.querySelector('.flow-detail h3').textContent,/Inicio/);
@@ -16,6 +16,14 @@ for(const s of all('.criterion select')){s.value='2';s.dispatchEvent(new w.Event
 const s=all('.criterion select')[0];s.value='1';s.dispatchEvent(new w.Event('change',{bubbles:true}));await wait();assert.equal(doc.querySelector('.supplier-result h3').textContent,'No aprobar');
 for(const c of all('.release-gate input'))await click(c);assert.match(doc.querySelector('.release-gate h3').textContent,/habilitada/);await click(all('.release-gate input')[0]);assert.match(doc.querySelector('.release-gate h3').textContent,/retenido/);
 assert.match(doc.querySelector('.indicator-demo output').textContent,/N\/A/);
-await click(button('Opciones ☰'));await click(button('Índice completo'));assert.equal(all('.index-grid button').length,14);await click(all('.index-grid button')[11]);assert.equal(w.lastScroll,'mejora');assert.equal(doc.querySelector('.zoom-reset b').textContent,'110%');
+await click(button('Opciones ☰'));await click(button('Índice completo'));assert.equal(all('.index-grid button').length,17);await click(all('.index-grid button')[14]);assert.equal(w.lastScroll,'iso-d');assert.equal(doc.querySelector('.zoom-reset b').textContent,'110%');
+assert.deepEqual(all('.chapter').map(x=>x.id),['inicio','empresa','requisitos','cadena','escenario','causas','prevencion','proveedor','control','acciones','matriz','iso-a','iso-b','iso-c','iso-d','conclusiones','fuentes']);
+assert.equal(all('.why-chain li').length,5);for(const li of all('.why-chain li')){assert.ok(li.querySelector('h4').textContent.startsWith('¿Por qué'));assert.ok(li.querySelector('p').textContent.length>30);}
+assert.equal(all('.specific-branch').length,6);assert.equal(all('.specific-branch .fish-specific').length,12);
+assert.equal(all('.iso-matrix tbody tr').length,4);assert.equal(all('.iso-explorer').length,4);
+await click(doc.querySelector('.iso-matrix tbody tr:nth-child(2) button'));assert.equal(w.lastScroll,'iso-b');
+await click(doc.querySelector('#iso-b .clause-tabs button:nth-child(2)'));assert.match(doc.querySelector('#iso-b .clause-source h3').textContent,/6.2/);assert.match(doc.querySelector('#iso-b .clause-case').textContent,/30 días/);assert.ok(doc.querySelector('#iso-b .legal-connections a'));assert.equal(doc.querySelector('.zoom-reset b').textContent,'110%');
+w.scrollHistory=[];await click(doc.querySelector('#iso-b .block-actions button'));assert.ok(w.scrollHistory.includes('cadena'));assert.match(doc.querySelector('.top-controls>span').textContent,/04/);assert.match(doc.querySelector('.flow-detail h3').textContent,/Cuarentena/);
+await click(doc.querySelector('.iso-matrix tbody tr:nth-child(3) button'));await click(doc.querySelector('#iso-c .clause-tabs button:nth-child(3)'));assert.equal(all('#iso-c .subclauses article').length,6);
 await click(doc.querySelector('.zoom-reset'));assert.equal(doc.querySelector('.zoom-reset b').textContent,'100%');
-await click(button('Opciones ☰'));await click(button('Animaciones: no'));assert.equal(doc.documentElement.dataset.motion,'on');assert.equal(w.localStorage.getItem('candela-motion'),'true');await click(button('Animaciones: sí'));assert.equal(doc.documentElement.dataset.motion,'off');assert.equal(errors.length,0,errors.join('\n'));console.log('OK: montaje React, 14 capítulos, navegación, primer foco, zoom persistente, proveedor, barrera de liberación, índice e indicador N/A.');w.close();
+await click(button('Opciones ☰'));await click(button('Animaciones: no'));assert.equal(doc.documentElement.dataset.motion,'on');assert.equal(w.localStorage.getItem('candela-motion'),'true');await click(button('Animaciones: sí'));assert.equal(doc.documentElement.dataset.motion,'off');assert.equal(errors.length,0,errors.join('\n'));console.log('OK: montaje React, 17 capítulos, matriz al cierre, ISO aplicado a la cadena, preguntas y respuestas completas, navegación, primer foco, zoom persistente, proveedor, barrera de liberación, índice e indicador N/A.');w.close();

@@ -4,7 +4,7 @@
 
 - Compilación de producción de React con Vite y recursos locales.
 - Montaje en DOM sin errores capturados. No es una prueba visual de navegador.
-- Catorce capítulos y sus controles; navegación directa, índice y avance entre focos.
+- Diecisiete capítulos y sus controles; navegación directa, índice y avance entre focos.
 - Vista general independiente y acercamiento del primer símbolo del flujograma.
 - Zoom de lectura conservado al cambiar de capítulo y subtema; ajuste explícito a 100 %.
 - Ficha real en NV sin puntaje; ejercicio separado. Pesos suman 100.
@@ -22,3 +22,11 @@ No está disponible la herramienta admitida de revisión visual de navegador en 
 ## Comandos
 
 `npm run build`, `npm run check`, `node tests/ui.test.mjs` desde el proyecto fuente.
+
+## Comprobaciones de la revisión A–D
+
+- Orden: estudio de caso y cadena, matriz completa, A, B, C, D, conclusiones y fuentes.
+- Sin etiquetas de bloques A–D ni numeración de cláusulas en los capítulos iniciales de desarrollo del caso.
+- Cinco preguntas de porqués con sus cinco respuestas visibles y seis ramas de Ishikawa con dos causas concretas por rama.
+- Cláusulas respaldadas por el PDF ISO proporcionado: 4.1, 4.2, 4.4, 6.1, 6.2, 8.1, 8.4–8.7, 9.1, 10.2 y 10.3. Aplicaciones al caso separadas del resumen normativo.
+- Selección interactiva de cláusulas actualiza etapas relacionadas y permite abrir la misma cadena de procesos.
