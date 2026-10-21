@@ -36,3 +36,12 @@ No está disponible la herramienta admitida de revisión visual de navegador en 
 - Calculadora retirada; indicador estático compacto con fórmula, meta, responsable y frecuencia.
 - Sin avisos destacados de estudio académico ni referencias a archivos proporcionados por el usuario en el contenido proyectado.
 - Referencias externas y notas breves de fuentes conservadas. La redacción mantiene la diferencia entre escenario, hipótesis y propuesta sin agregar banners.
+
+## Revisión 4: índice literal y distribución del explorador ISO
+- 22 títulos (apartados y subapartados) cotejados con el índice de la traducción oficial ISO 9001:2015. Títulos entre comillas angulares; las aplicaciones mantienen redacción propia.
+- Matriz con acceso directo al apartado seleccionado, selector lateral persistente y traza de ocho etapas numeradas con recorrido de ida y vuelta.
+- Retirada definitiva de la ficha visual del indicador mensual. Se mantiene la explicación de seguimiento del bloque D.
+- Párrafo de introducción de la matriz centrado.
+- En pantallas bajas se eliminan introducciones repetidas para liberar altura, sin reducir el texto explicativo. En móvil el selector se mantiene como banda horizontal desplazable.
+- Verificación visual real en navegador de los bloques A y C, incluidos los títulos largos 4.2 y 8.4, a 1363 × 936 y zoom de lectura 100 %. Selector, cadena y detalle principal visibles simultáneamente. No equivale a comprobar todas las resoluciones ni todos los niveles de zoom.
+- Pruebas DOM de selección de los 13 apartados, resaltado de etapas, acceso directo de la matriz, zoom persistente y retirada del indicador, junto con compilación de producción y reglas del proceso.

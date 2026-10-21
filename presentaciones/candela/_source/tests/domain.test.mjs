@@ -17,3 +17,7 @@ assert.equal(chapters.length,17);console.log('OK: reglas críticas, 16 combinaci
 const {isoBlocks,whyQuestions,causeDetails}=await import('../src/iso-data.js');
 for(const b of Object.values(isoBlocks))for(const c of b.clauses){assert.ok(c.summary&&c.application&&c.evidence&&c.stage);for(const f of c.focus)assert.ok(flowNodes.some(n=>n.id===f));assert.ok(c.legal.length>0);}
 assert.equal(whyQuestions.length,5);assert.equal(causeDetails.length,6);console.log('OK: ISO trazable a etapas reales del flujograma, síntesis y aplicación separadas, cinco preguntas y seis ramas.');
+
+const titles=JSON.parse((await import('node:fs')).readFileSync(new URL('./iso-titles.json',import.meta.url),'utf8'));
+for(const b of Object.values(isoBlocks))for(const c of b.clauses){assert.equal(c.name,titles[c.id]);for(const [id,name] of c.sub||[])assert.equal(name,titles[id]);}
+console.log('OK: 22 títulos oficiales y subapartados coinciden literalmente con el índice ISO 9001:2015.');

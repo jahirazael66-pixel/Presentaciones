@@ -18,3 +18,6 @@ Conservar estilo visual y reemplazar frases de encabezado por títulos temático
 ## Limpieza editorial
 
 El indicador debe poder leerse como una ficha pequeña, sin calculadora que domine la sección. Retirar avisos destacados y referencias a archivos de trabajo del contenido proyectado; conservar referencias externas, la redacción como escenario o propuesta y los controles que apoyan la comprensión.
+
+### Iteración 4
+Los títulos normativos se conservan literalmente. La simplificación se limita a explicar su aplicación. Se sustituyó la fila de tarjetas por un selector lateral persistente, y se compactó la traza en ocho etapas numeradas. Resúmenes repetidos se retiraron del área principal; subapartados y normativa pueden desplegarse en línea. Cada punto seleccionado reencuadra su capítulo. Se retiró la ficha mensual adicional por solicitud del usuario.
