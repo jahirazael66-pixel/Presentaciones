@@ -1,0 +1,5 @@
+GSAP 3.15.0
+Copyright 2008-2026 GreenSock, Inc.
+Distribuido bajo GSAP Standard License. Texto y condiciones:
+https://gsap.com/standard-license/
+Se conserva el aviso de copyright de GSAP en el código compilado.
