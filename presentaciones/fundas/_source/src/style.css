@@ -9,3 +9,4 @@
 @media print{.section-stage{transform:none!important;max-width:none}.source-pages{display:none}.sources>a[hidden]{display:grid!important}.section{height:auto!important;min-height:0!important}}
 .conclusion .section-inner>h2{grid-column:1/-1}.conclusion .section-inner{row-gap:14px}
 .reading-controls .fit-button{font-size:.68rem;border-right:1px solid #2a242525;border-radius:99px 0 0 99px;padding-right:13px}@media(max-width:959px){.reading-controls .fit-button{display:none}}
+.team-credit{display:grid;gap:4px;margin-top:18px;padding-top:12px;border-top:1px solid #8f294240;max-width:400px;font-size:.78rem;line-height:1.35}.team-credit b{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;color:var(--wine);margin-bottom:3px}html[data-fit-mode=true] .team-credit{margin-top:13px;padding-top:10px;font-size:.76rem}

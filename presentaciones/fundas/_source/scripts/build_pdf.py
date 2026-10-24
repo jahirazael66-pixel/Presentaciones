@@ -25,7 +25,12 @@ def line(x1,y1,x2,y2,color=None,width=1,dash=None):
  c.setStrokeColor(HexColor(color or fg));c.setLineWidth(width);c.setDash(dash or []);c.line(x1,H-y1,x2,H-y2);c.setDash([])
 def text(t,x,y,w,size=11.5,font='Sans',color=None,leading=None,align=0):
  t=t.replace('−','-').replace('–','-').replace('—','-').replace('≤','hasta ').replace('≥','al menos ').replace('→',' > ').replace('\n','<br/>')
- st=ParagraphStyle('p',fontName=font,fontSize=size,leading=leading or size*1.33,textColor=HexColor(color or fg),alignment=align,spaceAfter=0)
+ original_size=size
+ if font=='Sans' and 9.5<=size<=15:size=max(12.6,size*1.18)
+ elif font=='Sans' and size<9.5:size=max(8.5,size*1.17)
+ elif font=='Bold' and size<=15:size=max(11,size*1.15)
+ elif font=='Serif' and size<10:size=9.5
+ st=ParagraphStyle('p',fontName=font,fontSize=size,leading=leading or size*1.22,textColor=HexColor(color or fg),alignment=align,spaceAfter=0)
  p=Paragraph(t,st);_,h=p.wrap(w,10000);p.drawOn(c,x,H-y-h);bounds.append((page,t[:50],x,y,w,h));assert y+h<=H-16,(page,t[:80],y+h);return h
 
 def title(t,eyebrow=None,theme='linen',index=None):
@@ -43,7 +48,7 @@ def foot(t=''):
  text(str(page),W-M-26,H-30,26,8,'Sans',fg,align=2);c.showPage()
 def card(t,b,x,y,w,h=None,color=None):
  if h:rect(x,y,w,h,color or bg,3,stroke=accent)
- pad=12 if h else 0;th=text(t,x+pad,y+pad,w-2*pad,12,'Bold',accent);bh=text(b,x+pad,y+pad+th+7,w-2*pad,10.8)
+ pad=10 if h else 0;th=text(t,x+pad,y+pad,w-2*pad,12,'Bold',accent);bh=text(b,x+pad,y+pad+th+7,w-2*pad,10.8)
  if h:assert th+bh+2*pad+7<=h,(page,t,'card overflow',th+bh+2*pad+7,h)
  return pad+th+7+bh+pad
 
@@ -75,6 +80,8 @@ text('Propuesta de negocio: una colección de fundas decorativas interiores para
 photo(1,443,117,365,345)
 for i,(a,b) in enumerate([('18 × 18 in','45,72 × 45,72 cm'),('B2B','venta por lote'),('Lima / NYC','producción tercerizada')]):
  text(a,M+i*127,369,120,22,'Serif',accent);text(b,M+i*127,408,120,9)
+text('Integrantes',M,448,375,12,'Bold',accent)
+text('Maria Fernanda Ruiz Luna<br/>Jahir Azael Castillo Paucas<br/>Jostin Chavez Estela',M,470,375,11.5,leading=18)
 foot('Producto propuesto sin relleno. Colección propia por desarrollar. Fotografías de referencia identificadas.')
 # 02
 Y=title('Resumen ejecutivo','1 · Qué se ofrece, a quién y bajo qué condiciones')
@@ -239,17 +246,18 @@ photo(2,550,111,258,388)
 foot('Encogimiento cambia costo; volumen cambia flete; anticipo cambia caja. No producir el año por adelantado ni endeudarse sin pedidos.')
 # 20 + reference continuation. All source titles retained; hyperlinks do not hide the citation text.
 sources=json.loads((ROOT.parent/'sources.json').read_text()) if (ROOT.parent/'sources.json').exists() else json.loads((ROOT/'src/sources.js').read_text().removeprefix('export default ').removesuffix(';'))
-for offset in [0,22]:
+for offset in [0,18,36]:
  Y=title('Referencias' if not offset else 'Referencias · continuación','Fuentes externas del análisis; enlaces activos',index=20)
- for j,s in enumerate(sources[offset:offset+22]):
-  col=j//11;row=j%11;x=M+col*397;yy=Y+row*37.5
+ chunk=sources[offset:offset+18];per_col=math.ceil(len(chunk)/2);row_h=min(78,414/per_col)
+ for j,s in enumerate(chunk):
+  col=j//per_col;row=j%per_col;x=M+col*397;yy=Y+row*row_h
   t=s['text'];t=re.sub(r'^\[E\d+\]\s*','',t)
   # Keep institution, date and the first bibliographic sentence; descriptive extraction notes are not separate sources.
   match=re.search(r'(?<=\))\.\s*',t)
   end=t.find('. ',match.end() if match else 0)
   short=t if end<0 else t[:end+1]
   if len(short)>170:short=short[:167].rsplit(' ',1)[0]+'…'
-  h=text(f'<b>E{offset+j+1:02d}</b> · '+short,x,yy,380,9,leading=11.1)
+  h=text(f'<b>E{offset+j+1:02d}</b> · '+short,x,yy,380,10,leading=13.5)
   c.linkURL(s['url'],(x,H-yy-h,x+380,H-yy),relative=0,thickness=0)
  foot('Fotografías: AMAHÍ, referencias facilitadas por el usuario. Diagramas y gráficos propios. DM Sans + Cormorant Garamond (SIL OFL).')
 c.save();(TMP/'pdf-layout-check.json').write_text(json.dumps({'pages':page,'blocks':len(bounds),'bounds':bounds},ensure_ascii=False));print(OUT,page,'páginas')
