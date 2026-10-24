@@ -25,3 +25,9 @@ React MIT; Vite MIT; GSAP según licencia incluida por su paquete. DM Sans y Cor
 ## Publicación
 
 Ruta `presentaciones/fundas/`; tarjeta nueva en el lobby raíz. El despliegue conserva las presentaciones anteriores. No subir node_modules, el informe fuente privado ni temporales de pruebas.
+
+## Revisión de encuadre y PDF
+
+En escritorio (desde 960 × 600), al 100% de lectura, cada sección se encuadra en el alto visible con distribución compacta y un ajuste final proporcional si hace falta. ResizeObserver recalcula al cambiar resolución, fuentes, imágenes o contenido. La cadena usa gráfico y controles laterales. Las referencias tienen cuatro páginas de botones para evitar letras diminutas. Al entrar en pantalla completa se activa lectura al 100%; Encajar vuelve a ese nivel. El zoom manual sigue persistiendo entre secciones y permite lectura desplazable cuando se amplía.
+
+Descargar PDF entrega `Fundas-textiles-peruanas.pdf`, no `window.print()`. Es un documento independiente A4 horizontal de 21 páginas: 20 secciones, con fuentes continuadas en una segunda página. Incluye todos los estados esenciales de interacciones, cadena completa, costos logísticos de referencia/objetivo, dos escenarios de caja, tres escenarios financieros y dos VAN. Reproducir con Python + reportlab + fonttools + pillow: `python scripts/build_pdf.py` tras instalar dependencias Node y preparar imágenes. No depende de navegadores para generarse.
