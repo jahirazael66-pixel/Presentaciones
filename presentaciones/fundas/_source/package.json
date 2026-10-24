@@ -1,0 +1,25 @@
+{
+  "name": "fundas-textiles-presentacion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node tests/model.test.mjs",
+    "test:ui": "node tests/ui.test.mjs",
+    "predev": "node prepare.mjs",
+    "prebuild": "node prepare.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "gsap": "^3.14.2",
+    "@fontsource/dm-sans": "^5.2.0",
+    "@fontsource/cormorant-garamond": "^5.2.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0",
+    "jsdom": "^26.1.0"
+  }
+}

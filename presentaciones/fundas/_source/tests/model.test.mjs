@@ -1,0 +1,3 @@
+import assert from'node:assert/strict';import{months,cash,delayed,result,landed,npv,titles}from'../src/model.js';
+const near=(a,b)=>assert.ok(Math.abs(a-b)<.015,`${a} ≈ ${b}`);
+assert.equal(titles.length,20);assert.equal(months.reduce((a,b)=>a+b),1440);near(result().net,3918.6);near(result().contribution,17904);near(result(720,25.2,15.525).net,-7971.2);near(result(2160,28,13.5,1100).net,10355.4);near(landed().cost,37.6667);near(landed().limit,380);near(landed(300,false).limit,274.16);near(landed(718.315).cost,44.63858);near(npv().value,7904.34);near(npv(false).value,-513.16);near(Math.min(...cash),1251.2);near(delayed[4],-253.4);assert.equal(Math.ceil((11400+400+1750)/(28-13.5-40/60-1.4)),1090);console.log('16 comprobaciones financieras correctas.');
