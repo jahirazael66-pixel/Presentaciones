@@ -26,7 +26,7 @@ def text(t,x,y,w,size=12.7,font='Sans',color=None,lead=None,align=0):
 def begin(i,theme='cream',subtitle=None):
  global page,bg,fg,accent
  page=i+1;bg=C[theme];fg=C['cream'] if theme=='forest' else C['ink'];accent=C['mint'] if theme=='forest' else C['forest'];rect(0,0,W,H,bg)
- ch=D['chapters'][D['scenes'][i][1]];text(ch,M,20,CW-60,7.7,'Bold',accent);text(f'{page:02d} / 18',W-84,20,52,8,'Sans',fg,align=2);line(M,47,W-M,47,fg,.4)
+ ch=D['chapters'][D['scenes'][i][1]];text(ch,M,20,CW-60,7.7,'Bold',accent);text(f"{page:02d} / {len(D['scenes'])}",W-84,20,52,8,'Sans',fg,align=2);line(M,47,W-M,47,fg,.4)
  if i>0:text(D['scenes'][i][0],M,61,CW,30,'Serif',lead=35)
  if subtitle:text(subtitle,M,103,CW,11.3)
  return 128 if subtitle else 117
@@ -77,12 +77,12 @@ rect(M,412,CW,102,C['sage'],5);text('Condición orgánica',M+16,426,190,15,'Bold
 footer('Reglamento (UE) 2018/848 y controles de importación [G04–G05, G10]. Cumplir no garantiza prima de precio.')
 # 5
 Y=begin(4,'sage','Actores internos y externos, con expectativas y relación con el programa')
-text('Dentro de Greenbox',M,Y,330,20,'Serif');text('Alrededor del programa',410,Y,400,20,'Serif')
+text('Cadena operativa · internos',M,Y,368,20,'Serif');text('Entorno del programa · externos',429,Y,381,20,'Serif')
 inside=[a for a in D['actors']if a['type']=='Interno'];outside=[a for a in D['actors']if a['type']=='Externo']
-for i,a in enumerate(inside):card(a['name'],a['need']+'<br/>'+a['action'],M,Y+49+i*150,330,135)
-for i,a in enumerate(outside):
- yy=Y+48+i*55;text(a['id'],410,yy,27,10,'Bold');text(a['name'],446,yy,362,11.5,'Bold');text(a['need'],446,yy+18,362,10.6)
-footer('Agricultores y envases: externos. Primarios: relación directa; secundarios: regulación, apoyo o verificación. [G01–G02]')
+for group,xx in [(inside,M),(outside,429)]:
+ for i,a in enumerate(group):
+  yy=Y+46+i*84;line(xx,yy+74,xx+380,yy+74,fg,.3);text(a['id']+' · '+a['name'],xx,yy,376,12.2,'Bold');text(a['need'],xx,yy+33,376,12.1);text(a['relation']+' · '+a['process'],xx,yy+54,376,10.5)
+footer('Alcance de la cadena operativa: los internos incluyen agricultores y proveedor de envases. Relación directa: primarios.')
 # 6
 Y=begin(5);x=61;y=Y;w=365;h=335
 for i,col in enumerate([C['sage'],C['mint'],C['cream'],C['sand']]):rect(x+i%2*w/2,y+i//2*h/2,w/2,h/2,col,0,stroke=C['forest'])
@@ -153,8 +153,18 @@ footer('Metas 2027, no resultados. Cierre mensual y anual; denominador cero: «n
 Y=begin(13,'sage');cols([('Inocuidad','BRCGS Food Safety: revisar vigencia, alcance, planta y organismo aprobado. SGS: candidata a cotizar.<br/><br/><b>Antes del primer embarque.</b>'),('Condición orgánica','Organismo reconocido para la UE; revisar operador, producto y certificado de inspección.<br/><br/><b>Cada envío.</b>'),('Ambiente e indicadores','Evaluar ISO 14001:2026 entre meses 12–24. Firma independiente revisa los KPIs.<br/><br/><b>Seguimiento y cierre anual.</b>')],Y,h=270)
 text('Certificar una cosa no demuestra todas.',M,432,CW,25,'Serif');text('Inocuidad, pagos y emisiones requieren evidencias distintas. NESsT no reemplaza al auditor independiente.',M,477,CW,13)
 footer('La ficha comercial no sustituye revisar certificados [G11–G13]. ISO 14001:2026 es una evaluación propuesta. [G14]')
+# Certificaciones: todos los distintivos visibles, sin interacciones necesarias.
+Y=begin(14,subtitle='Inocuidad, producción orgánica, requisitos alimentarios y comercio justo')
+w=(CW-36)/4;h=178
+for i,(file,name,category,detail)in enumerate(D['certificates']):
+ xx=M+i%4*(w+12);yy=Y+i//4*(h+14);rect(xx,yy,w,h,'#ffffff',5,stroke=C['sage'])
+ im=Image.open(R/'public/assets/images/aportadas'/file).convert('RGBA');iw,ih=im.size;scale=min((w-36)/iw,67/ih);dw,dh=iw*scale,ih*scale
+ im.thumbnail((max(1,round(dw*2.5)),max(1,round(dh*2.5))));c.drawImage(ImageReader(im),xx+(w-dw)/2,H-yy-12-(67+dh)/2,dw,dh,mask='auto')
+ text(category,xx+12,yy+88,w-24,8.7,'Bold','#52723f');text(name,xx+12,yy+108,w-24,13,'Bold');text(detail,xx+12,yy+133,w-24,10.6)
+text('Greenbox declara BRCGS, USDA Organic, EU Organic, Bio Suisse, Kosher y Fairtrade [G16]. SIAL menciona HACCP+ [G13]. JAS: referencia para Japón [G17].',M,519,CW,9.1)
+footer('Cada sello tiene un alcance distinto; revisar producto y actividad cubiertos en el certificado correspondiente.')
 # 15
-Y=begin(14,subtitle='Precio FCA Callao · 20.000 kg · costo variable supuesto USD 6,40/kg')
+Y=begin(15,subtitle='Precio FCA Callao · 20.000 kg · costo variable supuesto USD 6,40/kg')
 for i,(price,sales,cont,margin,title)in enumerate([(8,160000,32000,'20%','Base'),(7.2,144000,16000,'11,1%','Precio -10%')]):
  xx=M+i*397;text(title,xx,Y,380,18,'Bold');text(f'USD {price:.2f} / kg',xx,Y+36,380,14)
  width=365;rect(xx,Y+90,width*128000/sales,60,'#b7c3a5',3);rect(xx+width*128000/sales,Y+90,width*cont/sales,60,C['gold']if i==0 else C['coral'],3)
@@ -163,17 +173,17 @@ for i,(price,sales,cont,margin,title)in enumerate([(8,160000,32000,'20%','Base')
 text('Meta mínima 15%. La caída de precio la incumple.',M,487,CW,17,'Bold')
 footer('Contribución no es utilidad neta: faltan fijos, financiamiento e impuestos. FCA: comprador contrata transporte principal. [G15]')
 # 16
-Y=begin(15,'sand');rows=[('1 · Acordar','Muestra, precio y entrega.','Comercial + comprador','Muestra y condiciones aceptadas.'),('2 · Validar','Empaque, inocuidad y vida útil.','Calidad + proveedor','Piloto y especificación aprobados.'),('3 · Documentar','Residuos y responsabilidades.','Operaciones + importador','Aprovechamiento acreditado y roles definidos.'),('4 · Medir','Tablero y correcciones.','Finanzas + calidad + RR. HH.','Seis metas revisadas con evidencia.'),('5 · Revisar','Resultados del programa.','Dirección + actores clave','Revisión trimestral y verificación anual.')]
+Y=begin(16,'sand');rows=[('1 · Acordar','Muestra, precio y entrega.','Comercial + comprador','Muestra y condiciones aceptadas.'),('2 · Validar','Empaque, inocuidad y vida útil.','Calidad + proveedor','Piloto y especificación aprobados.'),('3 · Documentar','Residuos y responsabilidades.','Operaciones + importador','Aprovechamiento acreditado y roles definidos.'),('4 · Medir','Tablero y correcciones.','Finanzas + calidad + RR. HH.','Seis metas revisadas con evidencia.'),('5 · Revisar','Resultados del programa.','Dirección + actores clave','Revisión trimestral y verificación anual.')]
 for i,(a,b,who,ev)in enumerate(rows):
  yy=Y+i*77;line(M,yy+66,W-M,yy+66,fg,.4);text(a,M,yy,155,15,'Bold');text(b,202,yy,270,12.4);text(who,202,yy+30,270,9.8);text(ev,502,yy,306,12)
 footer('Recortes limpios y compostaje antes de harina de cáscara. Avanzar solo con seguridad, costo y demanda demostrados.')
 # 17
-Y=begin(16,'forest');text('El impacto<br/>se construye<br/>lote a lote.',M,Y,370,46,'Serif',accent,lead=52);text('Rentabilidad, personas y ambiente deben avanzar juntos.',M,345,340,17)
+Y=begin(17,'forest');text('El impacto<br/>se construye<br/>lote a lote.',M,Y,370,46,'Serif',accent,lead=52);text('Rentabilidad, personas y ambiente deben avanzar juntos.',M,345,340,17)
 for i,(a,b)in enumerate([('Viabilidad comercial','Muestra aprobada, precio viable y condiciones de entrega claras.'),('Operación controlada','Producto seguro, empaque apto y trazabilidad de cada lote.'),('Impacto demostrable','Pagos oportunos, aprovechamiento acreditado y equipo formado.')]):card(a,b,430,Y+i*133,378,116)
 footer('El margen debe sostener los compromisos sociales y ambientales del programa.')
 # 18
-Y=begin(17);per=8
+Y=begin(18);per=9
 for i,(id,t,u)in enumerate(D['sources']):
  xx=M+(i//per)*397;yy=Y+(i%per)*47;text(id,xx,yy,35,9.5,'Bold');hh=text(t,xx+41,yy,339,11.5);c.linkURL(u,(xx,H-yy-hh,xx+380,H-yy),relative=0,thickness=0)
 footer('Fuentes externas enlazadas. Fotografías y logo: recursos de Greenbox y material facilitado por el usuario. Visualizaciones propias.')
-c.save();(TMP/'layout.json').write_text(json.dumps({'pages':18,'bounds':bounds},ensure_ascii=False));print(OUT,18,'páginas')
+c.save();(TMP/'layout.json').write_text(json.dumps({'pages':len(D['scenes']),'bounds':bounds},ensure_ascii=False));print(OUT,len(D['scenes']),'páginas')

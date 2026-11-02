@@ -8,3 +8,6 @@
 6. Encajar al 100% y lectura ampliada son intenciones distintas. El encuadre automático no debe cancelar el zoom manual al navegar.
 7. Reutilizar activos existentes sin repetir la composición aceleró el rediseño y mantuvo contexto visual real.
 8. Empaquetar datos, pruebas, licencias y generador PDF junto al código mantiene futuras modificaciones reproducibles.
+
+9. Confirmar el perímetro de stakeholders con el trabajo base antes de cambiar etiquetas. La unidad de análisis puede ser la cadena completa, no solo la sociedad jurídica.
+10. No usar microtipografía decorativa en una exposición: ampliar etiquetas, notas y SVG, y después redistribuir para recuperar el encuadre. Una prueba sin recortes no garantiza legibilidad.

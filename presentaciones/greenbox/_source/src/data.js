@@ -1,9 +1,9 @@
 export const chapters=['Presentación del caso','CAPÍTULO 1: MARCO ESTRATÉGICO E INTEGRACIÓN DE LA RSE','CAPÍTULO 2: MATRIZ DE STAKEHOLDERS (PARTES INTERESADAS)','CAPÍTULO 3: DISEÑO DE PROCESOS BAJO ECONOMÍA CIRCULAR','CAPÍTULO 4: PLAN DE COMUNICACIÓN ESTRATÉGICA','CAPÍTULO 5: CUADRO DE MANDO DE RSE E INDICADORES DE GESTIÓN (KPIs)','CAPITULO 6: RECOMENDACIONES PARA LA EMPRESA QUE ELIGIERON','Cierre'];
-export const scenes=[['Greenbox: del origen al impacto',0,'cover'],['La empresa y el programa',0,'case'],['Misión, visión y triple impacto',1,'strategy'],['RSE en la exportación',1,'rse'],['Quiénes participan',2,'actors'],['Matriz de poder e interés',2,'matrix'],['Cadena completa de procesos',3,'chain'],['Empaque: proteger y reducir',3,'pack'],['Aprovechamiento de residuos',3,'waste'],['Logística y uso del espacio',3,'logistics'],['Comunicación interna',4,'internal'],['Comunicación con clientes',4,'external'],['Seis metas, tres dimensiones',5,'kpis'],['Verificación y certificaciones',5,'audit'],['Viabilidad económica',6,'finance'],['Qué hacer primero',6,'actions'],['Conclusiones del plan',7,'closing'],['Referencias',7,'sources']];
+export const scenes=[['Greenbox: del origen al impacto',0,'cover'],['La empresa y el programa',0,'case'],['Misión, visión y triple impacto',1,'strategy'],['RSE en la exportación',1,'rse'],['Quiénes participan',2,'actors'],['Matriz de poder e interés',2,'matrix'],['Cadena completa de procesos',3,'chain'],['Empaque: proteger y reducir',3,'pack'],['Aprovechamiento de residuos',3,'waste'],['Logística y uso del espacio',3,'logistics'],['Comunicación interna',4,'internal'],['Comunicación con clientes',4,'external'],['Seis metas, tres dimensiones',5,'kpis'],['Verificación y certificaciones',5,'audit'],['Certificaciones y sellos',5,'certificates'],['Viabilidad económica',6,'finance'],['Qué hacer primero',6,'actions'],['Conclusiones del plan',7,'closing'],['Referencias',7,'sources']];
 export const team=['Maria Fernanda Ruiz Luna','Jahir Azael Castillo Paucas','Estefany Mirelle Quispe Chavarría','Jostin Alexander Chávez Estela'];
 export const actors=[
-{id:'AG',name:'Agricultores proveedores',type:'Externo',relation:'Primario',power:'Alto',interest:'Alto',x:76,y:80,need:'Precio claro y pago puntual.',action:'Acuerdos escritos, calendario de compra, asistencia y reclamos.',process:'Abastecimiento'},
-{id:'EN',name:'Proveedor de envases',type:'Externo',relation:'Primario',power:'Medio',interest:'Alto',x:85,y:50,need:'Pedidos previsibles y especificaciones.',action:'Validar barrera, migración y composición; acordar entregas.',process:'Empaque'},
+{id:'AG',name:'Agricultores proveedores',type:'Interno',relation:'Primario',power:'Alto',interest:'Alto',x:76,y:80,need:'Precio claro y pago puntual.',action:'Acuerdos escritos, calendario de compra, asistencia y reclamos.',process:'Abastecimiento'},
+{id:'EN',name:'Proveedor de envases',type:'Interno',relation:'Primario',power:'Medio',interest:'Alto',x:85,y:50,need:'Pedidos previsibles y especificaciones.',action:'Validar barrera, migración y composición; acordar entregas.',process:'Empaque'},
 {id:'DI',name:'Distribuidor alemán',type:'Externo',relation:'Primario',power:'Alto',interest:'Alto',x:89,y:68,need:'Inocuidad, continuidad y trazabilidad.',action:'Aprobar muestra, contrato, rechazos y datos de impacto.',process:'Entrega'},
 {id:'AU',name:'Autoridades y registro de envases',type:'Externo',relation:'Secundario',power:'Alto',interest:'Medio',x:50,y:85,need:'Cumplimiento verificable.',action:'Revisar expediente orgánico y obligaciones del envase con el importador.',process:'Exportación'},
 {id:'DR',name:'Dirección y finanzas',type:'Interno',relation:'Primario',power:'Alto',interest:'Alto',x:64,y:68,need:'Margen y liquidez.',action:'Revisar costos y reservar caja para pagos, pruebas y auditoría.',process:'Toda la cadena'},
@@ -35,8 +35,21 @@ export const sources=[
 ['G12','SGS · BRCGS Global Standard for Food Safety','https://www.sgs.com/en/services/brcgs-global-standard-for-food-safety/'],
 ['G13','SIAL Paris 2026 · Ficha Greenbox','https://www.sialparis.com/en/exhibitors-2026/exhibitor/GREENBOX'],
 ['G14','ISO 14001:2026 · Sistemas de gestión ambiental','https://www.iso.org/standard/14001'],
-['G15','ICC · Incoterms 2020, checklist 2024','https://library.iccwbo.org/content/clp/Others/incoterms_2020_checklist_2024-update.pdf']];
+['G15','ICC · Incoterms 2020, checklist 2024','https://library.iccwbo.org/content/clp/Others/incoterms_2020_checklist_2024-update.pdf'],
+['G16','Greenbox · Certificaciones declaradas en su FAQ','https://greenbox.pe/contact-us/'],
+['G17','MAFF · Organic JAS','https://www.maff.go.jp/e/policies/standard/jas/specific/organic.html']];
 export const kpis=[
 {dimension:'Económica',color:'gold',items:[['≥15%','margen de contribución','(Ventas netas − costos variables) / ventas netas × 100.','Finanzas · ventas y costos'],['100%','volumen del programa','kg aceptados / 20.000 kg programados × 100.','Finanzas · recepción del comprador']]},
 {dimension:'Ambiental',color:'mint',items:[['≥80%','residuos valorizados','kg valorizados con evidencia / kg de residuos orgánicos generados × 100.','Calidad · pesajes y constancias'],['≥5%','menos empaque por kg','(I₀ − I₁) / I₀ × 100; I = kg de empaque / kg de producto.','Calidad · piloto y pesaje ponderado']]},
 {dimension:'Social',color:'coral',items:[['≥95%','pagos oportunos','Facturas pagadas a tiempo / facturas vencidas del mismo período × 100.','Finanzas · facturas y pagos'],['100%','capacitación aprobada','Trabajadores que completan y aprueban / trabajadores asignados × 100.','RR. HH. · asistencia y evaluación']]}];
+
+export const certificates=[
+['brcgs.webp','BRCGS Food Safety','Inocuidad','Gestión de la seguridad alimentaria.'],
+['haccp.webp','HACCP','Inocuidad','Análisis de peligros y controles críticos.'],
+['usda.gif','USDA Organic','Orgánico · EE. UU.','Producción orgánica para este mercado.'],
+['eu-organic.jpg','EU Organic','Orgánico · Unión Europea','Producción ecológica y control del operador.'],
+['bio-suisse.png','Bio Suisse','Orgánico · Suiza','Requisitos privados de agricultura orgánica.'],
+['jas.jpg','Organic JAS','Orgánico · Japón','Referencia de acceso al mercado japonés.'],
+['kosher.jpg','Kosher','Requisitos alimentarios','Ingredientes y proceso según reglas Kosher.'],
+['fairtrade.png','Fairtrade','Comercio justo','Condiciones sociales y comerciales.']
+];
