@@ -29,3 +29,8 @@ html[data-expanded=true] .certificates-grid{grid-template-columns:repeat(2,minma
 @media(max-width:760px){.actor-group.external{grid-template-columns:1fr}.actor-group.external>div{min-height:0}}
 
 @media(min-width:761px){.actor-map{grid-template-columns:1fr 1fr}.actor-group.external{display:block}.actor-group.internal>div{padding:11px 0}.actor-group>div{min-height:100px}}
+
+/* Cuadrantes categóricos: posiciones derivadas del poder y el interés. */
+@media screen{.quadrant:nth-child(n){justify-content:flex-start;text-align:left;align-items:flex-start}.quadrant b{max-width:190px}.quadrant>span{max-width:210px;font-size:.75rem;line-height:1.35}.actor-point{width:38px;height:38px}.matrix-key{display:flex;gap:15px;align-items:center;flex-wrap:wrap;font-size:.75rem;margin:0 0 10px}.matrix-key>span{display:flex;align-items:center;gap:5px}.matrix-key i{width:10px;height:10px;border-radius:50%;border:1px solid var(--forest);background:var(--cream)}.matrix-key .internal-key{background:var(--forest)}.matrix-key .selected-key{background:var(--gold)}.matrix-key>b{font-weight:600;margin-left:auto}.matrix-levels{font-size:.85rem!important}.actor-detail .eyebrow{letter-spacing:.04em}.actor-detail h3{font-size:1rem}.actor-detail p{line-height:1.45}.actor-legend button{padding:3px 9px}}
+
+.empty-quadrant{font-family:inherit;font-size:.85rem;font-style:normal;color:var(--ink);opacity:.7;margin:auto 0;text-align:center;width:100%}

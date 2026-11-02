@@ -6,3 +6,13 @@ export const visibleActor=(a,types,relations)=>(!types.length||types.includes(a.
 export const fitScale=(height,space)=>Math.min(1,Math.max(.1,space/Math.max(1,height)));
 
 export function coverageKg(price,cost=6.4,additional=10000){const unit=Math.round((price-cost)*100)/100;return unit>0?Math.ceil(additional/unit-1e-9):null;}
+
+// Matriz 2x2: solo niveles Bajo y Alto.
+export function stakeholderStrategy(a){
+ if(!['Bajo','Alto'].includes(a.power)||!['Bajo','Alto'].includes(a.interest))throw Error('Nivel de stakeholder no válido');
+ return a.power==='Alto'?(a.interest==='Alto'?'Administrar de cerca':'Mantener satisfechos'):(a.interest==='Alto'?'Mantener informados':'Monitorear');
+}
+export function matrixPosition(a,all){
+ const matrixStrategy=stakeholderStrategy(a),group=all.filter(b=>stakeholderStrategy(b)===matrixStrategy),index=group.findIndex(b=>b.id===a.id),center=a.interest==='Alto'?75:25;
+ return{matrixStrategy,x:group.length===1?center:center-16+index*32/(group.length-1),y:a.power==='Alto'?68:22};
+}

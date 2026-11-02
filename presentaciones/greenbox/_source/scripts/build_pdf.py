@@ -90,13 +90,14 @@ footer('Internos de la cadena: agricultores, envases, dirección y personal. Ext
 # 6
 Y=begin(5);x=61;y=Y;w=365;h=335
 for i,col in enumerate([C['sage'],C['mint'],C['cream'],C['sand']]):rect(x+i%2*w/2,y+i//2*h/2,w/2,h/2,col,0,stroke=C['forest'])
-for t,xx,yy in [('Mantener satisfechos',x+10,y+12),('Administrar de cerca',x+w/2+60,y+h/2-40),('Monitorear',x+10,y+h-30),('Mantener informados',x+w/2+10,y+h-43)]:text(t,xx,yy,w/2-70 if t.startswith('Administrar') else w/2-20,9.1 if t.startswith('Administrar') else 10.2,'Bold')
+for t,xx,yy in [('Mantener satisfechos',x+10,y+12),('Administrar de cerca',x+w/2+10,y+12),('Monitorear',x+10,y+h/2+12),('Mantener informados',x+w/2+10,y+h/2+12)]:text(t,xx,yy,w/2-20,10.2,'Bold')
+text('Sin actores en esta categoría',x+12,y+h*.72,w/2-24,9.5)
 for a in D['actors']:
  xx=x+a['x']/100*w;yy=y+h-a['y']/100*h;c.setFillColor(HexColor(C['forest'] if a['type']=='Interno' else C['gold']));c.circle(xx,H-yy,12,fill=1,stroke=0);text(a['id'],xx-10,yy-5.5,20,7.8,'Bold',C['cream'] if a['type']=='Interno' else C['forest'],align=1)
 text('Interés bajo → alto',x,y+h+13,w,10,align=1);c.saveState();c.translate(x-19,H-y-h/2);c.rotate(90);c.setFillColor(HexColor(fg));c.setFont('Sans',9);c.drawCentredString(0,0,'Poder de influencia: bajo a alto');c.restoreState()
 for i,a in enumerate(D['actors']):
  yy=Y+i*46;text(a['id'],460,yy,27,10,'Bold');text(a['name'],495,yy,313,10.8,'Bold');text(f"{a['type']} · {a['relation']} · poder {a['power'].lower()} / interés {a['interest'].lower()}",495,yy+17,313,9.2)
-text('Niveles medios en las líneas centrales. Posiciones cualitativas, no puntajes medidos.',61,502,750,10.6)
+text('Dos niveles: Bajo y Alto. Eje vertical: poder; eje horizontal: interés. Cada actor ocupa un cuadrante definido.',61,502,750,10.6)
 footer('La estrategia depende de expectativas, capacidad de condicionar la operación y afectación por el programa.')
 # 7
 Y=begin(6,'forest');positions=[(100,164),(260,164),(420,164),(580,164),(740,164),(740,278),(580,278),(420,278),(260,278)]
