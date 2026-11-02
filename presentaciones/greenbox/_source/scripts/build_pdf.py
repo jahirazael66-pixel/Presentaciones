@@ -83,11 +83,10 @@ footer('Reglamento (UE) 2018/848 y controles de importación [G04–G05, G10]. C
 Y=begin(4,'sage','Actores internos y externos, con expectativas y relación con el programa')
 text('Stakeholders internos',M,Y,340,20,'Serif');text('Stakeholders externos',420,Y,388,20,'Serif')
 inside=[a for a in D['actors']if a['type']=='Interno'];outside=[a for a in D['actors']if a['type']=='Externo']
-for i,a in enumerate(inside):
- yy=Y+52+i*143;card(a['name'],a['need']+'<br/>'+a['relation']+' · '+a['process'],M,yy,340,120)
-for i,a in enumerate(outside):
- yy=Y+48+i*56;text(a['id']+' · '+a['name'],420,yy,388,11.4,'Bold');text(a['need'],420,yy+18,388,10.7);text(a['relation']+' · '+a['process'],420,yy+34,388,9.1)
-footer('Internos: dirección y personal. Agricultores y proveedor de envases: externos. Primarios: vínculo operativo directo.')
+for group,xx in [(inside,M),(outside,429)]:
+ for i,a in enumerate(group):
+  yy=Y+46+i*84;line(xx,yy+74,xx+380,yy+74,fg,.3);text(a['id']+' · '+a['name'],xx,yy,376,12.2,'Bold');text(a['need'],xx,yy+33,376,12.1);text(a['relation']+' · '+a['process'],xx,yy+54,376,10.5)
+footer('Internos de la cadena: agricultores, envases, dirección y personal. Externos: comprador, autoridades, NESsT y auditor.')
 # 6
 Y=begin(5);x=61;y=Y;w=365;h=335
 for i,col in enumerate([C['sage'],C['mint'],C['cream'],C['sand']]):rect(x+i%2*w/2,y+i//2*h/2,w/2,h/2,col,0,stroke=C['forest'])

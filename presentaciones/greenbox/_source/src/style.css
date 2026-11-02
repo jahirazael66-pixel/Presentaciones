@@ -27,3 +27,5 @@ html[data-expanded=true] .certificates-grid{grid-template-columns:repeat(2,minma
 @media(max-width:760px){.actor-map,html[data-expanded=true] .actor-map{grid-template-columns:1fr}.strategy-connections{grid-template-columns:1fr}.strategy-company .impact-orbit{margin-top:25px;height:400px}.supply-needs{grid-template-columns:1fr 1fr}.supply-needs>span:last-of-type{grid-column:1/-1}.variable-costs{grid-template-columns:repeat(3,1fr)}.finance-summary{grid-template-columns:1fr 1fr}.scene-finance .finance-summary>span:last-child{grid-column:1/-1}}
 
 @media(max-width:760px){.actor-group.external{grid-template-columns:1fr}.actor-group.external>div{min-height:0}}
+
+@media(min-width:761px){.actor-map{grid-template-columns:1fr 1fr}.actor-group.external{display:block}.actor-group.internal>div{padding:11px 0}.actor-group>div{min-height:100px}}
