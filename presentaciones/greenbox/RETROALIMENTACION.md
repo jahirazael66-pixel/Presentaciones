@@ -11,3 +11,5 @@
 
 9. Confirmar el perímetro de stakeholders con el trabajo base antes de cambiar etiquetas. La unidad de análisis puede ser la cadena completa, no solo la sociedad jurídica.
 10. No usar microtipografía decorativa en una exposición: ampliar etiquetas, notas y SVG, y después redistribuir para recuperar el encuadre. Una prueba sin recortes no garantiza legibilidad.
+
+11. Al recibir un informe revisado, comparar todo el documento: una corrección de misión puede venir acompañada de cambios de actores, volúmenes o costos. Sincronizar los datos y títulos del PDF, web e índice desde una misma fuente.

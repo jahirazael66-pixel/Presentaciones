@@ -4,3 +4,5 @@ export function balance(fresh=1000){return{fresh,product:fresh*.1,main:fresh*.09
 export function cargo(lots=1){return{kg:5000*lots,boxes:500*lots,pallets:10*lots,boxVolume:15*lots,palletVolume:16.8*lots,height:1.4};}
 export const visibleActor=(a,types,relations)=>(!types.length||types.includes(a.type))&&(!relations.length||relations.includes(a.relation));
 export const fitScale=(height,space)=>Math.min(1,Math.max(.1,space/Math.max(1,height)));
+
+export function coverageKg(price,cost=6.4,additional=10000){const unit=Math.round((price-cost)*100)/100;return unit>0?Math.ceil(additional/unit-1e-9):null;}

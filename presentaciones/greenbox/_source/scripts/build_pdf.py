@@ -14,7 +14,7 @@ for name,file in [('Sans','plus-jakarta-sans/files/plus-jakarta-sans-latin-400-n
  f=Font(R/'node_modules/@fontsource'/file);f.flavor=None;f.save(TMP/(name+'.ttf'));pdfmetrics.registerFont(TTFont(name,str(TMP/(name+'.ttf'))))
 OUT=R/'public/Greenbox-Triple-Impacto-2027.pdf';W,H=841.89,595.28;M=32;CW=W-64
 C={'forest':'#153e2f','ink':'#183b31','cream':'#f6f4ec','mint':'#c8e0b3','sage':'#e4eadc','gold':'#d6a547','coral':'#be6c52','blue':'#8fb4ba','sand':'#eee7d8'}
-c=canvas.Canvas(str(OUT),pagesize=(W,H),pageCompression=1);c.setTitle('Greenbox | Piña deshidratada para Alemania | Triple impacto 2027');c.setAuthor(' · '.join(D['team']));page=0;fg=C['ink'];bg=C['cream'];accent=C['forest'];bounds=[]
+c=canvas.Canvas(str(OUT),pagesize=(W,H),pageCompression=1);c.setTitle('Greenbox | Plan de exportación a Alemania | Triple impacto 2027');c.setAuthor(' · '.join(D['team']));page=0;fg=C['ink'];bg=C['cream'];accent=C['forest'];bounds=[]
 def rect(x,y,w,h,color,r=0,stroke=None):
  c.setFillColor(HexColor(color));c.setStrokeColor(HexColor(stroke or color));c.roundRect(x,H-y-h,w,h,r,fill=1,stroke=bool(stroke))
 def line(x,y,xx,yy,color=None,width=.6,dash=None):
@@ -56,7 +56,7 @@ def cols(cards,y,columns=3,h=150,gap=17):
 def metric(v,label,x,y,w=180,color=None,size=36):
  text(v,x,y,w,size,'Serif',color or accent,lead=size*1.1);text(label,x,y+size+10,w,11.2)
 # 1
-begin(0);text('DEL ORIGEN<br/>AL IMPACTO.',M,93,430,47,'Serif',accent,lead=53);text('Piña deshidratada peruana<br/>para el mercado alemán.',M,226,385,19,'Sans');text('TARMA / CALLAO / HAMBURGO',M,306,400,10,'Bold',accent)
+begin(0);text('EXPORTACIÓN<br/>A ALEMANIA.',M,93,430,47,'Serif',accent,lead=53);text('Piña deshidratada peruana<br/>para el mercado alemán.',M,226,385,19,'Sans');text('TARMA / CALLAO / HAMBURGO',M,306,400,10,'Bold',accent)
 text('Programa de internacionalización con triple impacto · 2027',M,347,375,13)
 text('INTEGRANTES',M,407,390,9,'Bold');text('<br/>'.join(D['team']),M,430,390,11.4,lead=18)
 photo('greenbox-empaque.jpg',455,92,355,410);footer('Greenbox S.A.C. · Fotografías de su actividad; cifras del programa propuestas para 2027.')
@@ -64,25 +64,30 @@ photo('greenbox-empaque.jpg',455,92,355,410);footer('Greenbox S.A.C. · Fotograf
 Y=begin(1);photo('greenbox-campo.jpg',M,Y,350,235);text('Greenbox transforma frutas peruanas en ingredientes para compradores internacionales.',416,Y,394,16,'Serif');text('Acobamba, Tarma · fundada en 2011 según su web. Presencia comercial declarada en Alemania.',416,203,394,12.7)
 for i,(v,t)in enumerate([('4','embarques'),('5.000','kg por embarque'),('20 t','anuales')]):metric(v,t,416+i*132,292,125,size=29)
 cols([('500+ agricultores','Red reportada por NESsT; no beneficiarios nuevos del programa.'),('40 → 240','Crecimiento de personal de planta reportado por NESsT.'),('Cajas de 10 kg','500 cajas por embarque; un distribuidor alemán propuesto.')],397,h=126)
-footer('Empresa: Greenbox y NESsT [G01–G02]. Volúmenes, comprador y metas: programa propuesto, no contratos.')
+text('543 t exportadas de piña deshidratada en enero-junio 2025; las 20 t equivalen al 3,68% de ese volumen [G18]. Reservar capacidad y confirmar pedido.',M,535,CW,9.4);footer('Empresa: Greenbox y NESsT [G01–G02]. Volúmenes, comprador y metas: programa propuesto.')
 # 3
-Y=begin(2,'forest');text('Exportar con calidad.<br/>Crecer con las personas.',M,Y,430,35,'Serif',accent,lead=42);text('Misión: piña segura y trazable, con un margen que sostenga pagos oportunos y aprovechamiento de residuos.',M,230,390,14)
-for i,(v,t)in enumerate([('≥15%','margen de contribución'),('≥95%','pagos oportunos 2027'),('80%','residuos valorizados 2027')]):metric(v,t,466,Y+i*112,340,size=37)
-line(M,363,420,363,fg,.5);text('VISIÓN 2031',M,384,390,10,'Bold',accent);text('Tres clientes recurrentes en Alemania; margen ≥15%; pagos oportunos 100%; valorización 95%; intensidad logística -20% frente a 2027.',M,418,390,13)
-footer('Enunciados propuestos para el programa; no reemplazan la misión y visión oficiales.')
+Y=begin(2,'forest');text('Misión de Greenbox',M,Y,377,16,'Bold',accent);text(D['companyStrategy']['mission'],M,Y+34,365,14.2)
+text('Visión de Greenbox',M,265,377,16,'Bold',accent);text(D['companyStrategy']['vision'],M,299,365,14.2)
+for i,(v,t)in enumerate([('≥15%','margen de contribución'),('≥95%','pagos oportunos'),('≥80%','residuos valorizados')]):metric(v,t,466,153+i*100,340,size=35)
+text('METAS DEL PROGRAMA 2027',466,Y,340,10,'Bold',accent)
+line(M,446,W-M,446,fg,.5)
+for i,(label,meaning)in enumerate(D['companyStrategy']['connections']):
+ xx=M+i*263;text(label,xx,465,246,12.5,'Bold',accent);text(meaning,xx,489,246,12)
+footer('Paráfrasis de misión y visión oficiales [G01]. Triple impacto: interpretación. Metas: programa 2027; visión oficial sin año.')
 # 4
-Y=begin(3);text('Responsabilidad social en cada decisión.',M,Y,CW,30,'Serif',lead=36)
+Y=begin(3);text('Responsabilidad social en la exportación.',M,Y,CW,30,'Serif',lead=36)
 cols([('Agricultores','Precio claro y pago puntual. Evidencia: acuerdos y comprobantes.'),('Producto','Inocuidad, origen y continuidad. Evidencia: muestra, análisis y trazabilidad.'),('Ambiente y negocio','Residuos y empaque, margen y liquidez. Evidencia: pesajes, ensayos, constancias y costos.')],192,h=180)
 rect(M,412,CW,102,C['sage'],5);text('Condición orgánica',M+16,426,190,15,'Bold');text('Operador, actividad y producto cubiertos; certificado de inspección del envío y gestión en TRACES. Solo así se ofrece como orgánico.',M+220,427,CW-236,12.4)
 footer('Reglamento (UE) 2018/848 y controles de importación [G04–G05, G10]. Cumplir no garantiza prima de precio.')
 # 5
 Y=begin(4,'sage','Actores internos y externos, con expectativas y relación con el programa')
-text('Cadena operativa · internos',M,Y,368,20,'Serif');text('Entorno del programa · externos',429,Y,381,20,'Serif')
+text('Stakeholders internos',M,Y,340,20,'Serif');text('Stakeholders externos',420,Y,388,20,'Serif')
 inside=[a for a in D['actors']if a['type']=='Interno'];outside=[a for a in D['actors']if a['type']=='Externo']
-for group,xx in [(inside,M),(outside,429)]:
- for i,a in enumerate(group):
-  yy=Y+46+i*84;line(xx,yy+74,xx+380,yy+74,fg,.3);text(a['id']+' · '+a['name'],xx,yy,376,12.2,'Bold');text(a['need'],xx,yy+33,376,12.1);text(a['relation']+' · '+a['process'],xx,yy+54,376,10.5)
-footer('Alcance de la cadena operativa: los internos incluyen agricultores y proveedor de envases. Relación directa: primarios.')
+for i,a in enumerate(inside):
+ yy=Y+52+i*143;card(a['name'],a['need']+'<br/>'+a['relation']+' · '+a['process'],M,yy,340,120)
+for i,a in enumerate(outside):
+ yy=Y+48+i*56;text(a['id']+' · '+a['name'],420,yy,388,11.4,'Bold');text(a['need'],420,yy+18,388,10.7);text(a['relation']+' · '+a['process'],420,yy+34,388,9.1)
+footer('Internos: dirección y personal. Agricultores y proveedor de envases: externos. Primarios: vínculo operativo directo.')
 # 6
 Y=begin(5);x=61;y=Y;w=365;h=335
 for i,col in enumerate([C['sage'],C['mint'],C['cream'],C['sand']]):rect(x+i%2*w/2,y+i//2*h/2,w/2,h/2,col,0,stroke=C['forest'])
@@ -118,7 +123,7 @@ Y=begin(8,'sage');metric('1.000 kg','piña fresca recibida',M,Y,230,size=37)
 flows=[('100 kg','producto alimentario','90 kg principales + 10 kg de recortes limpios.',C['gold']),('450 kg','cáscara y corazón','360 kg a compostaje acreditado + 90 kg pendientes.',C['mint']),('450 kg','agua retirada','Evaporación durante el secado; no es residuo valorizado.',C['blue'])]
 for i,(a,b,desc,color)in enumerate(flows):
  yy=Y+i*111;arrow(250,162,360,yy+35,C['forest']);rect(365,yy,443,96,color,5);text(a,382,yy+12,150,27,'Serif',lead=30);text(b,540,yy+14,251,13,'Bold');text(desc,382,yy+53,409,11.6)
-metric('80%','valorización orgánica',M,305,230,size=59);text('360 / 450 × 100',M,416,240,16,'Bold');text('1.000 = 100 + 450 + 450 kg',M,488,CW,18,'Serif')
+metric('80%','valorización orgánica',M,305,230,size=59);text('360 / 450 × 100',M,416,240,16,'Bold');text('1.000 = 100 + 450 + 450 kg',M,470,CW,16,'Serif');text('Para 20.000 kg principales: 222.222 kg frescos/año; 55.556 kg por embarque; 2.222 kg de recortes sin ingresos previstos. Rendimiento supuesto: 9%.',M,508,CW,10.4)
 footer('Balance ilustrativo, no rendimiento medido de Greenbox. Harina de cáscara: evaluación futura, sin ingresos presupuestados. [G01]')
 # 10
 Y=begin(9);text('TARMA → CALLAO → HAMBURGO → DISTRIBUIDOR',M,Y,CW,13,'Bold',accent)
@@ -129,15 +134,15 @@ for cc in range(4):boxes.append((cc*30,60,30,40))
 for i,(x,y,w,h)in enumerate(boxes):rect(60+x*2.5,183+y*2.5,w*2.5-4,h*2.5-4,C['mint'],3,stroke='#78976a');text(str(i+1),60+x*2.5,183+y*2.5+h*1.25-7,w*2.5-4,10,align=1)
 text('Vista superior: 10 cajas por nivel',58,447,300,11.5,align=1);text('Pallet 120 × 100 cm · 5 niveles · altura 1,40 m',58,477,300,10.6,align=1)
 for i,(a,b)in enumerate([('5.000 kg','producto por embarque'),('500 cajas','10 kg por caja'),('10 pallets','50 cajas por pallet'),('16,8 m³','volumen paletizado')]):metric(a,b,414+i%2*197,177+i//2*109,180,size=29)
-text('Priorizar consolidación marítima. Línea base en el primer embarque y meta -5% de intensidad logística en lotes comparables.',414,415,394,12.3)
+text('Intensidad = kg CO2e de Tarma al almacén alemán / kg principal entregado. Meta -5% frente al primer embarque, con alcance comparable y datos acordados con el comprador.',414,415,394,11.7)
 footer('15 m³ en cajas, 16,8 m³ paletizados; no demuestra ocupación de contenedor. Validar peso bruto, resistencia y vida útil. [G08]')
 # 11
-Y=begin(10,'sand');text('Que todos sepan<br/>qué registrar.',M,Y,330,39,'Serif',lead=46);text('Los compromisos se convierten en hábitos: formación, registros fiables y respuestas a tiempo.',M,256,330,15)
+Y=begin(10,'sand');text('Registros<br/>y responsables.',M,Y,330,39,'Serif',lead=46);text('Los compromisos se convierten en hábitos: formación, registros fiables y respuestas a tiempo.',M,256,330,15)
 rows=[('Antes del primer lote','Inducción pagada y práctica aprobada sobre trazabilidad, segregación y registros.'),('Cada semana','Producción se reúne; finanzas revisa pagos. Señalización y registros por lote.'),('Cada mes','Dirección revisa seis metas y acuerda correcciones con responsables.'),('En cinco días hábiles','Respuesta inicial del canal reservado de reclamos; seguimiento sin represalias.')]
 for i,(a,b)in enumerate(rows):card(a,b,409,Y+i*105,399)
 footer('Responsables: calidad, producción, finanzas y dirección; participación de trabajadores y proveedores.')
 # 12
-Y=begin(11,'forest');cols([('B2B: para comprar','Ficha técnica y análisis.<br/><br/>Trazabilidad y especificaciones del empaque.<br/><br/>Certificados aplicables y reporte trimestral de impacto.'),('B2C: para comprender','QR coordinado con la marca alemana que fracciona el producto.<br/><br/>Origen, lote y evidencia disponible.<br/><br/>El QR no reemplaza la información obligatoria.')],Y,columns=2,h=280,gap=30)
+Y=begin(11,'forest');cols([('Documentos para el distribuidor','Ficha técnica y análisis.<br/><br/>Trazabilidad y especificaciones del empaque.<br/><br/>Certificados aplicables y reporte trimestral de impacto.'),('Información para el consumidor','QR coordinado con la marca alemana que fracciona el producto.<br/><br/>Origen, lote y evidencia disponible.<br/><br/>El QR no reemplaza la información obligatoria.')],Y,columns=2,h=280,gap=30)
 text('Comunicar resultados, no promesas absolutas.',M,444,CW,24,'Serif',accent);text('Calidad aprueba afirmaciones; finanzas valida pagos. Precisar período y alcance. Evitar «cero impacto».',M,486,CW,12.7)
 footer('El operador responsable valida la información alimentaria conforme al Reglamento (UE) 1169/2011. [G09]')
 # 13
@@ -151,7 +156,7 @@ for i,b in enumerate(lines):text(b,M+i*(cw+17),410,cw,11.3)
 footer('Metas 2027, no resultados. Cierre mensual y anual; denominador cero: «no aplica». Empaque con protección equivalente.')
 # 14
 Y=begin(13,'sage');cols([('Inocuidad','BRCGS Food Safety: revisar vigencia, alcance, planta y organismo aprobado. SGS: candidata a cotizar.<br/><br/><b>Antes del primer embarque.</b>'),('Condición orgánica','Organismo reconocido para la UE; revisar operador, producto y certificado de inspección.<br/><br/><b>Cada envío.</b>'),('Ambiente e indicadores','Evaluar ISO 14001:2026 entre meses 12–24. Firma independiente revisa los KPIs.<br/><br/><b>Seguimiento y cierre anual.</b>')],Y,h=270)
-text('Certificar una cosa no demuestra todas.',M,432,CW,25,'Serif');text('Inocuidad, pagos y emisiones requieren evidencias distintas. NESsT no reemplaza al auditor independiente.',M,477,CW,13)
+text('Alcance de cada verificación',M,432,CW,25,'Serif');text('Inocuidad, pagos y emisiones requieren evidencias distintas. NESsT no reemplaza al auditor independiente.',M,477,CW,13)
 footer('La ficha comercial no sustituye revisar certificados [G11–G13]. ISO 14001:2026 es una evaluación propuesta. [G14]')
 # Certificaciones: todos los distintivos visibles, sin interacciones necesarias.
 Y=begin(14,subtitle='Inocuidad, producción orgánica, requisitos alimentarios y comercio justo')
@@ -164,21 +169,24 @@ for i,(file,name,category,detail)in enumerate(D['certificates']):
 text('Greenbox declara BRCGS, USDA Organic, EU Organic, Bio Suisse, Kosher y Fairtrade [G16]. SIAL menciona HACCP+ [G13]. JAS: referencia para Japón [G17].',M,519,CW,9.1)
 footer('Cada sello tiene un alcance distinto; revisar producto y actividad cubiertos en el certificado correspondiente.')
 # 15
-Y=begin(15,subtitle='Precio FCA Callao · 20.000 kg · costo variable supuesto USD 6,40/kg')
-for i,(price,sales,cont,margin,title)in enumerate([(8,160000,32000,'20%','Base'),(7.2,144000,16000,'11,1%','Precio -10%')]):
- xx=M+i*397;text(title,xx,Y,380,18,'Bold');text(f'USD {price:.2f} / kg',xx,Y+36,380,14)
- width=365;rect(xx,Y+90,width*128000/sales,60,'#b7c3a5',3);rect(xx+width*128000/sales,Y+90,width*cont/sales,60,C['gold']if i==0 else C['coral'],3)
- text('Variables: $128.000',xx,Y+166,380,12);text(f'Ventas: ${sales:,.0f} · contribución: ${cont:,.0f}',xx,Y+198,380,12)
- metric(margin,'margen de contribución',xx,Y+242,365,size=43)
-text('Meta mínima 15%. La caída de precio la incumple.',M,487,CW,17,'Bold')
-footer('Contribución no es utilidad neta: faltan fijos, financiamiento e impuestos. FCA: comprador contrata transporte principal. [G15]')
+Y=begin(15,subtitle='20.000 kg principales · precio base FCA USD 8/kg · costo variable USD 6,40/kg')
+for i,(label,value)in enumerate(D['variableCosts']):
+ xx=M+i*(CW/5);text(label,xx,Y,CW/5-10,9.5,'Bold');text(f'USD {value:.2f}/kg',xx,Y+23,CW/5-10,12)
+for i,(price,sales,cont,margin,title)in enumerate([(8,160000,32000,'20%','Escenario base'),(7.2,144000,16000,'11,1%','Precio -10%')]):
+ xx=M+i*397;text(title,xx,Y+76,380,17,'Bold');text(f'USD {price:.2f} / kg',xx,Y+104,380,12)
+ width=365;rect(xx,Y+136,width*128000/sales,42,'#b7c3a5',3);rect(xx+width*128000/sales,Y+136,width*cont/sales,42,C['gold']if i==0 else C['coral'],3)
+ text(f'Ventas ${sales:,.0f} · variables $128.000',xx,Y+195,380,11.5);text(f'Contribución ${cont:,.0f} · margen {margin}',xx,Y+220,380,13,'Bold')
+ text(f'Saldo tras adicionales: ${cont-10000:,.0f}',xx,Y+250,380,13,'Bold')
+text('Adicionales anuales: USD 10.000',M,451,CW,16,'Bold');text('Gestión comercial $4.000 · piloto de empaque $3.000 · auditoría de KPIs $3.000.',M,481,CW,11.5)
+text('A $8/kg: saldo $22.000; 6.250 kg cubren adicionales. Antes de financiación, impuestos y fijos existentes.',M,513,CW,10.8)
+footer('Costos supuestos, no cotizaciones. No es utilidad neta. FCA: el comprador contrata el transporte principal [G15].')
 # 16
 Y=begin(16,'sand');rows=[('1 · Acordar','Muestra, precio y entrega.','Comercial + comprador','Muestra y condiciones aceptadas.'),('2 · Validar','Empaque, inocuidad y vida útil.','Calidad + proveedor','Piloto y especificación aprobados.'),('3 · Documentar','Residuos y responsabilidades.','Operaciones + importador','Aprovechamiento acreditado y roles definidos.'),('4 · Medir','Tablero y correcciones.','Finanzas + calidad + RR. HH.','Seis metas revisadas con evidencia.'),('5 · Revisar','Resultados del programa.','Dirección + actores clave','Revisión trimestral y verificación anual.')]
 for i,(a,b,who,ev)in enumerate(rows):
  yy=Y+i*77;line(M,yy+66,W-M,yy+66,fg,.4);text(a,M,yy,155,15,'Bold');text(b,202,yy,270,12.4);text(who,202,yy+30,270,9.8);text(ev,502,yy,306,12)
-footer('Recortes limpios y compostaje antes de harina de cáscara. Avanzar solo con seguridad, costo y demanda demostrados.')
+footer('Confirmar pedido y capacidad. Comparar cuatro envíos de 5 t con dos de 10 t. Recortes y compostaje antes de harina.')
 # 17
-Y=begin(17,'forest');text('El impacto<br/>se construye<br/>lote a lote.',M,Y,370,46,'Serif',accent,lead=52);text('Rentabilidad, personas y ambiente deben avanzar juntos.',M,345,340,17)
+Y=begin(17,'forest');text('Rentabilidad,<br/>personas<br/>y ambiente.',M,Y,370,46,'Serif',accent,lead=52);text('Rentabilidad, personas y ambiente deben avanzar juntos.',M,345,340,17)
 for i,(a,b)in enumerate([('Viabilidad comercial','Muestra aprobada, precio viable y condiciones de entrega claras.'),('Operación controlada','Producto seguro, empaque apto y trazabilidad de cada lote.'),('Impacto demostrable','Pagos oportunos, aprovechamiento acreditado y equipo formado.')]):card(a,b,430,Y+i*133,378,116)
 footer('El margen debe sostener los compromisos sociales y ambientales del programa.')
 # 18

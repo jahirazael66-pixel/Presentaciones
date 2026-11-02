@@ -1,4 +1,4 @@
-# Greenbox · Del origen al impacto
+# Greenbox · Plan de exportación a Alemania
 
 Rediseño completo en React de la presentación Greenbox. Programa B2B propuesto de piña deshidratada para Alemania, con triple impacto, 2027. Se conservan literalmente los seis nombres de capítulos de la monografía y se distribuyen en 19 escenas con títulos simples. Los seis KPIs se resumen en tres dimensiones.
 
@@ -28,7 +28,7 @@ PDF A4 horizontal: `python scripts/build_pdf.py` con reportlab, fonttools y pill
 
 Base: monografía Greenbox ADEX EC3 facilitada por el usuario. Fuentes externas de empresa, NESsT, UE, ISO, ZSVR, BRCGS, SGS e ICC enlazadas en `src/data.js`. Se verificaron durante la implementación la ficha ISO 14001:2026, el reporte NESsT de enero de 2026 y la aplicación escalonada del reglamento de envases. No se afirma certificación ISO propia de Greenbox, proveedor contratado ni comprador confirmado.
 
-Se respeta la clasificación de la monografía: agricultores y proveedor de envases son internos de la cadena operativa, junto con dirección y personal; esto delimita el análisis de la cadena, no la pertenencia jurídica a la empresa. NESsT y auditor independiente se separan. Primarios/secundarios son clasificación analítica de la relación con este programa. No se extrapolan los agricultores y empleos reportados por NESsT como impacto nuevo del programa de 20 t.
+Clasificación de la versión revisada: dirección y personal son internos; agricultores y proveedor de envases son externos. El auditor independiente tiene poder medio e interés alto. NESsT y auditor se separan. Primarios/secundarios describen la relación analítica con el programa.
 
 Fotografías y logo recuperados sin modificación de los recursos de la presentación anterior. `CREDITS.md` histórico conserva su procedencia. Los esquemas SVG/CSS son propios; fotografías de actividad no identifican un lote concreto ni prueban certificados.
 
@@ -39,3 +39,9 @@ Ruta `presentaciones/greenbox/`; la tarjeta del lobby se actualiza para el progr
 ## Revisión de legibilidad y certificaciones · 02/11/2026
 
 Etiquetas y notas pasan de 8–11 px a una base de 12,8 px; texto de actores y gráficos ampliado. Se redistribuye la matriz para mantener el encuadre. Ocho logos originales en una nueva escena, con denominación y alcance. FAQ de Greenbox y ficha SIAL respaldan las certificaciones declaradas; JAS se conserva como referencia para Japón, sin atribuir vigencia a la empresa. Los archivos originales no se retocan. PDF actualizado a 19 páginas.
+
+## Actualización con monografía revisada
+
+Misión y visión oficiales de Greenbox parafraseadas en español, verificadas en About us; se retira la visión propuesta 2031 y sus metas anteriores. Se conserva el análisis de triple impacto y se identifica el bloque de metas 2027 del programa. Títulos descriptivos en portada, secciones, subtítulos e índice, sin alterar nombres literales de capítulos.
+
+Se sincronizan además la clasificación de actores y el poder/interés del auditor, el antecedente de 543 t (enero–junio 2025, Fluctuante), el abastecimiento equivalente con rendimiento principal supuesto de 9%, la intensidad logística, el desglose del costo variable, los USD 10.000 adicionales y el saldo base USD 22.000. Este saldo no se presenta como utilidad neta. Cobertura de adicionales calculada con aporte unitario redondeado a centavos; evita un kilo espurio por error de coma flotante.

@@ -1,15 +1,15 @@
 export const chapters=['Presentación del caso','CAPÍTULO 1: MARCO ESTRATÉGICO E INTEGRACIÓN DE LA RSE','CAPÍTULO 2: MATRIZ DE STAKEHOLDERS (PARTES INTERESADAS)','CAPÍTULO 3: DISEÑO DE PROCESOS BAJO ECONOMÍA CIRCULAR','CAPÍTULO 4: PLAN DE COMUNICACIÓN ESTRATÉGICA','CAPÍTULO 5: CUADRO DE MANDO DE RSE E INDICADORES DE GESTIÓN (KPIs)','CAPITULO 6: RECOMENDACIONES PARA LA EMPRESA QUE ELIGIERON','Cierre'];
-export const scenes=[['Greenbox: del origen al impacto',0,'cover'],['La empresa y el programa',0,'case'],['Misión, visión y triple impacto',1,'strategy'],['RSE en la exportación',1,'rse'],['Quiénes participan',2,'actors'],['Matriz de poder e interés',2,'matrix'],['Cadena completa de procesos',3,'chain'],['Empaque: proteger y reducir',3,'pack'],['Aprovechamiento de residuos',3,'waste'],['Logística y uso del espacio',3,'logistics'],['Comunicación interna',4,'internal'],['Comunicación con clientes',4,'external'],['Seis metas, tres dimensiones',5,'kpis'],['Verificación y certificaciones',5,'audit'],['Certificaciones y sellos',5,'certificates'],['Viabilidad económica',6,'finance'],['Qué hacer primero',6,'actions'],['Conclusiones del plan',7,'closing'],['Referencias',7,'sources']];
+export const scenes=[['Greenbox: plan de exportación a Alemania',0,'cover'],['La empresa y el programa',0,'case'],['Misión, visión y triple impacto',1,'strategy'],['RSE en la exportación',1,'rse'],['Stakeholders internos y externos',2,'actors'],['Matriz de poder e interés',2,'matrix'],['Cadena completa de procesos',3,'chain'],['Ecodiseño del empaque',3,'pack'],['Aprovechamiento de residuos',3,'waste'],['Logística y uso del espacio',3,'logistics'],['Comunicación interna',4,'internal'],['Comunicación con clientes',4,'external'],['Indicadores de triple impacto',5,'kpis'],['Auditoría y verificación externa',5,'audit'],['Certificaciones y sellos',5,'certificates'],['Viabilidad económica',6,'finance'],['Plan de implementación',6,'actions'],['Conclusiones del plan',7,'closing'],['Referencias',7,'sources']];
 export const team=['Maria Fernanda Ruiz Luna','Jahir Azael Castillo Paucas','Estefany Mirelle Quispe Chavarría','Jostin Alexander Chávez Estela'];
 export const actors=[
-{id:'AG',name:'Agricultores proveedores',type:'Interno',relation:'Primario',power:'Alto',interest:'Alto',x:76,y:80,need:'Precio claro y pago puntual.',action:'Acuerdos escritos, calendario de compra, asistencia y reclamos.',process:'Abastecimiento'},
-{id:'EN',name:'Proveedor de envases',type:'Interno',relation:'Primario',power:'Medio',interest:'Alto',x:85,y:50,need:'Pedidos previsibles y especificaciones.',action:'Validar barrera, migración y composición; acordar entregas.',process:'Empaque'},
+{id:'AG',name:'Agricultores proveedores',type:'Externo',relation:'Primario',power:'Alto',interest:'Alto',x:76,y:80,need:'Precio claro y pago puntual.',action:'Acuerdos escritos, calendario de compra, asistencia y reclamos.',process:'Abastecimiento'},
+{id:'EN',name:'Proveedor de envases',type:'Externo',relation:'Primario',power:'Medio',interest:'Alto',x:85,y:50,need:'Pedidos previsibles y especificaciones.',action:'Validar barrera, migración y composición; acordar entregas.',process:'Empaque'},
 {id:'DI',name:'Distribuidor alemán',type:'Externo',relation:'Primario',power:'Alto',interest:'Alto',x:89,y:68,need:'Inocuidad, continuidad y trazabilidad.',action:'Aprobar muestra, contrato, rechazos y datos de impacto.',process:'Entrega'},
 {id:'AU',name:'Autoridades y registro de envases',type:'Externo',relation:'Secundario',power:'Alto',interest:'Medio',x:50,y:85,need:'Cumplimiento verificable.',action:'Revisar expediente orgánico y obligaciones del envase con el importador.',process:'Exportación'},
 {id:'DR',name:'Dirección y finanzas',type:'Interno',relation:'Primario',power:'Alto',interest:'Alto',x:64,y:68,need:'Margen y liquidez.',action:'Revisar costos y reservar caja para pagos, pruebas y auditoría.',process:'Toda la cadena'},
 {id:'EQ',name:'Producción, calidad y trabajadores',type:'Interno',relation:'Primario',power:'Medio',interest:'Alto',x:68,y:50,need:'Seguridad, formación y trabajo estable.',action:'Inducción pagada, segregación y participación en mejoras.',process:'Transformación'},
 {id:'NE',name:'NESsT',type:'Externo',relation:'Secundario',power:'Alto',interest:'Medio',x:50,y:70,need:'Evidencia de impacto y registros fiables.',action:'Reportar avances. Su financiamiento no equivale a auditoría independiente.',process:'Seguimiento'},
-{id:'VE',name:'Auditor independiente',type:'Externo',relation:'Secundario',power:'Alto',interest:'Medio',x:50,y:59,need:'Registros completos y acceso a evidencia.',action:'Revisar indicadores y documentar hallazgos sin conflicto de interés.',process:'Verificación'}];
+{id:'VE',name:'Auditor independiente',type:'Externo',relation:'Secundario',power:'Medio',interest:'Alto',x:77,y:50,need:'Registros completos y acceso a evidencia.',action:'Revisar indicadores y documentar hallazgos sin conflicto de interés.',process:'Verificación'}];
 export const steps=[
 ['Abastecer','Agricultores','Acordar precio, calendario y condiciones; identificar origen y lote.','Acuerdo y registro de recepción'],
 ['Recibir y seleccionar','Producción / calidad','Pesar la fruta, revisar condición y separar material no apto.','Peso, condición y lote'],
@@ -37,7 +37,8 @@ export const sources=[
 ['G14','ISO 14001:2026 · Sistemas de gestión ambiental','https://www.iso.org/standard/14001'],
 ['G15','ICC · Incoterms 2020, checklist 2024','https://library.iccwbo.org/content/clp/Others/incoterms_2020_checklist_2024-update.pdf'],
 ['G16','Greenbox · Certificaciones declaradas en su FAQ','https://greenbox.pe/contact-us/'],
-['G17','MAFF · Organic JAS','https://www.maff.go.jp/e/policies/standard/jas/specific/organic.html']];
+['G17','MAFF · Organic JAS','https://www.maff.go.jp/e/policies/standard/jas/specific/organic.html'],
+['G18','Fluctuante · Piña deshidratada, primer semestre 2025','https://fluctuante.com/agroexportaciones-peruanas/2025/08/07/se-septuplican-las-exportaciones-de-pina-peruana-deshidratada/']];
 export const kpis=[
 {dimension:'Económica',color:'gold',items:[['≥15%','margen de contribución','(Ventas netas − costos variables) / ventas netas × 100.','Finanzas · ventas y costos'],['100%','volumen del programa','kg aceptados / 20.000 kg programados × 100.','Finanzas · recepción del comprador']]},
 {dimension:'Ambiental',color:'mint',items:[['≥80%','residuos valorizados','kg valorizados con evidencia / kg de residuos orgánicos generados × 100.','Calidad · pesajes y constancias'],['≥5%','menos empaque por kg','(I₀ − I₁) / I₀ × 100; I = kg de empaque / kg de producto.','Calidad · piloto y pesaje ponderado']]},
@@ -53,3 +54,11 @@ export const certificates=[
 ['kosher.jpg','Kosher','Requisitos alimentarios','Ingredientes y proceso según reglas Kosher.'],
 ['fairtrade.png','Fairtrade','Comercio justo','Condiciones sociales y comerciales.']
 ];
+
+export const companyStrategy={
+mission:'Generar bienestar a través de la transformación de frutas, ofreciendo soluciones saludables y sostenibles con innovación continua y calidad exigente.',
+vision:'Abastecer al mercado mundial con una oferta diversificada de productos naturales que contribuya al bienestar de las personas.',
+connections:[['Económico','Transformación y alcance global'],['Social','Bienestar y salud'],['Ambiental','Soluciones sostenibles']]
+};
+export const variableCosts=[['Fruta fresca',2.40],['Transformación',2.10],['Empaque',.55],['Entrega FCA',.85],['Controles por lote',.50]];
+export const programCosts=[['Gestión comercial',4000],['Piloto de empaque',3000],['Auditoría de KPIs',3000]];
