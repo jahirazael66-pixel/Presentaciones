@@ -1,6 +1,6 @@
 # Candela · La decisión de liberar un lote
 
-Presentación web interactiva de 17 capítulos para el caso académico de calidad de nueces amazónicas peladas destinadas a Alemania. Mantiene la lógica del PowerPoint EA1 y los bloques A–D de ISO 9001:2015.
+Presentación web interactiva de 25 capítulos para el caso académico de calidad de nueces amazónicas peladas destinadas a Alemania. Mantiene la lógica del PowerPoint EA1 y los bloques A–D de ISO 9001:2015.
 
 ## Uso
 
@@ -46,3 +46,7 @@ Ver `VALIDACION.md`. Compilación y pruebas funcionales en DOM. Esta ejecución 
 Primero se explica el caso y la cadena, sin repartir los bloques A–D por el recorrido. Al cierre se presenta la matriz completa, seguida de cuatro capítulos para A, B, C y D y, finalmente, conclusiones y fuentes. Cada cláusula muestra síntesis parafraseada del PDF ISO adjunto, aplicación a la misma cadena, vínculo normativo y registros. Los enlaces de etapa abren el flujograma en el foco correspondiente.
 
 El Ishikawa incluye dos causas específicas por rama y explicación del mecanismo, etapa y evidencia. Los cinco porqués muestran todas las preguntas y respuestas simultáneamente.
+
+## Ampliación EC3
+
+Después de D. Evaluación y mejora: dos fichas de ecoetiquetas y seis secciones de riesgos antes de Conclusiones. La matriz y el mapa comparten la misma fuente de datos. El menú Opciones incluye Imprimir o guardar PDF; los sustentos y códigos de riesgo están visibles en la impresión.

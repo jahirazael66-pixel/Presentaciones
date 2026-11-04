@@ -2,8 +2,9 @@ import React,{useState,useEffect,useRef,useId} from 'react';
 import {gsap} from 'gsap';
 import {flowNodes,flowEdges,chainNodes,tourIds} from './domain';
 const W=1540,H=900;
-export function ProcessFlow({step,setStep,motion}){
+export function ProcessFlow({step,setStep,motion,chainRequest}){
  const [chainFocus,setChainFocus]=useState(null),[view,setView]=useState([0,0,W,H]);const current=useRef([0,0,W,H]),svg=useRef(),drag=useRef(null),tween=useRef(null);const uid=useId().replace(/:/g,'');
+ useEffect(()=>{if(chainRequest)setChainFocus(chainRequest.index);},[chainRequest]);
  const focus=step>=2?flowNodes.find(n=>n.id===tourIds[step-2]):null;
  function move(v){tween.current?.kill();if(motion){const a={x:current.current[0],y:current.current[1],w:current.current[2],h:current.current[3]};tween.current=gsap.to(a,{x:v[0],y:v[1],w:v[2],h:v[3],duration:.65,ease:'power3.inOut',onUpdate:()=>{current.current=[a.x,a.y,a.w,a.h];setView([...current.current]);}});}else{current.current=v;setView(v);}}
  useEffect(()=>{if(focus)move([Math.max(0,Math.min(W-650,focus.x-220)),Math.max(0,Math.min(H-390,focus.y-145)),650,390]);else move([0,0,W,H]);return()=>tween.current?.kill();},[step,motion]);

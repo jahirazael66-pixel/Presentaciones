@@ -1,4 +1,5 @@
-export const chapters=[['inicio','Caso Candela'],['empresa','Empresa, producto y mercado'],['requisitos','Aflatoxinas y requisitos'],['cadena','Cadena de procesos y flujograma'],['escenario','No conformidad y riesgo'],['causas','Ishikawa y cinco porqués'],['prevencion','Prevención y HACCP'],['proveedor','Evaluación del proveedor'],['control','Control de recepción y liberación'],['acciones','Corrección y acciones'],['matriz','Matriz ISO A–D'],['iso-a','A. Contexto y proceso'],['iso-b','B. Riesgo y objetivo'],['iso-c','C. Control operacional'],['iso-d','D. Evaluación y mejora'],['conclusiones','Conclusiones del caso'],['fuentes','Fuentes y referencias']];
+import {ec3Chapters,ec3Sources} from './ec3-data.js';
+export const chapters=[['inicio','Caso Candela'],['empresa','Empresa, producto y mercado'],['requisitos','Aflatoxinas y requisitos'],['cadena','Cadena de procesos y flujograma'],['escenario','No conformidad y riesgo'],['causas','Ishikawa y cinco porqués'],['prevencion','Prevención y HACCP'],['proveedor','Evaluación del proveedor'],['control','Control de recepción y liberación'],['acciones','Corrección y acciones'],['matriz','Matriz ISO A–D'],['iso-a','A. Contexto y proceso'],['iso-b','B. Riesgo y objetivo'],['iso-c','C. Control operacional'],['iso-d','D. Evaluación y mejora'],...ec3Chapters,['conclusiones','Conclusiones del caso'],['fuentes','Fuentes y referencias']];
 export const stepCounts={cadena:16,escenario:4,causas:7,control:5,'iso-a':3,'iso-b':2,'iso-c':5,'iso-d':3};
 export const references=[
  ['R1','Candela · Perfil comercial','Empresa, producto y destinos','https://perutradecommission.us/candela-peru/'],
@@ -13,7 +14,7 @@ export const references=[
  ['R10','DS 004-2011-AG','Inocuidad agroalimentaria; modificado por DS 006-2016-MINAGRI','https://www.senasa.gob.pe/senasa/descargasarchivos/2014/11/DS.004-2011-AG-Rgto.-Inocuidad-Agroalimentaria.pdf'],
  ['R11','Codex CXC 1-1969','Principios de higiene y HACCP','https://www.fao.org/fao-who-codexalimentarius/codex-texts/codes-of-practice/es/'],
  ['R12','Codex CXC 75-2015','Alimentos de baja humedad','https://www.fao.org/fao-who-codexalimentarius/codex-texts/codes-of-practice/es/'],
- ['R13','ISO 9001:2015','Sistema de gestión de la calidad · apartados A–D','https://www.iso.org/standard/62085.html']];
+ ['R13','ISO 9001:2015','Sistema de gestión de la calidad · apartados A–D','https://www.iso.org/standard/62085.html'],...ec3Sources];
 export const criteria=[
  ['Identidad y trazabilidad',20,true,'Origen, proveedor, lote y cadena de custodia.'],
  ['Aflatoxinas del lote',25,true,'Informe con B1 y suma conformes e identificación coincidente.'],
