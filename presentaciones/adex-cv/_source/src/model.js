@@ -1,0 +1,6 @@
+export const UNIT_CREDITS=10.66;
+export function compare(cv=500){const before=cv*8/60,review=cv*3/60,maintenance=1,after=review+maintenance,credits=cv*UNIT_CREDITS,software=credits<=1000?0:credits<=10000?45.6:null;return{cv,before,review,maintenance,after,saved:Math.max(0,before-after),reduction:62.5,credits,software,plan:credits<=1000?'Free':credits<=10000?'Core · referencia':'Paquete mayor',capacity:Math.max(0,before-after)/160*100};}
+export const hours=n=>{const minutes=Math.round(n*60);return`${Math.floor(minutes/60)} h${minutes%60?' '+String(minutes%60).padStart(2,'0')+' min':''}`;};
+export const number=(n,d=0)=>n.toLocaleString('es-PE',{minimumFractionDigits:d,maximumFractionDigits:d});
+export function zoomCamera(camera,next,anchor={x:0,y:0}){next=Math.max(100,Math.min(220,next));if(next===100)return{zoom:100,x:0,y:0};const ratio=next/camera.zoom;return{zoom:next,x:anchor.x-ratio*(anchor.x-camera.x),y:anchor.y-ratio*(anchor.y-camera.y)};}
+export function keyboardAction(key,zoom){const directions={ArrowLeft:[100,0],ArrowRight:[-100,0],ArrowUp:[0,100],ArrowDown:[0,-100],PageUp:[0,350],PageDown:[0,-350]};if(!directions[key])return null;if(zoom>100)return{type:'pan',delta:directions[key]};return{type:'navigate',delta:['ArrowLeft','ArrowUp','PageUp'].includes(key)?-1:1};}
