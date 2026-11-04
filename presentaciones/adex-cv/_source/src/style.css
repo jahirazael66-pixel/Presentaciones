@@ -6,3 +6,8 @@
 @media(min-width:760px){.results-layout{gap:14px}.observed-results{padding:16px 24px}.result-metrics{min-height:151px}.result-metrics strong{font-size:58px}.result-metrics h2{margin:4px 0 7px}.kpi-targets article{padding:14px 17px}.closing-message{padding:12px 20px}.next-heading h2{max-width:540px}}
 
 @media(min-width:760px){.trials-table{min-height:151px;margin-top:10px}.trials-table>div{padding:3px 0}}
+
+/* Material del piloto: enlaces visibles sin reducir las notas. */
+.test-cv-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.test-cv-links a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font-size:20px;color:var(--blue);text-decoration:none;background:var(--pale)}
+@media(min-width:760px){.evidence-panel>svg{width:28px;height:28px;margin-bottom:8px}.evidence-panel h2{font-size:30px;margin-bottom:12px}.evidence-panel p{font-size:19px;line-height:1.45;margin:10px 0}.evidence-panel>a{padding-top:11px;margin-top:11px}.evidence-panel>a.return-lobby{padding-top:9px;margin-top:9px}.test-cv-links{margin-top:12px}}
+@media(max-width:759px){.test-cv-links a{font-size:18px}}

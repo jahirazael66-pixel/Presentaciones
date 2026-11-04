@@ -100,6 +100,8 @@ Y=begin(7)
 for i,(a,b)in enumerate(D['sources']):
  yy=Y+i*72;text(str(i+1).zfill(2),M,yy,42,17,'Display','blue');text(a,M+55,yy,520,18,'Display');text('Consultar fuente oficial'if b.startswith('http')else b,M+55,yy+29,520,13,'Body','muted')
  if b.startswith('http'):c.linkURL(b,(M+55,H-yy-52,M+575,H-yy),relative=0,thickness=0)
-rect(635,Y,177,351,'pale',10);text('Evidencia del piloto',649,Y+18,149,22,'Display','blue');text('Medido: tiempos, estados y créditos.<br/><br/>Estimado: tiempo humano, mantenimiento y costos.<br/><br/>Por validar: desempeño sostenido con carga real.',649,Y+90,149,13.5);c.linkURL(D['links']['sheet'],(635,H-Y-351,812,H-Y),relative=0,thickness=0)
+rect(635,Y,177,400,'pale',10);text('Evidencia del piloto',649,Y+18,149,22,'Display','blue');text('Medido: tiempos, estados y créditos.<br/><br/>Estimado: tiempo humano, mantenimiento y costos.<br/><br/>Por validar: desempeño sostenido con carga real.',649,Y+83,149,12.8);c.linkURL(D['links']['sheet'],(635,H-Y-400,812,H-Y),relative=0,thickness=0)
+for label,url,yy in [('CV de Sofía','https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/adex-cv/cv/CV_Sofia_Mendoza.pdf',407),('CV de Diego','https://jahirazael66-pixel.github.io/Presentaciones/presentaciones/adex-cv/cv/CV_Diego_Salazar.pdf',435),('Formulario de postulación',D['links']['form'],463)]:
+ text(label,649,yy,149,12.5,'Bold','blue');c.linkURL(url,(649,H-yy-22,798,H-yy),relative=0,thickness=0)
 footer('Pruebas del 3 de noviembre de 2026. Los perfiles finales son ficticios; los enlaces conservan sus permisos de acceso.')
 c.save();(T/'layout.json').write_text(json.dumps(bounds));print(OUT,'8 páginas')

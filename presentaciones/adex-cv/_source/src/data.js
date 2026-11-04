@@ -8,7 +8,7 @@ export const slides=[
 {title:'Resultados y siguientes pasos',chapter:'Comparación de resultados',speaker:'Jostin',time:'09–11 min',theme:'results'},
 {title:'Referencias y evidencia',chapter:'Consulta',speaker:'Equipo',time:'Respaldo',theme:'references'}];
 export const team=['Maria Fernanda Ruiz Luna','Jahir Azael Castillo Paucas','Miguel Peralta Llontop','Jostin Alexander Chavez Estela'];
-export const links={form:'https://docs.google.com/forms/d/e/1FAIpQLScT8o5Z7pdbROeTS73ZMBhrA1GA0dCDYHz17GZwUMJDhfrGbw/viewform',sheet:'https://docs.google.com/spreadsheets/d/1oVh6cfAQzYTXScPoIbC0EUou_gNIEtUdqWL44LXDXFg/edit?gid=202#gid=202'};
+export const links={sofia:'./cv/CV_Sofia_Mendoza.pdf',diego:'./cv/CV_Diego_Salazar.pdf',form:'https://docs.google.com/forms/d/e/1FAIpQLScT8o5Z7pdbROeTS73ZMBhrA1GA0dCDYHz17GZwUMJDhfrGbw/viewform',sheet:'https://docs.google.com/spreadsheets/d/1oVh6cfAQzYTXScPoIbC0EUou_gNIEtUdqWL44LXDXFg/edit?gid=202#gid=202'};
 export const flow=[
 {title:'Google Forms',short:'Recibe la postulación',detail:'Nombre, correo, vacante y PDF de la plantilla. El formulario admite un archivo de hasta 1 MB.',owner:'Postulante',icon:'form'},
 {title:'Google Drive',short:'Conserva el PDF',detail:'El documento original se guarda como fuente para comprobar los datos y revisar cualquier diferencia.',owner:'Cuenta del piloto',icon:'drive'},
