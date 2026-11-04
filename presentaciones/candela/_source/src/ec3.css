@@ -108,3 +108,11 @@ html[data-motion=on] .ec-score.ec-high{animation:score-high .48s ease-out both}
 @media(max-width:740px){.risk-return{top:67px}.ec-eco-facts{gap:8px}.ec-eco-facts>div{padding:11px 8px}.ec-process dl>div{padding:0}}
 @media(prefers-reduced-motion:reduce){html[data-motion=on] .ec-score{animation:none}}
 @media print{.risk-return{display:none!important}.ec-eco-facts{color:var(--ink)}.ec-eco-facts .ec-icon{color:var(--teal)}.ec-score{animation:none!important}}
+
+/* El listado de riesgos se lee de izquierda a derecha. */
+#riesgo-proceso .section-title{margin-inline:0 auto;text-align:left}
+#riesgo-proceso .section-title>p{margin-inline:0 auto}
+#riesgo-proceso .ec-process{margin-inline:0 auto;text-align:left}
+#riesgo-proceso .ec-process article>button:first-child,#riesgo-proceso .ec-action{margin-inline:0 auto;text-align:left}
+#riesgo-proceso .ec-process dl>div{padding-inline:0}
+#riesgo-proceso .citation{justify-content:flex-start;text-align:left}
