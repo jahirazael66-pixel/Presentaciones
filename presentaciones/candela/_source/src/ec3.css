@@ -116,3 +116,6 @@ html[data-motion=on] .ec-score.ec-high{animation:score-high .48s ease-out both}
 #riesgo-proceso .ec-process article>button:first-child,#riesgo-proceso .ec-action{margin-inline:0 auto;text-align:left}
 #riesgo-proceso .ec-process dl>div{padding-inline:0}
 #riesgo-proceso .citation{justify-content:flex-start;text-align:left}
+
+/* El puntaje crítico necesita contraste sobre la tarjeta clara. */
+.ec-priority .ec-score.ec-critical{color:#9b342e}
